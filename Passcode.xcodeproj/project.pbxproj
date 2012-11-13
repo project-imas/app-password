@@ -21,7 +21,33 @@
 		3B2907C7164BFFD50028C2CE /* IMSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B2907C6164BFFD50028C2CE /* IMSViewController.m */; };
 		3B2907CE164C003B0028C2CE /* IMSPasscodeStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B2907CD164C003B0028C2CE /* IMSPasscodeStoryboard_iPhone.storyboard */; };
 		3B2907D5164C02460028C2CE /* IMSPasscodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B2907D4164C02460028C2CE /* IMSPasscodeViewController.m */; };
+		3BEEB71B1652E60400642ECE /* libSecureFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BEEB7151652E0A600642ECE /* libSecureFoundation.a */; };
+		3BEEB71D1652E7FB00642ECE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BEEB71C1652E7FB00642ECE /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3BEEB7141652E0A600642ECE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3BEEB70C1652E0A600642ECE /* SecureFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3B89357C162C92F1003750B6;
+			remoteInfo = SecureFoundation;
+		};
+		3BEEB7161652E0A600642ECE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3BEEB70C1652E0A600642ECE /* SecureFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3B89358D162C92F1003750B6;
+			remoteInfo = SecureFoundationTests;
+		};
+		3BEEB7191652E5FE00642ECE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3BEEB70C1652E0A600642ECE /* SecureFoundation.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B89357B162C92F1003750B6;
+			remoteInfo = SecureFoundation;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3B2907A3164BFFD50028C2CE /* Passcode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Passcode.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,6 +71,8 @@
 		3B2907D2164C021B0028C2CE /* IMSPasscodeViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMSPasscodeViewControllerDelegate.h; sourceTree = "<group>"; };
 		3B2907D3164C02460028C2CE /* IMSPasscodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMSPasscodeViewController.h; sourceTree = "<group>"; };
 		3B2907D4164C02460028C2CE /* IMSPasscodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMSPasscodeViewController.m; sourceTree = "<group>"; };
+		3BEEB70C1652E0A600642ECE /* SecureFoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SecureFoundation.xcodeproj; path = vendor/securefoundation/SecureFoundation.xcodeproj; sourceTree = "<group>"; };
+		3BEEB71C1652E7FB00642ECE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +80,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BEEB71D1652E7FB00642ECE /* AudioToolbox.framework in Frameworks */,
+				3BEEB71B1652E60400642ECE /* libSecureFoundation.a in Frameworks */,
 				3B2907A8164BFFD50028C2CE /* UIKit.framework in Frameworks */,
 				3B2907AA164BFFD50028C2CE /* Foundation.framework in Frameworks */,
 				3B2907AC164BFFD50028C2CE /* CoreGraphics.framework in Frameworks */,
@@ -64,6 +94,7 @@
 		3B290798164BFFD50028C2CE = {
 			isa = PBXGroup;
 			children = (
+				3BEEB70C1652E0A600642ECE /* SecureFoundation.xcodeproj */,
 				3B2907AD164BFFD50028C2CE /* Passcode */,
 				3B2907A6164BFFD50028C2CE /* Frameworks */,
 				3B2907A4164BFFD50028C2CE /* Products */,
@@ -81,6 +112,7 @@
 		3B2907A6164BFFD50028C2CE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3BEEB71C1652E7FB00642ECE /* AudioToolbox.framework */,
 				3B2907A7164BFFD50028C2CE /* UIKit.framework */,
 				3B2907A9164BFFD50028C2CE /* Foundation.framework */,
 				3B2907AB164BFFD50028C2CE /* CoreGraphics.framework */,
@@ -128,6 +160,15 @@
 			name = Reusable;
 			sourceTree = "<group>";
 		};
+		3BEEB70D1652E0A600642ECE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3BEEB7151652E0A600642ECE /* libSecureFoundation.a */,
+				3BEEB7171652E0A600642ECE /* SecureFoundationTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -142,6 +183,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				3BEEB71A1652E5FE00642ECE /* PBXTargetDependency */,
 			);
 			name = Passcode;
 			productName = Passcode;
@@ -168,12 +210,35 @@
 			mainGroup = 3B290798164BFFD50028C2CE;
 			productRefGroup = 3B2907A4164BFFD50028C2CE /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 3BEEB70D1652E0A600642ECE /* Products */;
+					ProjectRef = 3BEEB70C1652E0A600642ECE /* SecureFoundation.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				3B2907A2164BFFD50028C2CE /* Passcode */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		3BEEB7151652E0A600642ECE /* libSecureFoundation.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSecureFoundation.a;
+			remoteRef = 3BEEB7141652E0A600642ECE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3BEEB7171652E0A600642ECE /* SecureFoundationTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SecureFoundationTests.octest;
+			remoteRef = 3BEEB7161652E0A600642ECE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		3B2907A1164BFFD50028C2CE /* Resources */ = {
@@ -205,6 +270,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3BEEB71A1652E5FE00642ECE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SecureFoundation;
+			targetProxy = 3BEEB7191652E5FE00642ECE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3B2907B0164BFFD50028C2CE /* InfoPlist.strings */ = {
@@ -327,6 +400,7 @@
 				3B2907CC164BFFD50028C2CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

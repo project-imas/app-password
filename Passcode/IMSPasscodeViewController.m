@@ -5,6 +5,8 @@
 //  Copyright (c) 2012 The MITRE Corporation. All rights reserved.
 //
 
+#import <AudioToolbox/AudioToolbox.h>
+
 #import "IMSPasscodeViewController.h"
 
 @interface IMSPasscodeViewController ()
@@ -38,6 +40,15 @@
     [super viewDidLoad];
     NSParameterAssert(self.mode != 0);
     
+}
+
+- (NSUInteger)supportedInterfaceOrientations {
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        return UIInterfaceOrientationMaskLandscape;
+    }
+    else {
+        return UIInterfaceOrientationMaskPortrait;
+    }
 }
 
 #pragma mark - button actions
@@ -83,6 +94,7 @@
 #pragma clang diagnostic pop
     if (!valid) {
         self.passcodeOneField.text = nil;
+        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
         [[[UIAlertView alloc]
           initWithTitle:@"MESSAGE"
           message:nil
