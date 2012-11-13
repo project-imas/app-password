@@ -1,0 +1,3 @@
+[submodule "vendor/securefoundation"]
+	path = vendor/securefoundation
+	url = git@barrel.mitre.org:imas/securefoundation.git
