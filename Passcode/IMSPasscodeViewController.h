@@ -7,7 +7,7 @@
 
 #import <UIKit/UIKit.h>
 
-enum {
+typedef NS_ENUM(short, IMSPasscodeViewControllerMode) {
     
     /*
      
@@ -26,7 +26,6 @@ enum {
     IMSPasscodeViewControllerModeVerify
     
 };
-typedef NSUInteger IMSPasscodeViewControllerMode;
 
 @interface IMSPasscodeViewController : UIViewController <UITextFieldDelegate>
 

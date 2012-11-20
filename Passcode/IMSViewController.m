@@ -6,24 +6,67 @@
 //  Copyright (c) 2012 The MITRE Corporation. All rights reserved.
 //
 
+#import <SecureFoundation/SecureFoundation.h>
+
 #import "IMSViewController.h"
+#import "IMSPasscodeViewController.h"
+
+//static NSString * const IMSKeychainService = @"";
+//static NSString * const IMSKeychainService = @"";
 
 @interface IMSViewController ()
+
+@property (nonatomic, weak) IBOutlet UIButton *createPasscodeButton;
+@property (nonatomic, weak) IBOutlet UIButton *verifyPasscodeButton;
+@property (nonatomic, weak) IBOutlet UIButton *resetPasscodeButton;
 
 @end
 
 @implementation IMSViewController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+#pragma mark - button actions
+
+- (IBAction)createPasscode:(id)sender {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"IMSPasscodeStoryboard_iPhone" bundle:nil];
+    UINavigationController *navigationController = [storyboard instantiateInitialViewController];
+    IMSPasscodeViewController *passcodeController = [[navigationController viewControllers] objectAtIndex:0];
+    passcodeController.target = self;
+    passcodeController.action = @selector(passcodeController:didCreatePasscode:);
+    passcodeController.passcodeSecurityPattern = @"^.*(?=.*[a-zA-Z])(?=.*[0-9])(?=.{6,}).*$";
+    [self presentViewController:navigationController animated:YES completion:nil];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)verifyPasscode:(id)sender {
+    
+}
+
+- (IBAction)resetPasscode:(id)sender {
+    
+}
+
+#pragma mark - passcode callbacks
+
+- (void)passcodeController:(IMSPasscodeViewController *)controller didCreatePasscode:(NSString *)passcode {
+    IMSCryptoManagerStoreTemporaryPasscode(passcode);
+    IMSCryptoManagerFinalize();
+    [self updateButtonEnabledStates];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - object methods
+
+- (void)updateButtonEnabledStates {
+    BOOL hasPasscode = IMSCryptoManagerHasPasscode();
+    self.createPasscodeButton.enabled = !hasPasscode;
+    self.resetPasscodeButton.enabled = hasPasscode;
+    self.verifyPasscodeButton.enabled = hasPasscode;
+}
+
+#pragma mark - view lifecycle
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self updateButtonEnabledStates];
 }
 
 @end

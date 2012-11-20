@@ -13,6 +13,7 @@
 
 @property (nonatomic, weak) IBOutlet UITextField *passcodeOneField;
 @property (nonatomic, weak) IBOutlet UITextField *passcodeTwoField;
+@property (nonatomic, copy) IBOutletCollection(UITextField) NSArray *passcodeFields;
 
 @end
 
@@ -39,6 +40,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSParameterAssert(self.mode != 0);
+    NSParameterAssert(self.target != nil);
+    NSParameterAssert(self.action != 0);
+    
+    // ui
+    self.navigationItem.rightBarButtonItem.enabled = NO;
+    [self.passcodeFields enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        [obj setSecureTextEntry:YES];
+        [obj setEnablesReturnKeyAutomatically:YES];
+        [obj setDelegate:self];
+        [obj addTarget:self action:@selector(textFieldTextDidChange:) forControlEvents:UIControlEventEditingChanged];
+    }];
+    [self.passcodeOneField becomeFirstResponder];
+    [self.navigationItem.rightBarButtonItem setAction:@selector(doneButtonAction:)];
     
 }
 
@@ -53,7 +67,16 @@
 
 #pragma mark - button actions
 
-- (IBAction)createPasscode {
+- (IBAction)doneButtonAction:(id)sender {
+    if (self.mode == IMSPasscodeViewControllerModeCreate) {
+        [self createPasscode];
+    }
+    else if (self.mode == IMSPasscodeViewControllerModeVerify) {
+        [self verifyPasscode];
+    }
+}
+
+- (void)createPasscode {
     NSParameterAssert(self.mode == IMSPasscodeViewControllerModeCreate);
     NSString *passcode = [self.passcodeOneField.text copy];
     if ([passcode isEqualToString:self.passcodeTwoField.text]) {
@@ -75,6 +98,10 @@
         }
     }
     else {
+        [self.passcodeFields enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            [obj setText:nil];
+        }];
+        [self.passcodeOneField becomeFirstResponder];
         [[[UIAlertView alloc]
           initWithTitle:@"The provided passcodes do not match."
           message:nil
@@ -85,7 +112,7 @@
     }
 }
 
-- (IBAction)verifyPasscode {
+- (void)verifyPasscode {
     NSParameterAssert(self.mode == IMSPasscodeViewControllerModeVerify);
     NSString *passcode = [self.passcodeOneField.text copy];
 #pragma clang diagnostic push

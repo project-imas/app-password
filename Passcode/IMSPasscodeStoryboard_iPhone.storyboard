@@ -1,68 +1,92 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="AsD-cy-Woj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="q4o-gi-0qe">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
-        <!--Passcode View Controller-->
+        <!--Passcode View Controller - Title-->
         <scene sceneID="uhL-2Y-wQw">
             <objects>
                 <viewController id="AsD-cy-Woj" customClass="IMSPasscodeViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j81-AC-5ym">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LjW-ua-Afc">
+                            <view contentMode="scaleToFill" id="Rt3-yO-5zx">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="003-WR-Vsc">
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" type="user" id="JPZ-Mw-dWE"/>
-                                            <constraint firstAttribute="width" constant="260" id="R8f-tE-leM"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lF3-Or-wPw">
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="RLu-zM-ZIL"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
+                                    <view contentMode="scaleToFill" id="FUD-Nf-RuJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Create Passcode" textAlignment="center" minimumFontSize="17" id="30E-gd-fKL">
+                                                <rect key="frame" x="30" y="20" width="260" height="50"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES"/>
+                                                <connections>
+                                                    <action selector="textFieldTextDidChange:" destination="AsD-cy-Woj" eventType="editingChanged" id="30d-zY-2zM"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Verify Passcode" textAlignment="center" minimumFontSize="17" id="Jer-yc-KMP">
+                                                <rect key="frame" x="30" y="71" width="260" height="50"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                                <connections>
+                                                    <action selector="textFieldTextDidChange:" destination="AsD-cy-Woj" eventType="editingChanged" id="IBp-is-4Hr"/>
+                                                </connections>
+                                            </textField>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Passcode must be 6 characters or longer and have one letter and one number." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="87h-C2-YVM">
+                                                <rect key="frame" x="30" y="128" width="260" height="63"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.30980392159999998" green="0.5568627451" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="lF3-Or-wPw" firstAttribute="top" secondItem="003-WR-Vsc" secondAttribute="bottom" constant="1" type="user" id="AS2-5t-tSb"/>
-                                    <constraint firstItem="003-WR-Vsc" firstAttribute="top" secondItem="LjW-ua-Afc" secondAttribute="top" constant="45" id="Imo-OK-fda"/>
-                                    <constraint firstItem="003-WR-Vsc" firstAttribute="leading" secondItem="lF3-Or-wPw" secondAttribute="leading" type="default" id="e1s-qd-9jN"/>
-                                    <constraint firstItem="lF3-Or-wPw" firstAttribute="centerX" secondItem="LjW-ua-Afc" secondAttribute="centerX" type="default" id="ehE-Ia-JOw"/>
-                                    <constraint firstItem="lF3-Or-wPw" firstAttribute="trailing" secondItem="003-WR-Vsc" secondAttribute="trailing" type="default" id="uhE-h6-83B"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="LjW-ua-Afc" firstAttribute="trailing" secondItem="j81-AC-5ym" secondAttribute="trailing" type="default" id="DNZ-MG-7AO"/>
-                            <constraint firstAttribute="bottom" secondItem="LjW-ua-Afc" secondAttribute="bottom" constant="216" type="user" id="YYG-6V-cdO"/>
-                            <constraint firstItem="LjW-ua-Afc" firstAttribute="top" secondItem="j81-AC-5ym" secondAttribute="top" type="default" id="ZnZ-S0-hrt"/>
-                            <constraint firstItem="LjW-ua-Afc" firstAttribute="leading" secondItem="j81-AC-5ym" secondAttribute="leading" type="default" id="svq-cL-0Cd"/>
-                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="7cL-tF-QLR">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="9pw-VK-nmW"/>
+                    </navigationItem>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="mode">
                             <real key="value" value="1"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <outlet property="passcodeOneField" destination="003-WR-Vsc" id="OxO-OL-rh3"/>
-                        <outlet property="passcodeTwoField" destination="lF3-Or-wPw" id="QVT-GQ-1T7"/>
+                        <outlet property="passcodeOneField" destination="30E-gd-fKL" id="Nw0-Jp-UMc"/>
+                        <outlet property="passcodeTwoField" destination="Jer-yc-KMP" id="OEm-Eb-95v"/>
+                        <outletCollection property="passcodeFields" destination="30E-gd-fKL" id="UHa-Qb-Ecv"/>
+                        <outletCollection property="passcodeFields" destination="Jer-yc-KMP" id="IOM-O6-2xf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xiQ-ah-LeN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="261" y="116"/>
+            <point key="canvasLocation" x="508" y="223"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vu5-Sy-dHq">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="q4o-gi-0qe" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Thb-qq-2TQ">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="AsD-cy-Woj" kind="relationship" relationship="rootViewController" id="YCZ-9M-EhV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kyD-MF-Jms" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="11" y="223"/>
         </scene>
     </scenes>
     <classes>
@@ -72,10 +96,8 @@
                 <relationship kind="action" name="textFieldTextDidChange:" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="passcodeOneField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="passcodeTwoField" candidateClass="UITextField"/>
+                <relationship kind="outletCollection" name="passcodeFields" candidateClass="UITextField"/>
             </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -16,8 +16,7 @@
 		3B2907BA164BFFD50028C2CE /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B2907B9164BFFD50028C2CE /* Default.png */; };
 		3B2907BC164BFFD50028C2CE /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B2907BB164BFFD50028C2CE /* Default@2x.png */; };
 		3B2907BE164BFFD50028C2CE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B2907BD164BFFD50028C2CE /* Default-568h@2x.png */; };
-		3B2907C1164BFFD50028C2CE /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B2907BF164BFFD50028C2CE /* MainStoryboard_iPhone.storyboard */; };
-		3B2907C4164BFFD50028C2CE /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B2907C2164BFFD50028C2CE /* MainStoryboard_iPad.storyboard */; };
+		3B2907C1164BFFD50028C2CE /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B2907BF164BFFD50028C2CE /* MainStoryboard.storyboard */; };
 		3B2907C7164BFFD50028C2CE /* IMSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B2907C6164BFFD50028C2CE /* IMSViewController.m */; };
 		3B2907CE164C003B0028C2CE /* IMSPasscodeStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B2907CD164C003B0028C2CE /* IMSPasscodeStoryboard_iPhone.storyboard */; };
 		3B2907D5164C02460028C2CE /* IMSPasscodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B2907D4164C02460028C2CE /* IMSPasscodeViewController.m */; };
@@ -63,12 +62,10 @@
 		3B2907B9164BFFD50028C2CE /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		3B2907BB164BFFD50028C2CE /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		3B2907BD164BFFD50028C2CE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		3B2907C0164BFFD50028C2CE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		3B2907C3164BFFD50028C2CE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		3B2907C0164BFFD50028C2CE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		3B2907C5164BFFD50028C2CE /* IMSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMSViewController.h; sourceTree = "<group>"; };
 		3B2907C6164BFFD50028C2CE /* IMSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IMSViewController.m; sourceTree = "<group>"; };
 		3B2907CD164C003B0028C2CE /* IMSPasscodeStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = IMSPasscodeStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		3B2907D2164C021B0028C2CE /* IMSPasscodeViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMSPasscodeViewControllerDelegate.h; sourceTree = "<group>"; };
 		3B2907D3164C02460028C2CE /* IMSPasscodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMSPasscodeViewController.h; sourceTree = "<group>"; };
 		3B2907D4164C02460028C2CE /* IMSPasscodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMSPasscodeViewController.m; sourceTree = "<group>"; };
 		3BEEB70C1652E0A600642ECE /* SecureFoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SecureFoundation.xcodeproj; path = vendor/securefoundation/SecureFoundation.xcodeproj; sourceTree = "<group>"; };
@@ -125,8 +122,7 @@
 			children = (
 				3B2907B6164BFFD50028C2CE /* IMSAppDelegate.h */,
 				3B2907B7164BFFD50028C2CE /* IMSAppDelegate.m */,
-				3B2907BF164BFFD50028C2CE /* MainStoryboard_iPhone.storyboard */,
-				3B2907C2164BFFD50028C2CE /* MainStoryboard_iPad.storyboard */,
+				3B2907BF164BFFD50028C2CE /* MainStoryboard.storyboard */,
 				3B2907C5164BFFD50028C2CE /* IMSViewController.h */,
 				3B2907C6164BFFD50028C2CE /* IMSViewController.m */,
 				3B2907D6164C024F0028C2CE /* Reusable */,
@@ -152,7 +148,6 @@
 		3B2907D6164C024F0028C2CE /* Reusable */ = {
 			isa = PBXGroup;
 			children = (
-				3B2907D2164C021B0028C2CE /* IMSPasscodeViewControllerDelegate.h */,
 				3B2907D3164C02460028C2CE /* IMSPasscodeViewController.h */,
 				3B2907D4164C02460028C2CE /* IMSPasscodeViewController.m */,
 				3B2907CD164C003B0028C2CE /* IMSPasscodeStoryboard_iPhone.storyboard */,
@@ -249,8 +244,7 @@
 				3B2907BA164BFFD50028C2CE /* Default.png in Resources */,
 				3B2907BC164BFFD50028C2CE /* Default@2x.png in Resources */,
 				3B2907BE164BFFD50028C2CE /* Default-568h@2x.png in Resources */,
-				3B2907C1164BFFD50028C2CE /* MainStoryboard_iPhone.storyboard in Resources */,
-				3B2907C4164BFFD50028C2CE /* MainStoryboard_iPad.storyboard in Resources */,
+				3B2907C1164BFFD50028C2CE /* MainStoryboard.storyboard in Resources */,
 				3B2907CE164C003B0028C2CE /* IMSPasscodeStoryboard_iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,20 +282,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		3B2907BF164BFFD50028C2CE /* MainStoryboard_iPhone.storyboard */ = {
+		3B2907BF164BFFD50028C2CE /* MainStoryboard.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				3B2907C0164BFFD50028C2CE /* en */,
 			);
-			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		3B2907C2164BFFD50028C2CE /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3B2907C3164BFFD50028C2CE /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
+			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
