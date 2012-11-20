@@ -76,7 +76,7 @@
         <!--Navigation Controller-->
         <scene sceneID="vu5-Sy-dHq">
             <objects>
-                <navigationController definesPresentationContext="YES" id="q4o-gi-0qe" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="CreatePasscodeViewController" definesPresentationContext="YES" id="q4o-gi-0qe" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Thb-qq-2TQ">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -88,11 +88,82 @@
             </objects>
             <point key="canvasLocation" x="11" y="223"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pzd-yN-Scl">
+            <objects>
+                <navigationController storyboardIdentifier="VerifyPasscodeViewController" definesPresentationContext="YES" id="COm-o1-ZPp" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TuP-pE-a38">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="AV5-sE-Yma" kind="relationship" relationship="rootViewController" id="uUc-dA-eC8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i54-W7-l8v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="11" y="910"/>
+        </scene>
+        <!--Passcode View Controller-->
+        <scene sceneID="OL6-dF-6fM">
+            <objects>
+                <viewController id="AV5-sE-Yma" customClass="IMSPasscodeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JW1-g8-itW">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="t6m-t5-XO9">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="jA2-yh-Rua">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Verify Passcode" textAlignment="center" minimumFontSize="17" id="xrJ-oZ-Fpd">
+                                                <rect key="frame" x="30" y="55" width="260" height="50"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                                <connections>
+                                                    <action selector="textFieldTextDidChange:" destination="AsD-cy-Woj" eventType="editingChanged" id="a42-u7-DgK"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.30980392159999998" green="0.5568627451" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xFJ-1m-whm">
+                        <barButtonItem key="rightBarButtonItem" title="Login" style="done" id="4Md-Nj-Dph">
+                            <connections>
+                                <action selector="doneButtonAction:" destination="AV5-sE-Yma" id="E5x-w5-w2l"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="mode">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="passcodeOneField" destination="xrJ-oZ-Fpd" id="c7d-5y-Yx8"/>
+                        <outletCollection property="passcodeFields" destination="xrJ-oZ-Fpd" id="dVU-jw-qJ8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w1a-HE-I8N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="508" y="910"/>
+        </scene>
     </scenes>
     <classes>
         <class className="IMSPasscodeViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/IMSPasscodeViewController.h"/>
             <relationships>
+                <relationship kind="action" name="doneButtonAction:"/>
                 <relationship kind="action" name="textFieldTextDidChange:" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="passcodeOneField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="passcodeTwoField" candidateClass="UITextField"/>

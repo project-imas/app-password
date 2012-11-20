@@ -11,14 +11,10 @@
 #import "IMSViewController.h"
 #import "IMSPasscodeViewController.h"
 
-//static NSString * const IMSKeychainService = @"";
-//static NSString * const IMSKeychainService = @"";
-
 @interface IMSViewController ()
 
 @property (nonatomic, weak) IBOutlet UIButton *createPasscodeButton;
 @property (nonatomic, weak) IBOutlet UIButton *verifyPasscodeButton;
-@property (nonatomic, weak) IBOutlet UIButton *resetPasscodeButton;
 
 @end
 
@@ -37,7 +33,12 @@
 }
 
 - (IBAction)verifyPasscode:(id)sender {
-    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"IMSPasscodeStoryboard_iPhone" bundle:nil];
+    UINavigationController *navigationController = [storyboard instantiateViewControllerWithIdentifier:@"VerifyPasscodeViewController"];
+    IMSPasscodeViewController *passcodeController = [[navigationController viewControllers] objectAtIndex:0];
+    passcodeController.target = self;
+    passcodeController.action = @selector(passcodeController:verifyPasscode:);
+    [self presentViewController:navigationController animated:YES completion:nil];
 }
 
 - (IBAction)resetPasscode:(id)sender {
@@ -53,12 +54,17 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (void)passcodeController:(IMSPasscodeViewController *)controller verifyPasscode:(NSString *)passcode {
+    if (IMSCryptoManagerUnlockWithPasscode(passcode)) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
+}
+
 #pragma mark - object methods
 
 - (void)updateButtonEnabledStates {
     BOOL hasPasscode = IMSCryptoManagerHasPasscode();
     self.createPasscodeButton.enabled = !hasPasscode;
-    self.resetPasscodeButton.enabled = hasPasscode;
     self.verifyPasscodeButton.enabled = hasPasscode;
 }
 
