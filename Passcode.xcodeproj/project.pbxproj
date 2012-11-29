@@ -19,7 +19,7 @@
 		3B2907C1164BFFD50028C2CE /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B2907BF164BFFD50028C2CE /* MainStoryboard.storyboard */; };
 		3B2907C7164BFFD50028C2CE /* IMSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B2907C6164BFFD50028C2CE /* IMSViewController.m */; };
 		3B2907CE164C003B0028C2CE /* IMSPasscodeStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B2907CD164C003B0028C2CE /* IMSPasscodeStoryboard_iPhone.storyboard */; };
-		3B2907D5164C02460028C2CE /* IMSPasscodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B2907D4164C02460028C2CE /* IMSPasscodeViewController.m */; };
+		3B2907D5164C02460028C2CE /* IMSPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B2907D4164C02460028C2CE /* IMSPasswordViewController.m */; };
 		3BEEB71B1652E60400642ECE /* libSecureFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BEEB7151652E0A600642ECE /* libSecureFoundation.a */; };
 		3BEEB71D1652E7FB00642ECE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BEEB71C1652E7FB00642ECE /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
@@ -66,8 +66,8 @@
 		3B2907C5164BFFD50028C2CE /* IMSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMSViewController.h; sourceTree = "<group>"; };
 		3B2907C6164BFFD50028C2CE /* IMSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IMSViewController.m; sourceTree = "<group>"; };
 		3B2907CD164C003B0028C2CE /* IMSPasscodeStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = IMSPasscodeStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		3B2907D3164C02460028C2CE /* IMSPasscodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMSPasscodeViewController.h; sourceTree = "<group>"; };
-		3B2907D4164C02460028C2CE /* IMSPasscodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMSPasscodeViewController.m; sourceTree = "<group>"; };
+		3B2907D3164C02460028C2CE /* IMSPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMSPasswordViewController.h; sourceTree = "<group>"; };
+		3B2907D4164C02460028C2CE /* IMSPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMSPasswordViewController.m; sourceTree = "<group>"; };
 		3BEEB70C1652E0A600642ECE /* SecureFoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SecureFoundation.xcodeproj; path = vendor/securefoundation/SecureFoundation.xcodeproj; sourceTree = "<group>"; };
 		3BEEB71C1652E7FB00642ECE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -148,8 +148,8 @@
 		3B2907D6164C024F0028C2CE /* Reusable */ = {
 			isa = PBXGroup;
 			children = (
-				3B2907D3164C02460028C2CE /* IMSPasscodeViewController.h */,
-				3B2907D4164C02460028C2CE /* IMSPasscodeViewController.m */,
+				3B2907D3164C02460028C2CE /* IMSPasswordViewController.h */,
+				3B2907D4164C02460028C2CE /* IMSPasswordViewController.m */,
 				3B2907CD164C003B0028C2CE /* IMSPasscodeStoryboard_iPhone.storyboard */,
 			);
 			name = Reusable;
@@ -259,7 +259,7 @@
 				3B2907B4164BFFD50028C2CE /* main.m in Sources */,
 				3B2907B8164BFFD50028C2CE /* IMSAppDelegate.m in Sources */,
 				3B2907C7164BFFD50028C2CE /* IMSViewController.m in Sources */,
-				3B2907D5164C02460028C2CE /* IMSPasscodeViewController.m in Sources */,
+				3B2907D5164C02460028C2CE /* IMSPasswordViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

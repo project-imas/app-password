@@ -9,7 +9,7 @@
 #import <SecureFoundation/SecureFoundation.h>
 
 #import "IMSViewController.h"
-#import "IMSPasscodeViewController.h"
+#import "IMSPasswordViewController.h"
 
 @interface IMSViewController ()
 
@@ -22,20 +22,20 @@
 
 #pragma mark - button actions
 
-- (IBAction)createPasscode:(id)sender {
+- (IBAction)createPassword:(id)sender {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"IMSPasscodeStoryboard_iPhone" bundle:nil];
     UINavigationController *navigationController = [storyboard instantiateInitialViewController];
-    IMSPasscodeViewController *passcodeController = [[navigationController viewControllers] objectAtIndex:0];
+    IMSPasswordViewController *passcodeController = [[navigationController viewControllers] objectAtIndex:0];
     passcodeController.target = self;
     passcodeController.action = @selector(passcodeController:didCreatePasscode:);
-    passcodeController.passcodeSecurityPattern = @"^.*(?=.*[a-zA-Z])(?=.*[0-9])(?=.{6,}).*$";
+    passcodeController.passwordSecurityPattern = @"^.*(?=.*[a-zA-Z])(?=.*[0-9])(?=.{6,}).*$";
     [self presentViewController:navigationController animated:YES completion:nil];
 }
 
-- (IBAction)verifyPasscode:(id)sender {
+- (IBAction)verifyPassword:(id)sender {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"IMSPasscodeStoryboard_iPhone" bundle:nil];
     UINavigationController *navigationController = [storyboard instantiateViewControllerWithIdentifier:@"VerifyPasscodeViewController"];
-    IMSPasscodeViewController *passcodeController = [[navigationController viewControllers] objectAtIndex:0];
+    IMSPasswordViewController *passcodeController = [[navigationController viewControllers] objectAtIndex:0];
     passcodeController.target = self;
     passcodeController.action = @selector(passcodeController:verifyPasscode:);
     [self presentViewController:navigationController animated:YES completion:nil];
@@ -45,16 +45,16 @@
     
 }
 
-#pragma mark - passcode callbacks
+#pragma mark - password callbacks
 
-- (void)passcodeController:(IMSPasscodeViewController *)controller didCreatePasscode:(NSString *)passcode {
+- (void)passcodeController:(IMSPasswordViewController *)controller didCreatePasscode:(NSString *)passcode {
     IMSCryptoManagerStoreTemporaryPasscode(passcode);
     IMSCryptoManagerFinalize();
     [self updateButtonEnabledStates];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)passcodeController:(IMSPasscodeViewController *)controller verifyPasscode:(NSString *)passcode {
+- (void)passcodeController:(IMSPasswordViewController *)controller verifyPasscode:(NSString *)passcode {
     if (IMSCryptoManagerUnlockWithPasscode(passcode)) {
         [self dismissViewControllerAnimated:YES completion:nil];
     }

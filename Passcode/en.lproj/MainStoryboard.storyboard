@@ -31,7 +31,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="createPasscode:" destination="2" eventType="touchUpInside" id="nGe-Wc-DV3"/>
+                                            <action selector="createPassword:" destination="2" eventType="touchUpInside" id="MRh-tL-Rst"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hhL-gc-dd8">
@@ -49,7 +49,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="verifyPasscode:" destination="2" eventType="touchUpInside" id="OlV-Dg-xHg"/>
+                                            <action selector="verifyPassword:" destination="2" eventType="touchUpInside" id="WQe-HU-X1i"/>
                                         </connections>
                                     </button>
                                 </subviews>

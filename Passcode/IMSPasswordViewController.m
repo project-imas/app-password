@@ -1,5 +1,5 @@
 //
-//  IMSPasscodeViewController.m
+//  IMSPasswordViewController.m
 //
 //  Created by Caleb Davenport on 11/8/12.
 //  Copyright (c) 2012 The MITRE Corporation. All rights reserved.
@@ -7,17 +7,17 @@
 
 #import <AudioToolbox/AudioToolbox.h>
 
-#import "IMSPasscodeViewController.h"
+#import "IMSPasswordViewController.h"
 
-@interface IMSPasscodeViewController ()
+@interface IMSPasswordViewController ()
 
-@property (nonatomic, weak) IBOutlet UITextField *passcodeOneField;
-@property (nonatomic, weak) IBOutlet UITextField *passcodeTwoField;
-@property (nonatomic, copy) IBOutletCollection(UITextField) NSArray *passcodeFields;
+@property (nonatomic, weak) IBOutlet UITextField *passwordOneField;
+@property (nonatomic, weak) IBOutlet UITextField *passwordTwoField;
+@property (nonatomic, copy) IBOutletCollection(UITextField) NSArray *passwordFields;
 
 @end
 
-@implementation IMSPasscodeViewController
+@implementation IMSPasswordViewController
 
 #pragma mark - object methods
 
@@ -25,12 +25,12 @@
     self = [super initWithCoder:coder];
     if (self) {
         _mode = 0;
-        self.passcodeSecurityPattern = @"^.*(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{6,}).*$";
+        self.passwordSecurityPattern = @"^.*(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{6,}).*$";
     }
     return self;
 }
 
-- (void)setMode:(IMSPasscodeViewControllerMode)mode {
+- (void)setMode:(IMSPasswordViewControllerMode)mode {
     NSParameterAssert(mode > 0 && mode < 3);
     if (_mode == 0) { _mode = mode; }
 }
@@ -45,13 +45,13 @@
     
     // ui
     self.navigationItem.rightBarButtonItem.enabled = NO;
-    [self.passcodeFields enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+    [self.passwordFields enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         [obj setSecureTextEntry:YES];
         [obj setEnablesReturnKeyAutomatically:YES];
         [obj setDelegate:self];
         [obj addTarget:self action:@selector(textFieldTextDidChange:) forControlEvents:UIControlEventEditingChanged];
     }];
-    [self.passcodeOneField becomeFirstResponder];
+    [self.passwordOneField becomeFirstResponder];
     [self.navigationItem.rightBarButtonItem setAction:@selector(doneButtonAction:)];
     
 }
@@ -68,23 +68,23 @@
 #pragma mark - button actions
 
 - (IBAction)doneButtonAction:(id)sender {
-    if (self.mode == IMSPasscodeViewControllerModeCreate) {
-        [self createPasscode];
+    if (self.mode == IMSPasswordViewControllerModeCreate) {
+        [self createPassword];
     }
-    else if (self.mode == IMSPasscodeViewControllerModeVerify) {
-        [self verifyPasscode];
+    else if (self.mode == IMSPasswordViewControllerModeVerify) {
+        [self verifyPassword];
     }
 }
 
-- (void)createPasscode {
-    NSParameterAssert(self.mode == IMSPasscodeViewControllerModeCreate);
-    NSString *passcode = [self.passcodeOneField.text copy];
-    if ([passcode isEqualToString:self.passcodeTwoField.text]) {
-        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", self.passcodeSecurityPattern];
-        if ([predicate evaluateWithObject:passcode]) {
+- (void)createPassword {
+    NSParameterAssert(self.mode == IMSPasswordViewControllerModeCreate);
+    NSString *password = [self.passwordOneField.text copy];
+    if ([password isEqualToString:self.passwordTwoField.text]) {
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", self.passwordSecurityPattern];
+        if ([predicate evaluateWithObject:password]) {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-            [self.target performSelector:self.action withObject:self withObject:passcode];
+            [self.target performSelector:self.action withObject:self withObject:password];
 #pragma clang diagnostic pop
         }
         else {
@@ -98,10 +98,10 @@
         }
     }
     else {
-        [self.passcodeFields enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        [self.passwordFields enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             [obj setText:nil];
         }];
-        [self.passcodeOneField becomeFirstResponder];
+        [self.passwordOneField becomeFirstResponder];
         [[[UIAlertView alloc]
           initWithTitle:@"The provided passcodes do not match."
           message:nil
@@ -112,15 +112,15 @@
     }
 }
 
-- (void)verifyPasscode {
-    NSParameterAssert(self.mode == IMSPasscodeViewControllerModeVerify);
-    NSString *passcode = [self.passcodeOneField.text copy];
+- (void)verifyPassword {
+    NSParameterAssert(self.mode == IMSPasswordViewControllerModeVerify);
+    NSString *password = [self.passwordOneField.text copy];
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-    BOOL valid = (BOOL)[self.target performSelector:self.action withObject:self withObject:passcode];
+    BOOL valid = (BOOL)[self.target performSelector:self.action withObject:self withObject:password];
 #pragma clang diagnostic pop
     if (!valid) {
-        self.passcodeOneField.text = nil;
+        self.passwordOneField.text = nil;
         AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
         [[[UIAlertView alloc]
           initWithTitle:@"MESSAGE"
@@ -135,24 +135,24 @@
 #pragma mark - text field methods
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    if (self.mode == IMSPasscodeViewControllerModeVerify) {
-        [self verifyPasscode];
+    if (self.mode == IMSPasswordViewControllerModeVerify) {
+        [self verifyPassword];
     }
-    else if (self.mode == IMSPasscodeViewControllerModeCreate) {
-        if (textField == self.passcodeOneField) {
-            [self.passcodeTwoField becomeFirstResponder];
+    else if (self.mode == IMSPasswordViewControllerModeCreate) {
+        if (textField == self.passwordOneField) {
+            [self.passwordTwoField becomeFirstResponder];
         }
         else {
-            [self createPasscode];
+            [self createPassword];
         }
     }
     return NO;
 }
 
 - (IBAction)textFieldTextDidChange:(UITextField *)sender {
-    BOOL enabled = ([self.passcodeOneField.text length] > 0);
-    if (self.mode == IMSPasscodeViewControllerModeCreate) {
-        enabled = (enabled && [self.passcodeTwoField.text length] > 0);
+    BOOL enabled = ([self.passwordOneField.text length] > 0);
+    if (self.mode == IMSPasswordViewControllerModeCreate) {
+        enabled = (enabled && [self.passwordTwoField.text length] > 0);
     }
     self.navigationItem.rightBarButtonItem.enabled = enabled;
 }
