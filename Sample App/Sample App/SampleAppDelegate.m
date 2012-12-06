@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 The MITRE Corporation. All rights reserved.
 //
 
-#import "IMSAppDelegate.h"
+#import "SampleAppDelegate.h"
 
-@implementation IMSAppDelegate
+@implementation SampleAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

@@ -41,7 +41,7 @@
     [super viewDidLoad];
     NSParameterAssert(self.mode != 0);
     NSParameterAssert(self.target != nil);
-    NSParameterAssert(self.action != 0);
+    NSParameterAssert(self.action != nil);
     
     // ui
     self.navigationItem.rightBarButtonItem.enabled = NO;
@@ -149,7 +149,7 @@
     return NO;
 }
 
-- (IBAction)textFieldTextDidChange:(UITextField *)sender {
+- (void)textFieldTextDidChange:(UITextField *)sender {
     BOOL enabled = ([self.passwordOneField.text length] > 0);
     if (self.mode == IMSPasswordViewControllerModeCreate) {
         enabled = (enabled && [self.passwordTwoField.text length] > 0);

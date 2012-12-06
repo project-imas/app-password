@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IMSViewController : UIViewController
+@interface SampleViewController : UIViewController
 
 @end
