@@ -44,9 +44,12 @@
 - (IBAction)resetPasscode:(id)sender {
     IMSCryptoManagerPurge();
     NSArray *accounts = [IMSKeychain accounts];
-    [accounts enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-//        [IMSKeychain deletePasswordForService:<#(NSString *)#> account:<#(NSString *)#>];
+    [accounts enumerateObjectsUsingBlock:^(NSDictionary *account, NSUInteger idx, BOOL *stop) {
+        NSString *serviceName = account[(__bridge NSString *)kSecAttrService];
+        NSString *accountName = account[(__bridge NSString *)kSecAttrAccount];
+        [IMSKeychain deletePasswordForService:accountName account:serviceName];
     }];
+    [IMSKeychain synchronize];
     [self updateButtonEnabledStates];
 }
 
