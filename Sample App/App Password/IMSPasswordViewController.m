@@ -27,10 +27,10 @@
     dispatch_once(&token, ^{
         NSMutableString *name = [NSMutableString stringWithString:[self storyboardBaseName]];
         if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-            [name appendString:@"iPad"];
+            [name appendString:@"_iPad"];
         }
         else {
-            [name appendString:@"iPhone"];
+            [name appendString:@"_iPhone"];
         }
         storyboard = [UIStoryboard storyboardWithName:name bundle:nil];
     });
@@ -38,7 +38,7 @@
 }
 
 + (NSString *)storyboardBaseName {
-    return @"IMSPasswordStoryboard_";
+    return @"IMSPasswordStoryboard";
 }
 
 #pragma mark - object methods

@@ -18,6 +18,10 @@
 
 @implementation SamplePasswordViewController
 
++ (NSString *)storyboardBaseName {
+    return @"SamplePasswordStoryboard";
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -28,6 +32,10 @@
     layer.shadowOffset = CGSizeMake(0.0, 2.0);
     layer.shadowOpacity = 0.35;
     
+}
+
+- (IBAction)cancelButtonAction:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
