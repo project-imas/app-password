@@ -62,10 +62,12 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)passwordController:(IMSPasswordViewController *)controller verifyPassword:(NSString *)password {
+- (BOOL)passwordController:(IMSPasswordViewController *)controller verifyPassword:(NSString *)password {
     if (IMSCryptoManagerUnlockWithPasscode(password)) {
         [self dismissViewControllerAnimated:YES completion:nil];
+        return YES;
     }
+    return NO;
 }
 
 #pragma mark - object methods

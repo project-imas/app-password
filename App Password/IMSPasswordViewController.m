@@ -19,6 +19,38 @@
 
 @implementation IMSPasswordViewController
 
+#pragma mark - class methods
+
++ (UIStoryboard *)storyboard {
+    static UIStoryboard *storyboard = nil;
+    static dispatch_once_t token;
+    dispatch_once(&token, ^{
+        NSMutableString *name = [NSMutableString stringWithString:[self storyboardBaseName]];
+        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+            [name appendString:@"_iPad"];
+        }
+        else {
+            [name appendString:@"_iPhone"];
+        }
+        storyboard = [UIStoryboard storyboardWithName:name bundle:nil];
+    });
+    return storyboard;
+}
+
++ (NSString *)storyboardBaseName {
+    return @"IMSPasswordStoryboard";
+}
+
++ (NSString *)localizedStringForKey:(NSString *)key {
+    static NSBundle *bundle = nil;
+    static dispatch_once_t token;
+    dispatch_once(&token, ^{
+        NSURL *URL = [[NSBundle mainBundle] URLForResource:@"IMSPassword" withExtension:@"bundle"];
+        bundle = [NSBundle bundleWithURL:URL];
+    });
+    return [bundle localizedStringForKey:key value:nil table:nil];
+}
+
 #pragma mark - object methods
 
 - (id)initWithCoder:(NSCoder *)coder {
@@ -89,10 +121,10 @@
         }
         else {
             [[[UIAlertView alloc]
-              initWithTitle:@"The passcode does not meet security requirements."
+              initWithTitle:[[self class] localizedStringForKey:@"CREATE_PASSWORD_SECURITY_POLICY_ERROR_TITLE"]
               message:nil
               delegate:nil
-              cancelButtonTitle:@"OK"
+              cancelButtonTitle:[[self class] localizedStringForKey:@"OK_BUTTON_TITLE"]
               otherButtonTitles:nil]
              show];
         }
@@ -103,10 +135,10 @@
         }];
         [self.passwordOneField becomeFirstResponder];
         [[[UIAlertView alloc]
-          initWithTitle:@"The provided passcodes do not match."
+          initWithTitle:[[self class] localizedStringForKey:@"CREATE_PASSWORD_MISMATCH_ERROR_TITLE"]
           message:nil
           delegate:nil
-          cancelButtonTitle:@"OK"
+          cancelButtonTitle:[[self class] localizedStringForKey:@"OK_BUTTON_TITLE"]
           otherButtonTitles:nil]
          show];
     }
@@ -123,10 +155,10 @@
         self.passwordOneField.text = nil;
         AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
         [[[UIAlertView alloc]
-          initWithTitle:@"MESSAGE"
+          initWithTitle:[[self class] localizedStringForKey:@"VERIFY_PASSWORD_WRONG_TITLE"]
           message:nil
           delegate:nil
-          cancelButtonTitle:@"OK"
+          cancelButtonTitle:[[self class] localizedStringForKey:@"OK_BUTTON_TITLE"]
           otherButtonTitles:nil]
          show];
     }

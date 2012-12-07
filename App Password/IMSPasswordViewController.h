@@ -72,4 +72,39 @@ typedef NS_ENUM(short, IMSPasswordViewControllerMode) {
  */
 @property (nonatomic, copy) NSString *passwordSecurityPattern;
 
+/*
+ 
+ Returns the base name of the storyboard file containing the password input
+ user interface. This is used by the default implementation of `storyboard` to
+ load a file named <base_name>_iPhone or <base_name>_iPad based on the device.
+ 
+ For example, returning "SomeStoryboard" here will result in
+ "SomeStoryboard_iPhone" or "SomeStoryboard_iPad" based on the device.
+ 
+ Override this in a subclass to load a custom storyboard. You do not need to
+ call super.
+ 
+ */
++ (NSString *)storyboardBaseName;
+
+/*
+ 
+ Returns the actual storyboard used to load the password user interface.
+ 
+ Override this to provide a custom file lookup instead of relying on the
+ default implementation and `storyboardBaseName`. You do not neet to call
+ super.
+ 
+ */
++ (UIStoryboard *)storyboard;
+
+/*
+ 
+ By default, this method performs a localized string lookup in
+ `IMSPassword.bundle`. Override this to return custom strings or perform a
+ custom lookup. You do not need to call super.
+ 
+ */
++ (NSString *)localizedStringForKey:(NSString *)key;
+
 @end

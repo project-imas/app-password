@@ -18,12 +18,13 @@
 		3B2907BE164BFFD50028C2CE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B2907BD164BFFD50028C2CE /* Default-568h@2x.png */; };
 		3B2907C1164BFFD50028C2CE /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B2907BF164BFFD50028C2CE /* MainStoryboard.storyboard */; };
 		3B2907C7164BFFD50028C2CE /* SampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B2907C6164BFFD50028C2CE /* SampleViewController.m */; };
-		3B7F166D1671329100A9B236 /* IMSPasswordStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7F166A1671329100A9B236 /* IMSPasswordStoryboard_iPhone.storyboard */; };
-		3B7F166E1671329100A9B236 /* IMSPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7F166C1671329100A9B236 /* IMSPasswordViewController.m */; };
-		3B7F1670167135F900A9B236 /* IMSPasswordStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7F166F167135F900A9B236 /* IMSPasswordStoryboard_iPad.storyboard */; };
 		3B7F167C167149EF00A9B236 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B7F167B167149EF00A9B236 /* Security.framework */; };
 		3B7F167E1671674900A9B236 /* SamplePasswordStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7F167D1671674900A9B236 /* SamplePasswordStoryboard_iPhone.storyboard */; };
 		3B7F1680167169DB00A9B236 /* SamplePasswordStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7F167F167169DB00A9B236 /* SamplePasswordStoryboard_iPad.storyboard */; };
+		3B7F16931671767400A9B236 /* IMSPassword.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3B7F168E1671767400A9B236 /* IMSPassword.bundle */; };
+		3B7F16941671767400A9B236 /* IMSPasswordStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7F168F1671767400A9B236 /* IMSPasswordStoryboard_iPad.storyboard */; };
+		3B7F16951671767400A9B236 /* IMSPasswordStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7F16901671767400A9B236 /* IMSPasswordStoryboard_iPhone.storyboard */; };
+		3B7F16961671767400A9B236 /* IMSPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7F16921671767400A9B236 /* IMSPasswordViewController.m */; };
 		3BDD2A941667EC7600F0BE44 /* SamplePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDD2A931667EC7600F0BE44 /* SamplePasswordViewController.m */; };
 		3BEEB71B1652E60400642ECE /* libSecureFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BEEB7151652E0A600642ECE /* libSecureFoundation.a */; };
 		3BEEB71D1652E7FB00642ECE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BEEB71C1652E7FB00642ECE /* AudioToolbox.framework */; };
@@ -70,13 +71,14 @@
 		3B2907C0164BFFD50028C2CE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		3B2907C5164BFFD50028C2CE /* SampleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SampleViewController.h; sourceTree = "<group>"; };
 		3B2907C6164BFFD50028C2CE /* SampleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleViewController.m; sourceTree = "<group>"; };
-		3B7F166A1671329100A9B236 /* IMSPasswordStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = IMSPasswordStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		3B7F166B1671329100A9B236 /* IMSPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMSPasswordViewController.h; sourceTree = "<group>"; };
-		3B7F166C1671329100A9B236 /* IMSPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMSPasswordViewController.m; sourceTree = "<group>"; };
-		3B7F166F167135F900A9B236 /* IMSPasswordStoryboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = IMSPasswordStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		3B7F167B167149EF00A9B236 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		3B7F167D1671674900A9B236 /* SamplePasswordStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SamplePasswordStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		3B7F167F167169DB00A9B236 /* SamplePasswordStoryboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SamplePasswordStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		3B7F168E1671767400A9B236 /* IMSPassword.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IMSPassword.bundle; sourceTree = "<group>"; };
+		3B7F168F1671767400A9B236 /* IMSPasswordStoryboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = IMSPasswordStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		3B7F16901671767400A9B236 /* IMSPasswordStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = IMSPasswordStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		3B7F16911671767400A9B236 /* IMSPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMSPasswordViewController.h; sourceTree = "<group>"; };
+		3B7F16921671767400A9B236 /* IMSPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMSPasswordViewController.m; sourceTree = "<group>"; };
 		3BDD2A921667EC7600F0BE44 /* SamplePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SamplePasswordViewController.h; sourceTree = "<group>"; };
 		3BDD2A931667EC7600F0BE44 /* SamplePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SamplePasswordViewController.m; sourceTree = "<group>"; };
 		3BEEB70C1652E0A600642ECE /* SecureFoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SecureFoundation.xcodeproj; path = vendor/securefoundation/SecureFoundation.xcodeproj; sourceTree = "<group>"; };
@@ -103,7 +105,7 @@
 		3B290798164BFFD50028C2CE = {
 			isa = PBXGroup;
 			children = (
-				3B7F16691671329100A9B236 /* App Password */,
+				3B7F168D1671767400A9B236 /* App Password */,
 				3B2907AD164BFFD50028C2CE /* Sample App */,
 				3B8EC6EF1671315A0056C176 /* Vendor */,
 				3B2907A6164BFFD50028C2CE /* Frameworks */,
@@ -162,15 +164,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		3B7F16691671329100A9B236 /* App Password */ = {
+		3B7F168D1671767400A9B236 /* App Password */ = {
 			isa = PBXGroup;
 			children = (
-				3B7F166B1671329100A9B236 /* IMSPasswordViewController.h */,
-				3B7F166C1671329100A9B236 /* IMSPasswordViewController.m */,
-				3B7F166F167135F900A9B236 /* IMSPasswordStoryboard_iPad.storyboard */,
-				3B7F166A1671329100A9B236 /* IMSPasswordStoryboard_iPhone.storyboard */,
+				3B7F168E1671767400A9B236 /* IMSPassword.bundle */,
+				3B7F168F1671767400A9B236 /* IMSPasswordStoryboard_iPad.storyboard */,
+				3B7F16901671767400A9B236 /* IMSPasswordStoryboard_iPhone.storyboard */,
+				3B7F16911671767400A9B236 /* IMSPasswordViewController.h */,
+				3B7F16921671767400A9B236 /* IMSPasswordViewController.m */,
 			);
-			path = "App Password";
+			name = "App Password";
+			path = "../App Password";
 			sourceTree = "<group>";
 		};
 		3B8EC6EF1671315A0056C176 /* Vendor */ = {
@@ -271,10 +275,11 @@
 				3B2907BC164BFFD50028C2CE /* Default@2x.png in Resources */,
 				3B2907BE164BFFD50028C2CE /* Default-568h@2x.png in Resources */,
 				3B2907C1164BFFD50028C2CE /* MainStoryboard.storyboard in Resources */,
-				3B7F166D1671329100A9B236 /* IMSPasswordStoryboard_iPhone.storyboard in Resources */,
-				3B7F1670167135F900A9B236 /* IMSPasswordStoryboard_iPad.storyboard in Resources */,
 				3B7F167E1671674900A9B236 /* SamplePasswordStoryboard_iPhone.storyboard in Resources */,
 				3B7F1680167169DB00A9B236 /* SamplePasswordStoryboard_iPad.storyboard in Resources */,
+				3B7F16931671767400A9B236 /* IMSPassword.bundle in Resources */,
+				3B7F16941671767400A9B236 /* IMSPasswordStoryboard_iPad.storyboard in Resources */,
+				3B7F16951671767400A9B236 /* IMSPasswordStoryboard_iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +294,7 @@
 				3B2907B8164BFFD50028C2CE /* SampleAppDelegate.m in Sources */,
 				3B2907C7164BFFD50028C2CE /* SampleViewController.m in Sources */,
 				3BDD2A941667EC7600F0BE44 /* SamplePasswordViewController.m in Sources */,
-				3B7F166E1671329100A9B236 /* IMSPasswordViewController.m in Sources */,
+				3B7F16961671767400A9B236 /* IMSPasswordViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

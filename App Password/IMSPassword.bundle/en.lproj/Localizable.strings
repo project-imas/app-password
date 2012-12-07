@@ -1,0 +1,12 @@
+
+//
+"OK_BUTTON_TITLE" = "OK";
+
+//
+"VERIFY_PASSWORD_WRONG_TITLE" = "The provided password is incorrect.";
+
+//
+"CREATE_PASSWORD_MISMATCH_ERROR_TITLE" = "The provided passcodes do not match.";
+
+//
+"CREATE_PASSWORD_SECURITY_POLICY_ERROR_TITLE" = "The password does not meet security requirements.";
