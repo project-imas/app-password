@@ -24,7 +24,7 @@
 
 - (IBAction)createPassword:(id)sender {
     UIStoryboard *storyboard = [SamplePasswordViewController storyboard];
-    UINavigationController *navigationController = [storyboard instantiateInitialViewController];
+    UINavigationController *navigationController = [storyboard instantiateViewControllerWithIdentifier:@"CreatePasswordViewController"];
     SamplePasswordViewController *passwordController = [[navigationController viewControllers] objectAtIndex:0];
     passwordController.target = self;
     passwordController.action = @selector(passwordController:didCreatePassword:);
@@ -47,7 +47,7 @@
     [accounts enumerateObjectsUsingBlock:^(NSDictionary *account, NSUInteger idx, BOOL *stop) {
         NSString *serviceName = account[(__bridge NSString *)kSecAttrService];
         NSString *accountName = account[(__bridge NSString *)kSecAttrAccount];
-        [IMSKeychain deletePasswordForService:accountName account:serviceName];
+        [IMSKeychain deletePasswordForService:serviceName account:accountName];
     }];
     [IMSKeychain synchronize];
     [self updateButtonEnabledStates];
@@ -78,7 +78,7 @@
     }
     else {
         self.createPasswordButton.enabled = NO;
-        self.verifyPasswordButton.enabled = NO;
+        self.verifyPasswordButton.enabled = YES;
     }
 }
 
