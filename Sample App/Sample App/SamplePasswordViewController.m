@@ -28,9 +28,9 @@
     CALayer *layer = self.passwordFieldContainerView.layer;
     layer.cornerRadius = 5.0;
     layer.shadowColor = [[UIColor blackColor] CGColor];
-    layer.shadowRadius = 5.0;
+    layer.shadowRadius = 4.0;
     layer.shadowOffset = CGSizeMake(0.0, 2.0);
-    layer.shadowOpacity = 0.35;
+    layer.shadowOpacity = 0.3;
     
 }
 
