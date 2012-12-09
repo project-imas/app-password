@@ -1,3 +1,6 @@
 [submodule "Sample App/vendor/securefoundation"]
 	path = Sample App/vendor/securefoundation
 	url = git@barrel.mitre.org:imas/securefoundation.git
+[submodule "Sample App/vendor/kif"]
+	path = Sample App/vendor/kif
+	url = https://github.com/square/KIF.git
