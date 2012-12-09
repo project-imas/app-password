@@ -7,6 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B21E80A1675167800F87886 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B2907B3164BFFD50028C2CE /* main.m */; };
+		3B21E80B1675167800F87886 /* SampleAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B2907B7164BFFD50028C2CE /* SampleAppDelegate.m */; };
+		3B21E80C1675167800F87886 /* SampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B2907C6164BFFD50028C2CE /* SampleViewController.m */; };
+		3B21E80D1675167800F87886 /* SamplePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDD2A931667EC7600F0BE44 /* SamplePasswordViewController.m */; };
+		3B21E80E1675167800F87886 /* IMSPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7F16921671767400A9B236 /* IMSPasswordViewController.m */; };
+		3B21E8101675167800F87886 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B7F167B167149EF00A9B236 /* Security.framework */; };
+		3B21E8111675167800F87886 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BEEB71C1652E7FB00642ECE /* AudioToolbox.framework */; };
+		3B21E8121675167800F87886 /* libSecureFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BEEB7151652E0A600642ECE /* libSecureFoundation.a */; };
+		3B21E8131675167800F87886 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2907A7164BFFD50028C2CE /* UIKit.framework */; };
+		3B21E8141675167800F87886 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2907A9164BFFD50028C2CE /* Foundation.framework */; };
+		3B21E8151675167800F87886 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2907AB164BFFD50028C2CE /* CoreGraphics.framework */; };
+		3B21E8171675167800F87886 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B2907B0164BFFD50028C2CE /* InfoPlist.strings */; };
+		3B21E8181675167800F87886 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B2907B9164BFFD50028C2CE /* Default.png */; };
+		3B21E8191675167800F87886 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B2907BB164BFFD50028C2CE /* Default@2x.png */; };
+		3B21E81A1675167800F87886 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B2907BD164BFFD50028C2CE /* Default-568h@2x.png */; };
+		3B21E81B1675167800F87886 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B2907BF164BFFD50028C2CE /* MainStoryboard.storyboard */; };
+		3B21E81C1675167800F87886 /* SamplePasswordStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7F167D1671674900A9B236 /* SamplePasswordStoryboard_iPhone.storyboard */; };
+		3B21E81D1675167800F87886 /* SamplePasswordStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7F167F167169DB00A9B236 /* SamplePasswordStoryboard_iPad.storyboard */; };
+		3B21E81E1675167800F87886 /* IMSPassword.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3B7F168E1671767400A9B236 /* IMSPassword.bundle */; };
+		3B21E81F1675167800F87886 /* IMSPasswordStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7F168F1671767400A9B236 /* IMSPasswordStoryboard_iPad.storyboard */; };
+		3B21E8201675167800F87886 /* IMSPasswordStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7F16901671767400A9B236 /* IMSPasswordStoryboard_iPhone.storyboard */; };
+		3B21E82D167518EF00F87886 /* IMSTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B21E82C167518EF00F87886 /* IMSTestController.m */; };
+		3B21E83016751A5300F87886 /* libKIF.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B21E8051675166900F87886 /* libKIF.a */; };
+		3B21E83316751ABE00F87886 /* IMSTestScenario.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B21E83216751ABE00F87886 /* IMSTestScenario.m */; };
+		3B21E83616751BB800F87886 /* IMSTestStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B21E83516751BB800F87886 /* IMSTestStep.m */; };
 		3B2907A8164BFFD50028C2CE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2907A7164BFFD50028C2CE /* UIKit.framework */; };
 		3B2907AA164BFFD50028C2CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2907A9164BFFD50028C2CE /* Foundation.framework */; };
 		3B2907AC164BFFD50028C2CE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2907AB164BFFD50028C2CE /* CoreGraphics.framework */; };
@@ -31,6 +56,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		3B21E8041675166900F87886 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B21E7FD1675166900F87886 /* KIF.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AAB07268139719AC008AF393;
+			remoteInfo = KIF;
+		};
+		3B21E8081675167800F87886 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3BEEB70C1652E0A600642ECE /* SecureFoundation.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B89357B162C92F1003750B6;
+			remoteInfo = SecureFoundation;
+		};
+		3B21E82E16751A5000F87886 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B21E7FD1675166900F87886 /* KIF.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = AAB07267139719AC008AF393;
+			remoteInfo = KIF;
+		};
 		3BEEB7141652E0A600642ECE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3BEEB70C1652E0A600642ECE /* SecureFoundation.xcodeproj */;
@@ -55,6 +101,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3B21E7FD1675166900F87886 /* KIF.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KIF.xcodeproj; path = vendor/kif/KIF.xcodeproj; sourceTree = "<group>"; };
+		3B21E8241675167800F87886 /* Password Tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Password Tests.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B21E8261675167900F87886 /* Password Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Password Tests-Info.plist"; sourceTree = "<group>"; };
+		3B21E82B167518EF00F87886 /* IMSTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMSTestController.h; sourceTree = "<group>"; };
+		3B21E82C167518EF00F87886 /* IMSTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMSTestController.m; sourceTree = "<group>"; };
+		3B21E83116751ABE00F87886 /* IMSTestScenario.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMSTestScenario.h; sourceTree = "<group>"; };
+		3B21E83216751ABE00F87886 /* IMSTestScenario.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMSTestScenario.m; sourceTree = "<group>"; };
+		3B21E83416751BB800F87886 /* IMSTestStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMSTestStep.h; sourceTree = "<group>"; };
+		3B21E83516751BB800F87886 /* IMSTestStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMSTestStep.m; sourceTree = "<group>"; };
 		3B2907A3164BFFD50028C2CE /* Password.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Password.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B2907A7164BFFD50028C2CE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3B2907A9164BFFD50028C2CE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -86,6 +141,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3B21E80F1675167800F87886 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B21E83016751A5300F87886 /* libKIF.a in Frameworks */,
+				3B21E8101675167800F87886 /* Security.framework in Frameworks */,
+				3B21E8111675167800F87886 /* AudioToolbox.framework in Frameworks */,
+				3B21E8121675167800F87886 /* libSecureFoundation.a in Frameworks */,
+				3B21E8131675167800F87886 /* UIKit.framework in Frameworks */,
+				3B21E8141675167800F87886 /* Foundation.framework in Frameworks */,
+				3B21E8151675167800F87886 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3B2907A0164BFFD50028C2CE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -102,6 +171,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B21E7FE1675166900F87886 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3B21E8051675166900F87886 /* libKIF.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3B21E82A167518C500F87886 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3B21E82B167518EF00F87886 /* IMSTestController.h */,
+				3B21E82C167518EF00F87886 /* IMSTestController.m */,
+				3B21E83116751ABE00F87886 /* IMSTestScenario.h */,
+				3B21E83216751ABE00F87886 /* IMSTestScenario.m */,
+				3B21E83416751BB800F87886 /* IMSTestStep.h */,
+				3B21E83516751BB800F87886 /* IMSTestStep.m */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
 		3B290798164BFFD50028C2CE = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				3B2907A3164BFFD50028C2CE /* Password.app */,
+				3B21E8241675167800F87886 /* Password Tests.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -146,6 +237,7 @@
 				3B7F167D1671674900A9B236 /* SamplePasswordStoryboard_iPhone.storyboard */,
 				3B7F167F167169DB00A9B236 /* SamplePasswordStoryboard_iPad.storyboard */,
 				3B2907AE164BFFD50028C2CE /* Supporting Files */,
+				3B21E82A167518C500F87886 /* Tests */,
 			);
 			path = "Sample App";
 			sourceTree = "<group>";
@@ -153,6 +245,7 @@
 		3B2907AE164BFFD50028C2CE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3B21E8261675167900F87886 /* Password Tests-Info.plist */,
 				3B2907AF164BFFD50028C2CE /* Password-Info.plist */,
 				3B2907B0164BFFD50028C2CE /* InfoPlist.strings */,
 				3B2907B3164BFFD50028C2CE /* main.m */,
@@ -180,6 +273,7 @@
 		3B8EC6EF1671315A0056C176 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				3B21E7FD1675166900F87886 /* KIF.xcodeproj */,
 				3BEEB70C1652E0A600642ECE /* SecureFoundation.xcodeproj */,
 			);
 			name = Vendor;
@@ -197,6 +291,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		3B21E8061675167800F87886 /* Password Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B21E8211675167800F87886 /* Build configuration list for PBXNativeTarget "Password Tests" */;
+			buildPhases = (
+				3B21E8091675167800F87886 /* Sources */,
+				3B21E80F1675167800F87886 /* Frameworks */,
+				3B21E8161675167800F87886 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3B21E82F16751A5000F87886 /* PBXTargetDependency */,
+				3B21E8071675167800F87886 /* PBXTargetDependency */,
+			);
+			name = "Password Tests";
+			productName = Passcode;
+			productReference = 3B21E8241675167800F87886 /* Password Tests.app */;
+			productType = "com.apple.product-type.application";
+		};
 		3B2907A2164BFFD50028C2CE /* Password */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3B2907CA164BFFD50028C2CE /* Build configuration list for PBXNativeTarget "Password" */;
@@ -237,6 +350,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = 3B21E7FE1675166900F87886 /* Products */;
+					ProjectRef = 3B21E7FD1675166900F87886 /* KIF.xcodeproj */;
+				},
+				{
 					ProductGroup = 3BEEB70D1652E0A600642ECE /* Products */;
 					ProjectRef = 3BEEB70C1652E0A600642ECE /* SecureFoundation.xcodeproj */;
 				},
@@ -244,11 +361,19 @@
 			projectRoot = "";
 			targets = (
 				3B2907A2164BFFD50028C2CE /* Password */,
+				3B21E8061675167800F87886 /* Password Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		3B21E8051675166900F87886 /* libKIF.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libKIF.a;
+			remoteRef = 3B21E8041675166900F87886 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		3BEEB7151652E0A600642ECE /* libSecureFoundation.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -266,6 +391,23 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3B21E8161675167800F87886 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B21E8171675167800F87886 /* InfoPlist.strings in Resources */,
+				3B21E8181675167800F87886 /* Default.png in Resources */,
+				3B21E8191675167800F87886 /* Default@2x.png in Resources */,
+				3B21E81A1675167800F87886 /* Default-568h@2x.png in Resources */,
+				3B21E81B1675167800F87886 /* MainStoryboard.storyboard in Resources */,
+				3B21E81C1675167800F87886 /* SamplePasswordStoryboard_iPhone.storyboard in Resources */,
+				3B21E81D1675167800F87886 /* SamplePasswordStoryboard_iPad.storyboard in Resources */,
+				3B21E81E1675167800F87886 /* IMSPassword.bundle in Resources */,
+				3B21E81F1675167800F87886 /* IMSPasswordStoryboard_iPad.storyboard in Resources */,
+				3B21E8201675167800F87886 /* IMSPasswordStoryboard_iPhone.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3B2907A1164BFFD50028C2CE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -286,6 +428,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3B21E8091675167800F87886 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B21E80A1675167800F87886 /* main.m in Sources */,
+				3B21E80B1675167800F87886 /* SampleAppDelegate.m in Sources */,
+				3B21E80C1675167800F87886 /* SampleViewController.m in Sources */,
+				3B21E80D1675167800F87886 /* SamplePasswordViewController.m in Sources */,
+				3B21E80E1675167800F87886 /* IMSPasswordViewController.m in Sources */,
+				3B21E82D167518EF00F87886 /* IMSTestController.m in Sources */,
+				3B21E83316751ABE00F87886 /* IMSTestScenario.m in Sources */,
+				3B21E83616751BB800F87886 /* IMSTestStep.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3B29079F164BFFD50028C2CE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -301,6 +458,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		3B21E8071675167800F87886 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SecureFoundation;
+			targetProxy = 3B21E8081675167800F87886 /* PBXContainerItemProxy */;
+		};
+		3B21E82F16751A5000F87886 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KIF;
+			targetProxy = 3B21E82E16751A5000F87886 /* PBXContainerItemProxy */;
+		};
 		3BEEB71A1652E5FE00642ECE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SecureFoundation;
@@ -328,6 +495,38 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		3B21E8221675167800F87886 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sample App/Password-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/vendor/kif\"/**";
+				INFOPLIST_FILE = "$(SRCROOT)/Sample App/Password Tests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3B21E8231675167800F87886 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sample App/Password-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/vendor/kif\"/**";
+				INFOPLIST_FILE = "$(SRCROOT)/Sample App/Password Tests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 		3B2907C8164BFFD50028C2CE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -352,6 +551,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "-DIMS_KIF_TESTS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -373,7 +573,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"-DIMS_KIF_TESTS=1",
+				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -405,6 +608,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3B21E8211675167800F87886 /* Build configuration list for PBXNativeTarget "Password Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B21E8221675167800F87886 /* Debug */,
+				3B21E8231675167800F87886 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		3B29079D164BFFD50028C2CE /* Build configuration list for PBXProject "Sample App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
