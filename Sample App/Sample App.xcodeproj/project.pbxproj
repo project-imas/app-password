@@ -500,8 +500,8 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sample App/Password-Prefix.pch";
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/vendor/kif\"/**";
 				INFOPLIST_FILE = "$(SRCROOT)/Sample App/Password Tests-Info.plist";
+				OTHER_CFLAGS = "-DIMS_KIF_TESTS=1";
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
@@ -516,8 +516,12 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sample App/Password-Prefix.pch";
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/vendor/kif\"/**";
 				INFOPLIST_FILE = "$(SRCROOT)/Sample App/Password Tests-Info.plist";
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"-DIMS_KIF_TESTS=1",
+					"-DIMS_KIF_TESTS=1",
+				);
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
@@ -549,9 +553,9 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/vendor/kif\"/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_CFLAGS = "-DIMS_KIF_TESTS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -572,11 +576,9 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/vendor/kif\"/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				OTHER_CFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"-DIMS_KIF_TESTS=1",
-				);
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
