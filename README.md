@@ -23,7 +23,6 @@ It is highly customizable. You can change the following:
 To allow a user to set their passcode your code would look like:
 
 ```
-- (void)createPassword {
 UIStoryboard *storyboard = [SamplePasswordViewController storyboard];
 UINavigationController *navigationController = [storyboard instantiateViewControllerWithIdentifier:@"CreatePasswordViewController"];
 IMSPasswordViewController *passwordController = [[navigationController viewControllers] objectAtIndex:0];
@@ -31,7 +30,6 @@ passwordController.target = self;
 passwordController.action = @selector(passwordController:didCreatePassword:);
 passwordController.passwordSecurityPattern = @"^.*(?=.*[a-zA-Z])(?=.*[0-9])(?=.{6,}).*$";
 [self presentViewController:navigationController animated:YES completion:nil];
-}
 ```
 
 The code for showing a password verification screen would look very similar. Perform any required actions in the action method you provide, including dismissing the view.
