@@ -22,7 +22,7 @@ It is highly customizable. You can change the following:
 
 To allow a user to set their passcode your code would look like:
 
-```
+```objc
 UIStoryboard *storyboard = [SamplePasswordViewController storyboard];
 UINavigationController *navigationController = [storyboard instantiateViewControllerWithIdentifier:@"CreatePasswordViewController"];
 IMSPasswordViewController *passwordController = [[navigationController viewControllers] objectAtIndex:0];
