@@ -126,6 +126,7 @@
 		3B2907C0164BFFD50028C2CE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		3B2907C5164BFFD50028C2CE /* SampleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SampleViewController.h; sourceTree = "<group>"; };
 		3B2907C6164BFFD50028C2CE /* SampleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleViewController.m; sourceTree = "<group>"; };
+		3B4DF358167F64D500D92BD1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		3B7F167B167149EF00A9B236 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		3B7F167D1671674900A9B236 /* SamplePasswordStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SamplePasswordStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		3B7F167F167169DB00A9B236 /* SamplePasswordStoryboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SamplePasswordStoryboard_iPad.storyboard; sourceTree = "<group>"; };
@@ -195,6 +196,7 @@
 		3B290798164BFFD50028C2CE = {
 			isa = PBXGroup;
 			children = (
+				3B4DF358167F64D500D92BD1 /* README.md */,
 				3B7F168D1671767400A9B236 /* App Password */,
 				3B2907AD164BFFD50028C2CE /* Sample App */,
 				3B8EC6EF1671315A0056C176 /* Vendor */,
