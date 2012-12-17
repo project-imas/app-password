@@ -37,4 +37,6 @@ The code for showing a password verification screen would look very similar. Per
 
 ## Sample App
 
-The sample application demonstrates the use of the different password view modes, as well as its use with [SecureFoundation](https://github.com/project-imas/securefoundation) which provides additional levels of data protection. 
+The sample application demonstrates the use of the different password view modes, as well as its use with [SecureFoundation](https://github.com/project-imas/securefoundation) which provides additional levels of data protection.
+
+Tests built using the [KIF](https://github.com/square/KIF) testing framework can be run by running the "Password Tests" target.
