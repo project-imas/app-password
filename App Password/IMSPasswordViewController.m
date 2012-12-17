@@ -120,6 +120,10 @@
 #pragma clang diagnostic pop
         }
         else {
+            [self.passwordFields enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                [obj setText:nil];
+            }];
+            [self.passwordOneField becomeFirstResponder];
             [[[UIAlertView alloc]
               initWithTitle:[[self class] localizedStringForKey:@"CREATE_PASSWORD_SECURITY_POLICY_ERROR_TITLE"]
               message:nil
