@@ -12,7 +12,7 @@ The "iMAS App Password" provides a simple way to include a password prompt to pr
 
 ## Usage
 
-The "App Password" project contains one key class: `IMSPasswordViewController`. This class contains basic logic for controlling password input inside your app.
+The "App Password" folder contains one key class: `IMSPasswordViewController`. This class contains basic logic for controlling password input inside your app.
 
 It is highly customizable. You can change the following:
 
@@ -34,3 +34,7 @@ passwordController.passwordSecurityPattern = @"^.*(?=.*[a-zA-Z])(?=.*[0-9])(?=.{
 ```
 
 The code for showing a password verification screen would look very similar. Perform any required actions in the action method you provide, including dismissing the view.
+
+## Sample App
+
+The sample application demonstrates the use of the different password view modes, as well as its use with [SecureFoundation](https://github.com/project-imas/securefoundation) which provides additional levels of data protection. 
