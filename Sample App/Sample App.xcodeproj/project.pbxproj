@@ -24,7 +24,6 @@
 		3B21E81A1675167800F87886 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B2907BD164BFFD50028C2CE /* Default-568h@2x.png */; };
 		3B21E81B1675167800F87886 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B2907BF164BFFD50028C2CE /* MainStoryboard.storyboard */; };
 		3B21E81C1675167800F87886 /* SamplePasswordStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7F167D1671674900A9B236 /* SamplePasswordStoryboard_iPhone.storyboard */; };
-		3B21E81D1675167800F87886 /* SamplePasswordStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7F167F167169DB00A9B236 /* SamplePasswordStoryboard_iPad.storyboard */; };
 		3B21E81E1675167800F87886 /* IMSPassword.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3B7F168E1671767400A9B236 /* IMSPassword.bundle */; };
 		3B21E81F1675167800F87886 /* IMSPasswordStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7F168F1671767400A9B236 /* IMSPasswordStoryboard_iPad.storyboard */; };
 		3B21E8201675167800F87886 /* IMSPasswordStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7F16901671767400A9B236 /* IMSPasswordStoryboard_iPhone.storyboard */; };
@@ -45,7 +44,6 @@
 		3B2907C7164BFFD50028C2CE /* SampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B2907C6164BFFD50028C2CE /* SampleViewController.m */; };
 		3B7F167C167149EF00A9B236 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B7F167B167149EF00A9B236 /* Security.framework */; };
 		3B7F167E1671674900A9B236 /* SamplePasswordStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7F167D1671674900A9B236 /* SamplePasswordStoryboard_iPhone.storyboard */; };
-		3B7F1680167169DB00A9B236 /* SamplePasswordStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7F167F167169DB00A9B236 /* SamplePasswordStoryboard_iPad.storyboard */; };
 		3B7F16931671767400A9B236 /* IMSPassword.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3B7F168E1671767400A9B236 /* IMSPassword.bundle */; };
 		3B7F16941671767400A9B236 /* IMSPasswordStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7F168F1671767400A9B236 /* IMSPasswordStoryboard_iPad.storyboard */; };
 		3B7F16951671767400A9B236 /* IMSPasswordStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7F16901671767400A9B236 /* IMSPasswordStoryboard_iPhone.storyboard */; };
@@ -129,7 +127,6 @@
 		3B4DF358167F64D500D92BD1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; wrapsLines = 1; };
 		3B7F167B167149EF00A9B236 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		3B7F167D1671674900A9B236 /* SamplePasswordStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SamplePasswordStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		3B7F167F167169DB00A9B236 /* SamplePasswordStoryboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SamplePasswordStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		3B7F168E1671767400A9B236 /* IMSPassword.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IMSPassword.bundle; sourceTree = "<group>"; };
 		3B7F168F1671767400A9B236 /* IMSPasswordStoryboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = IMSPasswordStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		3B7F16901671767400A9B236 /* IMSPasswordStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = IMSPasswordStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
@@ -237,7 +234,6 @@
 				3BDD2A921667EC7600F0BE44 /* SamplePasswordViewController.h */,
 				3BDD2A931667EC7600F0BE44 /* SamplePasswordViewController.m */,
 				3B7F167D1671674900A9B236 /* SamplePasswordStoryboard_iPhone.storyboard */,
-				3B7F167F167169DB00A9B236 /* SamplePasswordStoryboard_iPad.storyboard */,
 				3B2907AE164BFFD50028C2CE /* Supporting Files */,
 				3B21E82A167518C500F87886 /* Tests */,
 			);
@@ -403,7 +399,6 @@
 				3B21E81A1675167800F87886 /* Default-568h@2x.png in Resources */,
 				3B21E81B1675167800F87886 /* MainStoryboard.storyboard in Resources */,
 				3B21E81C1675167800F87886 /* SamplePasswordStoryboard_iPhone.storyboard in Resources */,
-				3B21E81D1675167800F87886 /* SamplePasswordStoryboard_iPad.storyboard in Resources */,
 				3B21E81E1675167800F87886 /* IMSPassword.bundle in Resources */,
 				3B21E81F1675167800F87886 /* IMSPasswordStoryboard_iPad.storyboard in Resources */,
 				3B21E8201675167800F87886 /* IMSPasswordStoryboard_iPhone.storyboard in Resources */,
@@ -420,7 +415,6 @@
 				3B2907BE164BFFD50028C2CE /* Default-568h@2x.png in Resources */,
 				3B2907C1164BFFD50028C2CE /* MainStoryboard.storyboard in Resources */,
 				3B7F167E1671674900A9B236 /* SamplePasswordStoryboard_iPhone.storyboard in Resources */,
-				3B7F1680167169DB00A9B236 /* SamplePasswordStoryboard_iPad.storyboard in Resources */,
 				3B7F16931671767400A9B236 /* IMSPassword.bundle in Resources */,
 				3B7F16941671767400A9B236 /* IMSPasswordStoryboard_iPad.storyboard in Resources */,
 				3B7F16951671767400A9B236 /* IMSPasswordStoryboard_iPhone.storyboard in Resources */,
@@ -509,6 +503,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -529,6 +524,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -594,6 +590,7 @@
 				GCC_PREFIX_HEADER = "Sample App/Password-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Sample App/Password-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -605,6 +602,7 @@
 				GCC_PREFIX_HEADER = "Sample App/Password-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Sample App/Password-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
