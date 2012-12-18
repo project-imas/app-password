@@ -40,3 +40,19 @@ The code for showing a password verification screen would look very similar. Per
 The sample application demonstrates the use of the different password view modes, as well as its use with [SecureFoundation](https://github.com/project-imas/securefoundation) which provides additional levels of data protection.
 
 Tests built using the [KIF](https://github.com/square/KIF) testing framework can be run by running the "Password Tests" target.
+
+## License
+
+Copyright 2012 The MITRE Corporation, All Rights Reserved.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this project source code except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
