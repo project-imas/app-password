@@ -20,14 +20,14 @@ typedef NS_ENUM(short, IMSPasswordViewControllerMode) {
     /*
      
      Verify a password. This allows the user to input a password then have it
-     checked by the caller.
+     checked using the target/action pair.
      
      */
     IMSPasswordViewControllerModeVerify
     
 };
 
-@interface IMSPasswordViewController : UIViewController <UITextFieldDelegate>
+@interface IMSPasswordViewController : UIViewController
 
 /*
  

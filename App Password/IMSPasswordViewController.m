@@ -9,7 +9,7 @@
 
 #import "IMSPasswordViewController.h"
 
-@interface IMSPasswordViewController ()
+@interface IMSPasswordViewController () <UITextFieldDelegate>
 
 @property (nonatomic, weak) IBOutlet UITextField *passwordOneField;
 @property (nonatomic, weak) IBOutlet UITextField *passwordTwoField;
