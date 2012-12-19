@@ -8,9 +8,12 @@ The "iMAS App Password" provides a simple way to include a password prompt to pr
 1. No application password
    - CWE-521: Weak Password Requirements
 2. Open Application Authentication
-3. iOS Keychain contents vulnerable to jailbreak
+   - CWE-287: Improper Authentication
+. iOS Keychain contents vulnerable to jailbreak
+   - CWE-200: Information Exposure
 4. Application allows any user to execute application
- 
+   - CWE-250: Execution with Unnecessary Privileges
+
 ## Installation
 
 - Add the App Password repository as a submodule to your project. `git submodule add git@github.com:project-imas/app-password.git vendor/app-password`
