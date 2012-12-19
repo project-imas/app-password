@@ -4,6 +4,12 @@
 
 The "iMAS App Password" provides a simple way to include a password prompt to protect your application's data. It has just enough logic to enforce password strength, show alerts when input is invalid, and provide means for a customizable user interface.
 
+## Vulnerabilities Addressed
+1. No application password
+2. Open Application Authentication
+3. iOS Keychain contents vulnerable to jailbreak
+4. Application allows any user to execute application
+ 
 ## Installation
 
 - Add the App Password repository as a submodule to your project. `git submodule add git@github.com:project-imas/app-password.git vendor/app-password`
