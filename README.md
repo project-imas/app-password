@@ -4,6 +4,16 @@
 
 The "iMAS App Password" provides a simple way to include a password prompt to protect your application's data. It has just enough logic to enforce password strength, show alerts when input is invalid, and provide means for a customizable user interface.
 
+## Vulnerabilities Addressed
+1. No application password
+   - CWE-521: Weak Password Requirements
+2. Open Application Authentication
+   - CWE-287: Improper Authentication
+3. iOS Keychain contents vulnerable to jailbreak
+   - CWE-200: Information Exposure
+4. Application allows any user to execute application
+   - CWE-250: Execution with Unnecessary Privileges
+
 ## Installation
 
 - Add the App Password repository as a submodule to your project. `git submodule add git@github.com:project-imas/app-password.git vendor/app-password`
@@ -46,3 +56,19 @@ Custom localizations can be loaded by subclassing `IMSPasswordViewController` an
 The sample application demonstrates the use of the different password view modes, as well as its use with [SecureFoundation](https://github.com/project-imas/securefoundation) which provides additional levels of data protection.
 
 Tests built using the [KIF](https://github.com/square/KIF) testing framework can be run by running the "Password Tests" target.
+
+## License
+
+Copyright 2012 The MITRE Corporation, All Rights Reserved.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this work except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
