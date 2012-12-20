@@ -1,14 +1,14 @@
 
 // title for "ok" button used in alert views
-"OK_BUTTON_TITLE" = "OK";
+"IMS_PASSWORD_OK_BUTTON_TITLE" = "OK";
 
 // alert title shown when the user is attempting to login with the wrong password
-"VERIFY_PASSWORD_WRONG_TITLE" = "The provided password is incorrect.";
+"IMS_PASSWORD_VERIFY_PASSWORD_WRONG_TITLE" = "The provided password is incorrect.";
 
 // alert title shown when the user is attempting to create a password but has
 // provided two different passwords
-"CREATE_PASSWORD_MISMATCH_ERROR_TITLE" = "The provided passcodes do not match.";
+"IMS_PASSWORD_CREATE_PASSWORD_MISMATCH_ERROR_TITLE" = "The provided passcodes do not match.";
 
 // alert title shown when the user is attempting to create a password but it
 // does not meet security requirements
-"CREATE_PASSWORD_SECURITY_POLICY_ERROR_TITLE" = "The password does not meet security requirements.";
+"IMS_PASSWORD_CREATE_PASSWORD_SECURITY_POLICY_ERROR_TITLE" = "The password does not meet security requirements.";

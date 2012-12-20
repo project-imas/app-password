@@ -35,6 +35,12 @@ passwordController.passwordSecurityPattern = @"^.*(?=.*[a-zA-Z])(?=.*[0-9])(?=.{
 
 The code for showing a password verification screen would look very similar. Perform any required actions in the action method you provide, including dismissing the view.
 
+## Customization
+
+You can provide your own storyboard by subclassing `IMSPasswordViewController` and overriding either `storyboardBaseName` to use the default load mechanism, or `storyboard` to perform custom storyboard loading. You do not need to call super in either of these cases. In your storyboard you should set the `passwordOneField`, `passwordTwoField`, and `passwordFields` outlets. The behavior of each of these can be seen in either of the `IMSPasswordStoryboard` files.
+
+Custom localizations can be loaded by subclassing `IMSPasswordViewController` and overriding `localizedStringForKey:`. You do not need to call super here. The default implementation of this method looks in `IMSPassword.bundle` for localizations. If you would like to add a translation to the default set please send a pull request. Otherwise you can load your own localization table or pass calls through to `NSLocalizedString`.
+
 ## Sample App
 
 The sample application demonstrates the use of the different password view modes, as well as its use with [SecureFoundation](https://github.com/project-imas/securefoundation) which provides additional levels of data protection.

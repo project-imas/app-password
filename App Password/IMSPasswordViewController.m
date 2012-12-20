@@ -75,7 +75,7 @@
     NSParameterAssert(self.target != nil);
     NSParameterAssert(self.action != nil);
     
-    // ui
+    // configure ui
     self.navigationItem.rightBarButtonItem.enabled = NO;
     [self.passwordFields enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         [obj setSecureTextEntry:YES];
@@ -111,7 +111,11 @@
 - (void)createPassword {
     NSParameterAssert(self.mode == IMSPasswordViewControllerModeCreate);
     NSString *password = [self.passwordOneField.text copy];
+    
+    // make sure the two fields are the same
     if ([password isEqualToString:self.passwordTwoField.text]) {
+        
+        // password meets policy
         NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", self.passwordSecurityPattern];
         if ([predicate evaluateWithObject:password]) {
 #pragma clang diagnostic push
@@ -119,30 +123,34 @@
             [self.target performSelector:self.action withObject:self withObject:password];
 #pragma clang diagnostic pop
         }
+        
+        // password does not meet policy, pop alert and clear text
         else {
             [self.passwordFields enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
                 [obj setText:nil];
             }];
             [self.passwordOneField becomeFirstResponder];
             [[[UIAlertView alloc]
-              initWithTitle:[[self class] localizedStringForKey:@"CREATE_PASSWORD_SECURITY_POLICY_ERROR_TITLE"]
+              initWithTitle:[[self class] localizedStringForKey:@"IMS_PASSWORD_CREATE_PASSWORD_SECURITY_POLICY_ERROR_TITLE"]
               message:nil
               delegate:nil
-              cancelButtonTitle:[[self class] localizedStringForKey:@"OK_BUTTON_TITLE"]
+              cancelButtonTitle:[[self class] localizedStringForKey:@"IMS_PASSWORD_OK_BUTTON_TITLE"]
               otherButtonTitles:nil]
              show];
         }
     }
+    
+    // fields are different, pop alert and clear text
     else {
         [self.passwordFields enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             [obj setText:nil];
         }];
         [self.passwordOneField becomeFirstResponder];
         [[[UIAlertView alloc]
-          initWithTitle:[[self class] localizedStringForKey:@"CREATE_PASSWORD_MISMATCH_ERROR_TITLE"]
+          initWithTitle:[[self class] localizedStringForKey:@"IMS_PASSWORD_CREATE_PASSWORD_MISMATCH_ERROR_TITLE"]
           message:nil
           delegate:nil
-          cancelButtonTitle:[[self class] localizedStringForKey:@"OK_BUTTON_TITLE"]
+          cancelButtonTitle:[[self class] localizedStringForKey:@"IMS_PASSWORD_OK_BUTTON_TITLE"]
           otherButtonTitles:nil]
          show];
     }
@@ -159,10 +167,10 @@
         self.passwordOneField.text = nil;
         AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
         [[[UIAlertView alloc]
-          initWithTitle:[[self class] localizedStringForKey:@"VERIFY_PASSWORD_WRONG_TITLE"]
+          initWithTitle:[[self class] localizedStringForKey:@"IMS_PASSWORD_VERIFY_PASSWORD_WRONG_TITLE"]
           message:nil
           delegate:nil
-          cancelButtonTitle:[[self class] localizedStringForKey:@"OK_BUTTON_TITLE"]
+          cancelButtonTitle:[[self class] localizedStringForKey:@"IMS_PASSWORD_OK_BUTTON_TITLE"]
           otherButtonTitles:nil]
          show];
     }
@@ -171,9 +179,13 @@
 #pragma mark - text field methods
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    
+    // just verify
     if (self.mode == IMSPasswordViewControllerModeVerify) {
         [self verifyPassword];
     }
+    
+    // advance to next field or attempt creation
     else if (self.mode == IMSPasswordViewControllerModeCreate) {
         if (textField == self.passwordOneField) {
             [self.passwordTwoField becomeFirstResponder];
@@ -182,6 +194,7 @@
             [self createPassword];
         }
     }
+    
     return NO;
 }
 
