@@ -9,7 +9,7 @@ The "iMAS App Password" provides a simple way to include a password prompt to pr
    - CWE-521: Weak Password Requirements
 2. Open Application Authentication
    - CWE-287: Improper Authentication
-. iOS Keychain contents vulnerable to jailbreak
+3. iOS Keychain contents vulnerable to jailbreak
    - CWE-200: Information Exposure
 4. Application allows any user to execute application
    - CWE-250: Execution with Unnecessary Privileges
