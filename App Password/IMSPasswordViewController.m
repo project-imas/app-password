@@ -77,11 +77,13 @@
     
     // configure ui
     self.navigationItem.rightBarButtonItem.enabled = NO;
-    [self.passwordFields enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        [obj setSecureTextEntry:YES];
-        [obj setEnablesReturnKeyAutomatically:YES];
-        [obj setDelegate:self];
-        [obj addTarget:self action:@selector(textFieldTextDidChange:) forControlEvents:UIControlEventEditingChanged];
+    [self.passwordFields enumerateObjectsUsingBlock:^(UITextField *textField, NSUInteger idx, BOOL *stop) {
+        textField.secureTextEntry = YES;
+        textField.enablesReturnKeyAutomatically = YES;
+        textField.delegate = self;
+        textField.autocapitalizationType = UITextAutocapitalizationTypeNone;
+        textField.autocorrectionType = UITextAutocorrectionTypeNo;
+        [textField addTarget:self action:@selector(textFieldTextDidChange:) forControlEvents:UIControlEventEditingChanged];
     }];
     [self.passwordOneField becomeFirstResponder];
     [self.navigationItem.rightBarButtonItem setAction:@selector(doneButtonAction:)];
