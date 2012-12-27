@@ -144,9 +144,10 @@
     
     // fields are different, pop alert and clear text
     else {
-        [self.passwordFields enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-            [obj setText:nil];
+        [self.passwordFields enumerateObjectsUsingBlock:^(UITextField *textField, NSUInteger idx, BOOL *stop) {
+            textField.text = nil;
         }];
+        self.navigationItem.rightBarButtonItem.enabled = NO;
         [self.passwordOneField becomeFirstResponder];
         [[[UIAlertView alloc]
           initWithTitle:[[self class] localizedStringForKey:@"IMS_PASSWORD_CREATE_PASSWORD_MISMATCH_ERROR_TITLE"]
@@ -167,6 +168,7 @@
 #pragma clang diagnostic pop
     if (!valid) {
         self.passwordOneField.text = nil;
+        self.navigationItem.rightBarButtonItem.enabled = NO;
         AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
         [[[UIAlertView alloc]
           initWithTitle:[[self class] localizedStringForKey:@"IMS_PASSWORD_VERIFY_PASSWORD_WRONG_TITLE"]
