@@ -14,6 +14,7 @@ The "iMAS App Password" provides a simple way to include a password prompt to pr
 4. Application allows any user to execute application
    - CWE-250: Execution with Unnecessary Privileges
    - SRG-APP-000022-MAPP-000009 Severity-CAT II: The mobile application must not permit execution of code without user direction.
+   - SRG-APP-000128-MAPP-000028 Severity-CAT II: The mobile application must not change the file permissions of any files other than those dedicated to its own operation.
 
 ## Installation
 
