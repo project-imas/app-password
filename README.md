@@ -13,6 +13,8 @@ The "iMAS App Password" provides a simple way to include a password prompt to pr
 3. iOS Keychain contents vulnerable to jailbreak
    - CWE-200: Information Exposure
    - SRG-APP-000133-MAPP-000030 Severity-CAT II: The mobile application must not enable other applications or non-privileged processes to modify software libraries.
+   - SRG-APP-000243-MAPP-000049 Severity-CAT II: The mobile application must not write data to persistent memory accessible to other applications.
+   - SRG-APP-000243-MAPP-000050 Severity_CAT II: The mobile application must not share working memory with other applications or processes.
 4. Application allows any user to execute application
    - CWE-250: Execution with Unnecessary Privileges
    - SRG-APP-000022-MAPP-000009 Severity-CAT II: The mobile application must not permit execution of code without user direction.
