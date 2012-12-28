@@ -7,6 +7,7 @@ The "iMAS App Password" provides a simple way to include a password prompt to pr
 ## Vulnerabilities Addressed
 1. No application password
    - CWE-521: Weak Password Requirements
+   - SRG-APP-000129-MAPP-000029 Severity-CAT II: The mobile application must implement automated mechanisms to enforce access control restrictions which are not provided by the operating system.
 2. Open Application Authentication
    - CWE-287: Improper Authentication
 3. iOS Keychain contents vulnerable to jailbreak
