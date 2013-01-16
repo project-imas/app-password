@@ -21,8 +21,6 @@ The "iMAS App Password" provides a simple way to include a password prompt to pr
    - CWE-250: Execution with Unnecessary Privileges
    - SRG-APP-000022-MAPP-000009 Severity-CAT II: The mobile application must not permit execution of code without user direction.
 
-![screenshot](https://github.com/project-imas/app-password/raw/master/passcode.png)
-
 ## Installation
 
 - Add the App Password repository as a submodule to your project. `git submodule add git@github.com:project-imas/app-password.git vendor/app-password`
@@ -65,6 +63,11 @@ Custom localizations can be loaded by subclassing `IMSPasswordViewController` an
 The sample application demonstrates the use of the different password view modes, as well as its use with [SecureFoundation](https://github.com/project-imas/securefoundation) which provides additional levels of data protection.
 
 Tests built using the [KIF](https://github.com/square/KIF) testing framework can be run by running the "Password Tests" target.
+
+## Example Screenshot 
+
+![screenshot](https://github.com/project-imas/app-password/raw/master/passcode.png)
+
 
 ## License
 
