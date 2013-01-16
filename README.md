@@ -21,6 +21,8 @@ The "iMAS App Password" provides a simple way to include a password prompt to pr
    - CWE-250: Execution with Unnecessary Privileges
    - SRG-APP-000022-MAPP-000009 Severity-CAT II: The mobile application must not permit execution of code without user direction.
 
+![screenshot](https://github.com/project-imas/app-password/passcode.png)
+
 ## Installation
 
 - Add the App Password repository as a submodule to your project. `git submodule add git@github.com:project-imas/app-password.git vendor/app-password`
