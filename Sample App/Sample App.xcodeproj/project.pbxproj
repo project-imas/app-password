@@ -11,7 +11,6 @@
 		3B21E80B1675167800F87886 /* SampleAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B2907B7164BFFD50028C2CE /* SampleAppDelegate.m */; };
 		3B21E80C1675167800F87886 /* SampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B2907C6164BFFD50028C2CE /* SampleViewController.m */; };
 		3B21E80D1675167800F87886 /* SamplePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDD2A931667EC7600F0BE44 /* SamplePasswordViewController.m */; };
-		3B21E80E1675167800F87886 /* IMSPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7F16921671767400A9B236 /* IMSPasswordViewController.m */; };
 		3B21E8101675167800F87886 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B7F167B167149EF00A9B236 /* Security.framework */; };
 		3B21E8111675167800F87886 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BEEB71C1652E7FB00642ECE /* AudioToolbox.framework */; };
 		3B21E8121675167800F87886 /* libSecureFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BEEB7151652E0A600642ECE /* libSecureFoundation.a */; };
@@ -24,9 +23,6 @@
 		3B21E81A1675167800F87886 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B2907BD164BFFD50028C2CE /* Default-568h@2x.png */; };
 		3B21E81B1675167800F87886 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B2907BF164BFFD50028C2CE /* MainStoryboard.storyboard */; };
 		3B21E81C1675167800F87886 /* SamplePasswordStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7F167D1671674900A9B236 /* SamplePasswordStoryboard_iPhone.storyboard */; };
-		3B21E81E1675167800F87886 /* IMSPassword.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3B7F168E1671767400A9B236 /* IMSPassword.bundle */; };
-		3B21E81F1675167800F87886 /* IMSPasswordStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7F168F1671767400A9B236 /* IMSPasswordStoryboard_iPad.storyboard */; };
-		3B21E8201675167800F87886 /* IMSPasswordStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7F16901671767400A9B236 /* IMSPasswordStoryboard_iPhone.storyboard */; };
 		3B21E82D167518EF00F87886 /* IMSTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B21E82C167518EF00F87886 /* IMSTestController.m */; };
 		3B21E83016751A5300F87886 /* libKIF.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B21E8051675166900F87886 /* libKIF.a */; };
 		3B21E83316751ABE00F87886 /* IMSTestScenario.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B21E83216751ABE00F87886 /* IMSTestScenario.m */; };
@@ -44,13 +40,11 @@
 		3B2907C7164BFFD50028C2CE /* SampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B2907C6164BFFD50028C2CE /* SampleViewController.m */; };
 		3B7F167C167149EF00A9B236 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B7F167B167149EF00A9B236 /* Security.framework */; };
 		3B7F167E1671674900A9B236 /* SamplePasswordStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7F167D1671674900A9B236 /* SamplePasswordStoryboard_iPhone.storyboard */; };
-		3B7F16931671767400A9B236 /* IMSPassword.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3B7F168E1671767400A9B236 /* IMSPassword.bundle */; };
-		3B7F16941671767400A9B236 /* IMSPasswordStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7F168F1671767400A9B236 /* IMSPasswordStoryboard_iPad.storyboard */; };
-		3B7F16951671767400A9B236 /* IMSPasswordStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7F16901671767400A9B236 /* IMSPasswordStoryboard_iPhone.storyboard */; };
-		3B7F16961671767400A9B236 /* IMSPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7F16921671767400A9B236 /* IMSPasswordViewController.m */; };
 		3BDD2A941667EC7600F0BE44 /* SamplePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDD2A931667EC7600F0BE44 /* SamplePasswordViewController.m */; };
 		3BEEB71B1652E60400642ECE /* libSecureFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BEEB7151652E0A600642ECE /* libSecureFoundation.a */; };
 		3BEEB71D1652E7FB00642ECE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BEEB71C1652E7FB00642ECE /* AudioToolbox.framework */; };
+		484DF82616D6E092002B7CD5 /* AppPassword.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 484DF80F16D6DC80002B7CD5 /* AppPassword.framework */; };
+		484DF82716D6E096002B7CD5 /* AppPassword.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 484DF80F16D6DC80002B7CD5 /* AppPassword.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +90,27 @@
 			remoteGlobalIDString = 3B89357B162C92F1003750B6;
 			remoteInfo = SecureFoundation;
 		};
+		484DF80616D6DC08002B7CD5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 484DF80216D6DC08002B7CD5 /* AppPassword.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4819438D16CE96B90016DB79;
+			remoteInfo = AppPassword;
+		};
+		484DF80816D6DC2D002B7CD5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 484DF80216D6DC08002B7CD5 /* AppPassword.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 4819438C16CE96B90016DB79;
+			remoteInfo = AppPassword;
+		};
+		484DF82416D6E01A002B7CD5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 484DF80216D6DC08002B7CD5 /* AppPassword.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 4819438C16CE96B90016DB79;
+			remoteInfo = AppPassword;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -127,15 +142,12 @@
 		3B4DF358167F64D500D92BD1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; wrapsLines = 1; };
 		3B7F167B167149EF00A9B236 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		3B7F167D1671674900A9B236 /* SamplePasswordStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SamplePasswordStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		3B7F168E1671767400A9B236 /* IMSPassword.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IMSPassword.bundle; sourceTree = "<group>"; };
-		3B7F168F1671767400A9B236 /* IMSPasswordStoryboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = IMSPasswordStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		3B7F16901671767400A9B236 /* IMSPasswordStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = IMSPasswordStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		3B7F16911671767400A9B236 /* IMSPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMSPasswordViewController.h; sourceTree = "<group>"; };
-		3B7F16921671767400A9B236 /* IMSPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMSPasswordViewController.m; sourceTree = "<group>"; };
 		3BDD2A921667EC7600F0BE44 /* SamplePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SamplePasswordViewController.h; sourceTree = "<group>"; };
 		3BDD2A931667EC7600F0BE44 /* SamplePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SamplePasswordViewController.m; sourceTree = "<group>"; };
 		3BEEB70C1652E0A600642ECE /* SecureFoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SecureFoundation.xcodeproj; path = vendor/securefoundation/SecureFoundation.xcodeproj; sourceTree = "<group>"; };
 		3BEEB71C1652E7FB00642ECE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		484DF80216D6DC08002B7CD5 /* AppPassword.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AppPassword.xcodeproj; path = ../AppPassword.xcodeproj; sourceTree = "<group>"; };
+		484DF80F16D6DC80002B7CD5 /* AppPassword.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppPassword.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/Sample_App-amvecbvmcvifpfcvqjrspxjzzzmp/Build/Products/Debug-iphoneos/AppPassword.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +162,7 @@
 				3B21E8131675167800F87886 /* UIKit.framework in Frameworks */,
 				3B21E8141675167800F87886 /* Foundation.framework in Frameworks */,
 				3B21E8151675167800F87886 /* CoreGraphics.framework in Frameworks */,
+				484DF82616D6E092002B7CD5 /* AppPassword.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +176,7 @@
 				3B2907A8164BFFD50028C2CE /* UIKit.framework in Frameworks */,
 				3B2907AA164BFFD50028C2CE /* Foundation.framework in Frameworks */,
 				3B2907AC164BFFD50028C2CE /* CoreGraphics.framework in Frameworks */,
+				484DF82716D6E096002B7CD5 /* AppPassword.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,7 +208,6 @@
 			isa = PBXGroup;
 			children = (
 				3B4DF358167F64D500D92BD1 /* README.md */,
-				3B7F168D1671767400A9B236 /* App Password */,
 				3B2907AD164BFFD50028C2CE /* Sample App */,
 				3B8EC6EF1671315A0056C176 /* Vendor */,
 				3B2907A6164BFFD50028C2CE /* Frameworks */,
@@ -214,6 +227,7 @@
 		3B2907A6164BFFD50028C2CE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				484DF80F16D6DC80002B7CD5 /* AppPassword.framework */,
 				3B7F167B167149EF00A9B236 /* Security.framework */,
 				3BEEB71C1652E7FB00642ECE /* AudioToolbox.framework */,
 				3B2907A7164BFFD50028C2CE /* UIKit.framework */,
@@ -255,22 +269,10 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		3B7F168D1671767400A9B236 /* App Password */ = {
-			isa = PBXGroup;
-			children = (
-				3B7F168E1671767400A9B236 /* IMSPassword.bundle */,
-				3B7F168F1671767400A9B236 /* IMSPasswordStoryboard_iPad.storyboard */,
-				3B7F16901671767400A9B236 /* IMSPasswordStoryboard_iPhone.storyboard */,
-				3B7F16911671767400A9B236 /* IMSPasswordViewController.h */,
-				3B7F16921671767400A9B236 /* IMSPasswordViewController.m */,
-			);
-			name = "App Password";
-			path = "../App Password";
-			sourceTree = "<group>";
-		};
 		3B8EC6EF1671315A0056C176 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				484DF80216D6DC08002B7CD5 /* AppPassword.xcodeproj */,
 				3B21E7FD1675166900F87886 /* KIF.xcodeproj */,
 				3BEEB70C1652E0A600642ECE /* SecureFoundation.xcodeproj */,
 			);
@@ -282,6 +284,14 @@
 			children = (
 				3BEEB7151652E0A600642ECE /* libSecureFoundation.a */,
 				3BEEB7171652E0A600642ECE /* SecureFoundationTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		484DF80316D6DC08002B7CD5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				484DF80716D6DC08002B7CD5 /* AppPassword.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -300,6 +310,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				484DF82516D6E01A002B7CD5 /* PBXTargetDependency */,
 				3B21E82F16751A5000F87886 /* PBXTargetDependency */,
 				3B21E8071675167800F87886 /* PBXTargetDependency */,
 			);
@@ -319,6 +330,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				484DF80916D6DC2D002B7CD5 /* PBXTargetDependency */,
 				3BEEB71A1652E5FE00642ECE /* PBXTargetDependency */,
 			);
 			name = Password;
@@ -347,6 +359,10 @@
 			productRefGroup = 3B2907A4164BFFD50028C2CE /* Products */;
 			projectDirPath = "";
 			projectReferences = (
+				{
+					ProductGroup = 484DF80316D6DC08002B7CD5 /* Products */;
+					ProjectRef = 484DF80216D6DC08002B7CD5 /* AppPassword.xcodeproj */;
+				},
 				{
 					ProductGroup = 3B21E7FE1675166900F87886 /* Products */;
 					ProjectRef = 3B21E7FD1675166900F87886 /* KIF.xcodeproj */;
@@ -386,6 +402,13 @@
 			remoteRef = 3BEEB7161652E0A600642ECE /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		484DF80716D6DC08002B7CD5 /* AppPassword.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AppPassword.framework;
+			remoteRef = 484DF80616D6DC08002B7CD5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -399,9 +422,6 @@
 				3B21E81A1675167800F87886 /* Default-568h@2x.png in Resources */,
 				3B21E81B1675167800F87886 /* MainStoryboard.storyboard in Resources */,
 				3B21E81C1675167800F87886 /* SamplePasswordStoryboard_iPhone.storyboard in Resources */,
-				3B21E81E1675167800F87886 /* IMSPassword.bundle in Resources */,
-				3B21E81F1675167800F87886 /* IMSPasswordStoryboard_iPad.storyboard in Resources */,
-				3B21E8201675167800F87886 /* IMSPasswordStoryboard_iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,9 +435,6 @@
 				3B2907BE164BFFD50028C2CE /* Default-568h@2x.png in Resources */,
 				3B2907C1164BFFD50028C2CE /* MainStoryboard.storyboard in Resources */,
 				3B7F167E1671674900A9B236 /* SamplePasswordStoryboard_iPhone.storyboard in Resources */,
-				3B7F16931671767400A9B236 /* IMSPassword.bundle in Resources */,
-				3B7F16941671767400A9B236 /* IMSPasswordStoryboard_iPad.storyboard in Resources */,
-				3B7F16951671767400A9B236 /* IMSPasswordStoryboard_iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,7 +449,6 @@
 				3B21E80B1675167800F87886 /* SampleAppDelegate.m in Sources */,
 				3B21E80C1675167800F87886 /* SampleViewController.m in Sources */,
 				3B21E80D1675167800F87886 /* SamplePasswordViewController.m in Sources */,
-				3B21E80E1675167800F87886 /* IMSPasswordViewController.m in Sources */,
 				3B21E82D167518EF00F87886 /* IMSTestController.m in Sources */,
 				3B21E83316751ABE00F87886 /* IMSTestScenario.m in Sources */,
 				3B21E83616751BB800F87886 /* IMSTestStep.m in Sources */,
@@ -447,7 +463,6 @@
 				3B2907B8164BFFD50028C2CE /* SampleAppDelegate.m in Sources */,
 				3B2907C7164BFFD50028C2CE /* SampleViewController.m in Sources */,
 				3BDD2A941667EC7600F0BE44 /* SamplePasswordViewController.m in Sources */,
-				3B7F16961671767400A9B236 /* IMSPasswordViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +483,16 @@
 			isa = PBXTargetDependency;
 			name = SecureFoundation;
 			targetProxy = 3BEEB7191652E5FE00642ECE /* PBXContainerItemProxy */;
+		};
+		484DF80916D6DC2D002B7CD5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AppPassword;
+			targetProxy = 484DF80816D6DC2D002B7CD5 /* PBXContainerItemProxy */;
+		};
+		484DF82516D6E01A002B7CD5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AppPassword;
+			targetProxy = 484DF82416D6E01A002B7CD5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -494,6 +519,10 @@
 		3B21E8221675167800F87886 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/Sample_App-amvecbvmcvifpfcvqjrspxjzzzmp/Build/Products/Debug-iphoneos\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sample App/Password-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Sample App/Password Tests-Info.plist";
@@ -511,6 +540,10 @@
 		3B21E8231675167800F87886 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/Sample_App-amvecbvmcvifpfcvqjrspxjzzzmp/Build/Products/Debug-iphoneos\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sample App/Password-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Sample App/Password Tests-Info.plist";
@@ -586,6 +619,10 @@
 		3B2907CB164BFFD50028C2CE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/Sample_App-amvecbvmcvifpfcvqjrspxjzzzmp/Build/Products/Debug-iphoneos\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sample App/Password-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Sample App/Password-Info.plist";
@@ -598,6 +635,10 @@
 		3B2907CC164BFFD50028C2CE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/Sample_App-amvecbvmcvifpfcvqjrspxjzzzmp/Build/Products/Debug-iphoneos\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sample App/Password-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Sample App/Password-Info.plist";
