@@ -7,7 +7,27 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(short, IMSPasswordViewControllerMode) {
+//typedef NS_ENUM(short, IMSPasswordViewControllerMode) {
+//    
+//    /*
+//     
+//     Create a new password. This allows the user to enter a new password then
+//     imediately verify it.
+//     
+//     */
+//    IMSPasswordViewControllerModeCreate = 1,
+//    
+//    /*
+//     
+//     Verify a password. This allows the user to input a password then have it
+//     checked using the target/action pair.
+//     
+//     */
+//    IMSPasswordViewControllerModeVerify
+//    
+//};
+
+typedef enum {
     
     /*
      
@@ -25,7 +45,7 @@ typedef NS_ENUM(short, IMSPasswordViewControllerMode) {
      */
     IMSPasswordViewControllerModeVerify
     
-};
+}IMSPasswordViewControllerMode;
 
 @interface IMSPasswordViewController : UIViewController
 
