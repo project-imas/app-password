@@ -45,6 +45,8 @@
 		3BEEB71D1652E7FB00642ECE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BEEB71C1652E7FB00642ECE /* AudioToolbox.framework */; };
 		484DF82616D6E092002B7CD5 /* AppPassword.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 484DF80F16D6DC80002B7CD5 /* AppPassword.framework */; };
 		484DF82716D6E096002B7CD5 /* AppPassword.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 484DF80F16D6DC80002B7CD5 /* AppPassword.framework */; };
+		F545532116E550680003CC56 /* IMSPassword.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F545532016E550680003CC56 /* IMSPassword.bundle */; };
+		F545532316E550FA0003CC56 /* IMSPassword.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F545532216E550FA0003CC56 /* IMSPassword.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -148,6 +150,8 @@
 		3BEEB71C1652E7FB00642ECE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		484DF80216D6DC08002B7CD5 /* AppPassword.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AppPassword.xcodeproj; path = ../AppPassword.xcodeproj; sourceTree = "<group>"; };
 		484DF80F16D6DC80002B7CD5 /* AppPassword.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppPassword.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/Sample_App-amvecbvmcvifpfcvqjrspxjzzzmp/Build/Products/Debug-iphoneos/AppPassword.framework"; sourceTree = "<group>"; };
+		F545532016E550680003CC56 /* IMSPassword.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = IMSPassword.bundle; path = ../../AppPassword/IMSPassword.bundle; sourceTree = "<group>"; };
+		F545532216E550FA0003CC56 /* IMSPassword.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = IMSPassword.bundle; path = ../../AppPassword/IMSPassword.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +198,7 @@
 		3B21E82A167518C500F87886 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				F545532216E550FA0003CC56 /* IMSPassword.bundle */,
 				3B21E82B167518EF00F87886 /* IMSTestController.h */,
 				3B21E82C167518EF00F87886 /* IMSTestController.m */,
 				3B21E83116751ABE00F87886 /* IMSTestScenario.h */,
@@ -257,6 +262,7 @@
 		3B2907AE164BFFD50028C2CE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F545532016E550680003CC56 /* IMSPassword.bundle */,
 				3B21E8261675167900F87886 /* Password Tests-Info.plist */,
 				3B2907AF164BFFD50028C2CE /* Password-Info.plist */,
 				3B2907B0164BFFD50028C2CE /* InfoPlist.strings */,
@@ -422,6 +428,7 @@
 				3B21E81A1675167800F87886 /* Default-568h@2x.png in Resources */,
 				3B21E81B1675167800F87886 /* MainStoryboard.storyboard in Resources */,
 				3B21E81C1675167800F87886 /* SamplePasswordStoryboard_iPhone.storyboard in Resources */,
+				F545532316E550FA0003CC56 /* IMSPassword.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +442,7 @@
 				3B2907BE164BFFD50028C2CE /* Default-568h@2x.png in Resources */,
 				3B2907C1164BFFD50028C2CE /* MainStoryboard.storyboard in Resources */,
 				3B7F167E1671674900A9B236 /* SamplePasswordStoryboard_iPhone.storyboard in Resources */,
+				F545532116E550680003CC56 /* IMSPassword.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,10 +527,7 @@
 		3B21E8221675167800F87886 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/Sample_App-amvecbvmcvifpfcvqjrspxjzzzmp/Build/Products/Debug-iphoneos\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sample App/Password-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Sample App/Password Tests-Info.plist";
@@ -540,10 +545,7 @@
 		3B21E8231675167800F87886 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/Sample_App-amvecbvmcvifpfcvqjrspxjzzzmp/Build/Products/Debug-iphoneos\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sample App/Password-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Sample App/Password Tests-Info.plist";
@@ -621,7 +623,6 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/Sample_App-amvecbvmcvifpfcvqjrspxjzzzmp/Build/Products/Debug-iphoneos\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sample App/Password-Prefix.pch";
@@ -637,7 +638,6 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/Sample_App-amvecbvmcvifpfcvqjrspxjzzzmp/Build/Products/Debug-iphoneos\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sample App/Password-Prefix.pch";
