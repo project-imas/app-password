@@ -25,6 +25,7 @@ The "iMAS App Password" provides a simple way to include a password prompt to pr
 
 - Add the App Password repository as a submodule to your project. `git submodule add git@github.com:project-imas/app-password.git vendor/app-password`
 - Drag the "App Password" folder to your Xcode Project and add to the appropriate target
+- Add the IMSPassword.bundle to the "Copy Bundle Resources" build phase of the target
 - If you wish to run the sample app or the test suite, run `git submodule update --init --recursive`
 
 ## Usage
