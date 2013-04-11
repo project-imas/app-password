@@ -105,21 +105,25 @@ The APPass class allows you to specify your own storyboard with the following me
 	  fromStoryboardWithName:(NSString*) storyboardName;
 ```
 
-####Parameters
+#####Parameters
 
-name 
+name
+
 	The Storyboard ID e.g. APSimplePass within the framework's provided storyboard.
 	
 numberOfCodes
+
 	The number of codes (digits) that will be required to create a passcode.
 	
 rotating
+
 	A boolean that indicates whether or not to rotate the keyboard keys.
 
-storyboardName
+storyboardName  
+
 	The storyboards name without the extension e.g. APSimplePass_iPhone within the framework's provided storyboards.
 
-####Required IBOutlets 
+#####Required IBOutlets 
 
 ```objc
 @property (nonatomic,strong) IBOutlet UILabel         * phraseTitleLabel;
@@ -135,16 +139,18 @@ storyboardName
 	         fromStoryboardWithName:(NSString*) storyboardName
 ```
 
-####Parameters
+#####Parameters
 
-name 
+name  
+
 	The Storyboard ID e.g. APComplexPass within the framework's provided storyboard.
 
-storyboardName
+storyboardName  
+
 	The storyboards name without the extension e.g. APComplexPass_iPhone within the framework's provided storyboards.
 
 
-####Required IBOutlets 
+#####Required IBOutlets 
 
 ```objc
 @property (nonatomic,strong) IBOutlet UILabel         * phraseTitleLabel;
