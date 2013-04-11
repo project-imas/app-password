@@ -121,7 +121,7 @@ rotating
 
 storyboardName  
 
-	The storyboards name without the extension e.g. APSimplePass_iPhone within the framework's provided storyboards.
+	The storyboard's name without the extension e.g. APSimplePass_iPhone within the framework's provided storyboards.
 
 #####Required IBOutlets 
 
@@ -147,7 +147,7 @@ name
 
 storyboardName  
 
-	The storyboards name without the extension e.g. APComplexPass_iPhone within the framework's provided storyboards.
+	The storyboard's name without the extension e.g. APComplexPass_iPhone within the framework's provided storyboards.
 
 
 #####Required IBOutlets 
@@ -165,12 +165,14 @@ The sample applications demonstrate the implementation of the "out of the box" p
 
 ### APSimplePass
 
-![screenshot](https://github.com/project-imas/app-password/raw/master/APSimplePass.png)
+<img align="center" src="https://github.com/project-imas/app-password/raw/master/APSimplePass.png">
+
 
 
 ### APComplexPassEncryt
 
-![screenshot](https://github.com/project-imas/app-password/raw/master/APComplexPass.png)
+<img align="center" src="https://github.com/project-imas/app-password/raw/master/APComplexPass.png">
+
 
 
 
