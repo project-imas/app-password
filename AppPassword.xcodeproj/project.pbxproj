@@ -8,11 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		4819439416CE96B90016DB79 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4819439216CE96B90016DB79 /* InfoPlist.strings */; };
-		481943A016CE96DA0016DB79 /* IMSPassword.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4819439B16CE96DA0016DB79 /* IMSPassword.bundle */; };
-		481943A116CE96DA0016DB79 /* IMSPasswordStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4819439C16CE96DA0016DB79 /* IMSPasswordStoryboard_iPad.storyboard */; };
-		481943A216CE96DA0016DB79 /* IMSPasswordStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4819439D16CE96DA0016DB79 /* IMSPasswordStoryboard_iPhone.storyboard */; };
-		481943A316CE96DA0016DB79 /* IMSPasswordViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4819439E16CE96DA0016DB79 /* IMSPasswordViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		481943A416CE96DA0016DB79 /* IMSPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4819439F16CE96DA0016DB79 /* IMSPasswordViewController.m */; };
+		48570FFF17133E74002429FB /* APQuestionPass.h in Headers */ = {isa = PBXBuildFile; fileRef = 48570FFD17133E74002429FB /* APQuestionPass.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4857100017133E74002429FB /* APQuestionPass.m in Sources */ = {isa = PBXBuildFile; fileRef = 48570FFE17133E74002429FB /* APQuestionPass.m */; };
+		48571003171367A4002429FB /* APQuestionPass_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48571001171367A4002429FB /* APQuestionPass_iPad.storyboard */; };
+		48571004171367A4002429FB /* APQuestionPass_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48571002171367A4002429FB /* APQuestionPass_iPhone.storyboard */; };
+		4857107A17137659002429FB /* APProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 4857107617136F64002429FB /* APProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4857107B17137661002429FB /* APQuestionProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 4857107517136C5E002429FB /* APQuestionProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		48C7039D170DBB00003C7742 /* APComplexPass_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48C7039A170DBB00003C7742 /* APComplexPass_iPhone.storyboard */; };
+		48C7039E170DBB00003C7742 /* APSimplePass_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48C7039B170DBB00003C7742 /* APSimplePass_iPad.storyboard */; };
+		48C7039F170DBB00003C7742 /* APSimplePass_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48C7039C170DBB00003C7742 /* APSimplePass_iPhone.storyboard */; };
+		48C703A9170DBB30003C7742 /* APComplexPass.h in Headers */ = {isa = PBXBuildFile; fileRef = 48C703A2170DBB30003C7742 /* APComplexPass.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		48C703AA170DBB30003C7742 /* APComplexPass.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C703A3170DBB30003C7742 /* APComplexPass.m */; };
+		48C703AB170DBB30003C7742 /* APKeyboardCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 48C703A4170DBB30003C7742 /* APKeyboardCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		48C703AC170DBB30003C7742 /* APKeyboardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C703A5170DBB30003C7742 /* APKeyboardCell.m */; };
+		48C703AD170DBB30003C7742 /* APPass.h in Headers */ = {isa = PBXBuildFile; fileRef = 48C703A6170DBB30003C7742 /* APPass.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		48C703B3170DBB4A003C7742 /* APPass.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C703AE170DBB4A003C7742 /* APPass.m */; };
+		48C703B4170DBB4A003C7742 /* APSimplePass.h in Headers */ = {isa = PBXBuildFile; fileRef = 48C703AF170DBB4A003C7742 /* APSimplePass.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		48C703B5170DBB4A003C7742 /* APSimplePass.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C703B0170DBB4A003C7742 /* APSimplePass.m */; };
+		48C703B6170DBB4A003C7742 /* APSimplePassCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 48C703B1170DBB4A003C7742 /* APSimplePassCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		48C703B7170DBB4A003C7742 /* APSimplePassCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C703B2170DBB4A003C7742 /* APSimplePassCell.m */; };
+		48C703BB170DBBC2003C7742 /* APPassProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 48C703BA170DBBC2003C7742 /* APPassProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		48C703BE170DBC1B003C7742 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 48C703BD170DBC1B003C7742 /* back.png */; };
+		48C703C0170DBE44003C7742 /* AppPassword.h in Headers */ = {isa = PBXBuildFile; fileRef = 48C703BF170DBC97003C7742 /* AppPassword.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		48C704B7170DF4E3003C7742 /* APComplexPass_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48C704B6170DF4E3003C7742 /* APComplexPass_iPad.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,10 +39,29 @@
 		4819439316CE96B90016DB79 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4819439516CE96B90016DB79 /* AppPassword-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppPassword-Prefix.pch"; sourceTree = "<group>"; };
 		4819439B16CE96DA0016DB79 /* IMSPassword.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IMSPassword.bundle; sourceTree = "<group>"; };
-		4819439C16CE96DA0016DB79 /* IMSPasswordStoryboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = IMSPasswordStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		4819439D16CE96DA0016DB79 /* IMSPasswordStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = IMSPasswordStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		4819439E16CE96DA0016DB79 /* IMSPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMSPasswordViewController.h; sourceTree = "<group>"; };
-		4819439F16CE96DA0016DB79 /* IMSPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMSPasswordViewController.m; sourceTree = "<group>"; };
+		48570FFD17133E74002429FB /* APQuestionPass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APQuestionPass.h; sourceTree = "<group>"; };
+		48570FFE17133E74002429FB /* APQuestionPass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APQuestionPass.m; sourceTree = "<group>"; };
+		48571001171367A4002429FB /* APQuestionPass_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = APQuestionPass_iPad.storyboard; sourceTree = "<group>"; };
+		48571002171367A4002429FB /* APQuestionPass_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = APQuestionPass_iPhone.storyboard; sourceTree = "<group>"; };
+		4857107517136C5E002429FB /* APQuestionProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APQuestionProtocol.h; sourceTree = "<group>"; };
+		4857107617136F64002429FB /* APProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APProtocol.h; sourceTree = "<group>"; };
+		48C7039A170DBB00003C7742 /* APComplexPass_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = APComplexPass_iPhone.storyboard; sourceTree = "<group>"; };
+		48C7039B170DBB00003C7742 /* APSimplePass_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = APSimplePass_iPad.storyboard; sourceTree = "<group>"; };
+		48C7039C170DBB00003C7742 /* APSimplePass_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = APSimplePass_iPhone.storyboard; sourceTree = "<group>"; };
+		48C703A2170DBB30003C7742 /* APComplexPass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APComplexPass.h; sourceTree = "<group>"; };
+		48C703A3170DBB30003C7742 /* APComplexPass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APComplexPass.m; sourceTree = "<group>"; };
+		48C703A4170DBB30003C7742 /* APKeyboardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APKeyboardCell.h; sourceTree = "<group>"; };
+		48C703A5170DBB30003C7742 /* APKeyboardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APKeyboardCell.m; sourceTree = "<group>"; };
+		48C703A6170DBB30003C7742 /* APPass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPass.h; sourceTree = "<group>"; };
+		48C703AE170DBB4A003C7742 /* APPass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPass.m; sourceTree = "<group>"; };
+		48C703AF170DBB4A003C7742 /* APSimplePass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APSimplePass.h; sourceTree = "<group>"; };
+		48C703B0170DBB4A003C7742 /* APSimplePass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APSimplePass.m; sourceTree = "<group>"; };
+		48C703B1170DBB4A003C7742 /* APSimplePassCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APSimplePassCell.h; sourceTree = "<group>"; };
+		48C703B2170DBB4A003C7742 /* APSimplePassCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APSimplePassCell.m; sourceTree = "<group>"; };
+		48C703BA170DBBC2003C7742 /* APPassProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPassProtocol.h; sourceTree = "<group>"; };
+		48C703BD170DBC1B003C7742 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		48C703BF170DBC97003C7742 /* AppPassword.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppPassword.h; sourceTree = "<group>"; };
+		48C704B6170DF4E3003C7742 /* APComplexPass_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = APComplexPass_iPad.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,10 +75,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4816FF34170F354000309034 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4819437E16CE96B90016DB79 = {
 			isa = PBXGroup;
 			children = (
 				4819438F16CE96B90016DB79 /* AppPassword */,
+				4816FF34170F354000309034 /* Frameworks */,
 				4819438E16CE96B90016DB79 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,10 +103,9 @@
 			isa = PBXGroup;
 			children = (
 				4819439B16CE96DA0016DB79 /* IMSPassword.bundle */,
-				4819439C16CE96DA0016DB79 /* IMSPasswordStoryboard_iPad.storyboard */,
-				4819439D16CE96DA0016DB79 /* IMSPasswordStoryboard_iPhone.storyboard */,
-				4819439E16CE96DA0016DB79 /* IMSPasswordViewController.h */,
-				4819439F16CE96DA0016DB79 /* IMSPasswordViewController.m */,
+				48C703BF170DBC97003C7742 /* AppPassword.h */,
+				48C70399170DBADB003C7742 /* Storyboards */,
+				48C70398170DBABF003C7742 /* Classes */,
 				4819439016CE96B90016DB79 /* Supporting Files */,
 			);
 			path = AppPassword;
@@ -70,11 +114,95 @@
 		4819439016CE96B90016DB79 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				48C703BC170DBC01003C7742 /* Images */,
 				4819439116CE96B90016DB79 /* AppPassword-Info.plist */,
 				4819439216CE96B90016DB79 /* InfoPlist.strings */,
 				4819439516CE96B90016DB79 /* AppPassword-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		48C70398170DBABF003C7742 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				48C703B9170DBBAD003C7742 /* Protocols */,
+				48C703B8170DBB54003C7742 /* Headers */,
+				48C703C3170DBF5B003C7742 /* Implementations */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		48C70399170DBADB003C7742 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				48C7039B170DBB00003C7742 /* APSimplePass_iPad.storyboard */,
+				48C7039C170DBB00003C7742 /* APSimplePass_iPhone.storyboard */,
+				48C704B6170DF4E3003C7742 /* APComplexPass_iPad.storyboard */,
+				48C7039A170DBB00003C7742 /* APComplexPass_iPhone.storyboard */,
+				48571001171367A4002429FB /* APQuestionPass_iPad.storyboard */,
+				48571002171367A4002429FB /* APQuestionPass_iPhone.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		48C703B8170DBB54003C7742 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				48C703C2170DBF45003C7742 /* Cells */,
+				48C703A6170DBB30003C7742 /* APPass.h */,
+				48C703AF170DBB4A003C7742 /* APSimplePass.h */,
+				48C703A2170DBB30003C7742 /* APComplexPass.h */,
+				48570FFD17133E74002429FB /* APQuestionPass.h */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		48C703B9170DBBAD003C7742 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				4857107617136F64002429FB /* APProtocol.h */,
+				48C703BA170DBBC2003C7742 /* APPassProtocol.h */,
+				4857107517136C5E002429FB /* APQuestionProtocol.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		48C703BC170DBC01003C7742 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				48C703BD170DBC1B003C7742 /* back.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		48C703C2170DBF45003C7742 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				48C703B1170DBB4A003C7742 /* APSimplePassCell.h */,
+				48C703A4170DBB30003C7742 /* APKeyboardCell.h */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		48C703C3170DBF5B003C7742 /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				48C703C4170DBFAF003C7742 /* Cells */,
+				48C703AE170DBB4A003C7742 /* APPass.m */,
+				48C703B0170DBB4A003C7742 /* APSimplePass.m */,
+				48C703A3170DBB30003C7742 /* APComplexPass.m */,
+				48570FFE17133E74002429FB /* APQuestionPass.m */,
+			);
+			name = Implementations;
+			sourceTree = "<group>";
+		};
+		48C703C4170DBFAF003C7742 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				48C703B2170DBB4A003C7742 /* APSimplePassCell.m */,
+				48C703A5170DBB30003C7742 /* APKeyboardCell.m */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,7 +212,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				481943A316CE96DA0016DB79 /* IMSPasswordViewController.h in Headers */,
+				48C703C0170DBE44003C7742 /* AppPassword.h in Headers */,
+				48C703AD170DBB30003C7742 /* APPass.h in Headers */,
+				48C703A9170DBB30003C7742 /* APComplexPass.h in Headers */,
+				48C703AB170DBB30003C7742 /* APKeyboardCell.h in Headers */,
+				48C703B4170DBB4A003C7742 /* APSimplePass.h in Headers */,
+				48C703B6170DBB4A003C7742 /* APSimplePassCell.h in Headers */,
+				48C703BB170DBBC2003C7742 /* APPassProtocol.h in Headers */,
+				48570FFF17133E74002429FB /* APQuestionPass.h in Headers */,
+				4857107B17137661002429FB /* APQuestionProtocol.h in Headers */,
+				4857107A17137659002429FB /* APProtocol.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,9 +281,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4819439416CE96B90016DB79 /* InfoPlist.strings in Resources */,
-				481943A016CE96DA0016DB79 /* IMSPassword.bundle in Resources */,
-				481943A116CE96DA0016DB79 /* IMSPasswordStoryboard_iPad.storyboard in Resources */,
-				481943A216CE96DA0016DB79 /* IMSPasswordStoryboard_iPhone.storyboard in Resources */,
+				48C7039D170DBB00003C7742 /* APComplexPass_iPhone.storyboard in Resources */,
+				48C7039E170DBB00003C7742 /* APSimplePass_iPad.storyboard in Resources */,
+				48C7039F170DBB00003C7742 /* APSimplePass_iPhone.storyboard in Resources */,
+				48C703BE170DBC1B003C7742 /* back.png in Resources */,
+				48C704B7170DF4E3003C7742 /* APComplexPass_iPad.storyboard in Resources */,
+				48571003171367A4002429FB /* APQuestionPass_iPad.storyboard in Resources */,
+				48571004171367A4002429FB /* APQuestionPass_iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,7 +340,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				481943A416CE96DA0016DB79 /* IMSPasswordViewController.m in Sources */,
+				48C703AA170DBB30003C7742 /* APComplexPass.m in Sources */,
+				48C703AC170DBB30003C7742 /* APKeyboardCell.m in Sources */,
+				48C703B3170DBB4A003C7742 /* APPass.m in Sources */,
+				48C703B5170DBB4A003C7742 /* APSimplePass.m in Sources */,
+				48C703B7170DBB4A003C7742 /* APSimplePassCell.m in Sources */,
+				4857100017133E74002429FB /* APQuestionPass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,7 +384,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -259,7 +405,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

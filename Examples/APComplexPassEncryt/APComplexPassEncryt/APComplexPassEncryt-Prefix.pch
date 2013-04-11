@@ -1,5 +1,5 @@
 //
-// Prefix header for all source files of the 'AppPassword' target in the 'AppPassword' project
+// Prefix header for all source files of the 'APComplexPassEncryt' target in the 'APComplexPassEncryt' project
 //
 
 #import <Availability.h>

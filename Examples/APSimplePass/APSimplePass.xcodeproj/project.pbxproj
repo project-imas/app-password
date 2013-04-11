@@ -1,0 +1,491 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4816FF2B170F282E00309034 /* AppPassword.framework in Resources */ = {isa = PBXBuildFile; fileRef = 48C703FD170DC1EC003C7742 /* AppPassword.framework */; };
+		4816FF3F170F39BB00309034 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4816FF3E170F39BB00309034 /* QuartzCore.framework */; };
+		48C703D2170DC0C0003C7742 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C703D1170DC0C0003C7742 /* UIKit.framework */; };
+		48C703D4170DC0C0003C7742 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C703D3170DC0C0003C7742 /* Foundation.framework */; };
+		48C703D6170DC0C0003C7742 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C703D5170DC0C0003C7742 /* CoreGraphics.framework */; };
+		48C703DC170DC0C0003C7742 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 48C703DA170DC0C0003C7742 /* InfoPlist.strings */; };
+		48C703DE170DC0C0003C7742 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C703DD170DC0C0003C7742 /* main.m */; };
+		48C703E2170DC0C0003C7742 /* APAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C703E1170DC0C0003C7742 /* APAppDelegate.m */; };
+		48C703E4170DC0C0003C7742 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 48C703E3170DC0C0003C7742 /* Default.png */; };
+		48C703E6170DC0C0003C7742 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 48C703E5170DC0C0003C7742 /* Default@2x.png */; };
+		48C703E8170DC0C0003C7742 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 48C703E7170DC0C0003C7742 /* Default-568h@2x.png */; };
+		48C703EB170DC0C0003C7742 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48C703E9170DC0C0003C7742 /* MainStoryboard_iPhone.storyboard */; };
+		48C703EE170DC0C0003C7742 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48C703EC170DC0C0003C7742 /* MainStoryboard_iPad.storyboard */; };
+		48C703F1170DC0C0003C7742 /* APViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C703F0170DC0C0003C7742 /* APViewController.m */; };
+		48C70402170DC256003C7742 /* AppPassword.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C703FD170DC1EC003C7742 /* AppPassword.framework */; };
+		48C70406170DC541003C7742 /* AppPassword.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C70405170DC541003C7742 /* AppPassword.framework */; };
+		48C7040E170DCF85003C7742 /* Wallpaper-Clown-Fish.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 48C7040D170DCF85003C7742 /* Wallpaper-Clown-Fish.jpg */; };
+		48CC0FE1171703F1008C1D13 /* libSecureFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48CC0FDC1716FDB0008C1D13 /* libSecureFoundation.a */; };
+		48CC0FE317170422008C1D13 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48CC0FE217170422008C1D13 /* Security.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		48C703FC170DC1EC003C7742 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 48C703F8170DC1EC003C7742 /* AppPassword.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4819438D16CE96B90016DB79;
+			remoteInfo = AppPassword;
+		};
+		48C703FE170DC20C003C7742 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 48C703F8170DC1EC003C7742 /* AppPassword.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 4819438C16CE96B90016DB79;
+			remoteInfo = AppPassword;
+		};
+		48CC0FDB1716FDB0008C1D13 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 48CC0FD61716FDB0008C1D13 /* SecureFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3B89357C162C92F1003750B6;
+			remoteInfo = SecureFoundation;
+		};
+		48CC0FDD1716FDB0008C1D13 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 48CC0FD61716FDB0008C1D13 /* SecureFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3B89358D162C92F1003750B6;
+			remoteInfo = SecureFoundationTests;
+		};
+		48CC0FDF171703D5008C1D13 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 48CC0FD61716FDB0008C1D13 /* SecureFoundation.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B89357B162C92F1003750B6;
+			remoteInfo = SecureFoundation;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4816FF3E170F39BB00309034 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		48C703CE170DC0C0003C7742 /* APSimplePass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APSimplePass.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		48C703D1170DC0C0003C7742 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		48C703D3170DC0C0003C7742 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		48C703D5170DC0C0003C7742 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		48C703D9170DC0C0003C7742 /* APSimplePass-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "APSimplePass-Info.plist"; sourceTree = "<group>"; };
+		48C703DB170DC0C0003C7742 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		48C703DD170DC0C0003C7742 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		48C703DF170DC0C0003C7742 /* APSimplePass-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "APSimplePass-Prefix.pch"; sourceTree = "<group>"; };
+		48C703E0170DC0C0003C7742 /* APAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APAppDelegate.h; sourceTree = "<group>"; };
+		48C703E1170DC0C0003C7742 /* APAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APAppDelegate.m; sourceTree = "<group>"; };
+		48C703E3170DC0C0003C7742 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		48C703E5170DC0C0003C7742 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		48C703E7170DC0C0003C7742 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		48C703EA170DC0C0003C7742 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		48C703ED170DC0C0003C7742 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		48C703EF170DC0C0003C7742 /* APViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APViewController.h; sourceTree = "<group>"; };
+		48C703F0170DC0C0003C7742 /* APViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APViewController.m; sourceTree = "<group>"; };
+		48C703F8170DC1EC003C7742 /* AppPassword.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AppPassword.xcodeproj; path = ../../AppPassword.xcodeproj; sourceTree = "<group>"; };
+		48C70405170DC541003C7742 /* AppPassword.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppPassword.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/APSimplePass-haexvfijndrxadcjymzlsztwnlue/Build/Products/Debug-iphoneos/AppPassword.framework"; sourceTree = "<group>"; };
+		48C7040D170DCF85003C7742 /* Wallpaper-Clown-Fish.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Wallpaper-Clown-Fish.jpg"; path = "../../../../rotatingkeypad/Images/Wallpaper-Clown-Fish.jpg"; sourceTree = "<group>"; };
+		48CC0FD61716FDB0008C1D13 /* SecureFoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SecureFoundation.xcodeproj; path = ../../../securefoundation/SecureFoundation.xcodeproj; sourceTree = "<group>"; };
+		48CC0FE217170422008C1D13 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		48C703CB170DC0C0003C7742 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48CC0FE317170422008C1D13 /* Security.framework in Frameworks */,
+				48CC0FE1171703F1008C1D13 /* libSecureFoundation.a in Frameworks */,
+				4816FF3F170F39BB00309034 /* QuartzCore.framework in Frameworks */,
+				48C70402170DC256003C7742 /* AppPassword.framework in Frameworks */,
+				48C703D2170DC0C0003C7742 /* UIKit.framework in Frameworks */,
+				48C703D4170DC0C0003C7742 /* Foundation.framework in Frameworks */,
+				48C703D6170DC0C0003C7742 /* CoreGraphics.framework in Frameworks */,
+				48C70406170DC541003C7742 /* AppPassword.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		48C703C5170DC0C0003C7742 = {
+			isa = PBXGroup;
+			children = (
+				48C703F7170DC1B2003C7742 /* Subprojects */,
+				48C703D7170DC0C0003C7742 /* APSimplePass */,
+				48C703D0170DC0C0003C7742 /* Frameworks */,
+				48C703CF170DC0C0003C7742 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		48C703CF170DC0C0003C7742 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				48C703CE170DC0C0003C7742 /* APSimplePass.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		48C703D0170DC0C0003C7742 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				48CC0FE217170422008C1D13 /* Security.framework */,
+				4816FF3E170F39BB00309034 /* QuartzCore.framework */,
+				48C70405170DC541003C7742 /* AppPassword.framework */,
+				48C703D1170DC0C0003C7742 /* UIKit.framework */,
+				48C703D3170DC0C0003C7742 /* Foundation.framework */,
+				48C703D5170DC0C0003C7742 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		48C703D7170DC0C0003C7742 /* APSimplePass */ = {
+			isa = PBXGroup;
+			children = (
+				48C7040C170DCF66003C7742 /* Images */,
+				48C7040B170DCE42003C7742 /* Delegate */,
+				48C703E9170DC0C0003C7742 /* MainStoryboard_iPhone.storyboard */,
+				48C703EC170DC0C0003C7742 /* MainStoryboard_iPad.storyboard */,
+				48C703EF170DC0C0003C7742 /* APViewController.h */,
+				48C703F0170DC0C0003C7742 /* APViewController.m */,
+				48C703D8170DC0C0003C7742 /* Supporting Files */,
+			);
+			path = APSimplePass;
+			sourceTree = "<group>";
+		};
+		48C703D8170DC0C0003C7742 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				48C703D9170DC0C0003C7742 /* APSimplePass-Info.plist */,
+				48C703DA170DC0C0003C7742 /* InfoPlist.strings */,
+				48C703DD170DC0C0003C7742 /* main.m */,
+				48C703DF170DC0C0003C7742 /* APSimplePass-Prefix.pch */,
+				48C703E3170DC0C0003C7742 /* Default.png */,
+				48C703E5170DC0C0003C7742 /* Default@2x.png */,
+				48C703E7170DC0C0003C7742 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		48C703F7170DC1B2003C7742 /* Subprojects */ = {
+			isa = PBXGroup;
+			children = (
+				48C703F8170DC1EC003C7742 /* AppPassword.xcodeproj */,
+				48CC0FD61716FDB0008C1D13 /* SecureFoundation.xcodeproj */,
+			);
+			name = Subprojects;
+			sourceTree = "<group>";
+		};
+		48C703F9170DC1EC003C7742 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				48C703FD170DC1EC003C7742 /* AppPassword.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		48C7040B170DCE42003C7742 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				48C703E0170DC0C0003C7742 /* APAppDelegate.h */,
+				48C703E1170DC0C0003C7742 /* APAppDelegate.m */,
+			);
+			name = Delegate;
+			sourceTree = "<group>";
+		};
+		48C7040C170DCF66003C7742 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				48C7040D170DCF85003C7742 /* Wallpaper-Clown-Fish.jpg */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		48CC0FD71716FDB0008C1D13 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				48CC0FDC1716FDB0008C1D13 /* libSecureFoundation.a */,
+				48CC0FDE1716FDB0008C1D13 /* SecureFoundationTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		48C703CD170DC0C0003C7742 /* APSimplePass */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48C703F4170DC0C0003C7742 /* Build configuration list for PBXNativeTarget "APSimplePass" */;
+			buildPhases = (
+				48C703CA170DC0C0003C7742 /* Sources */,
+				48C703CB170DC0C0003C7742 /* Frameworks */,
+				48C703CC170DC0C0003C7742 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				48CC0FE0171703D5008C1D13 /* PBXTargetDependency */,
+				48C703FF170DC20C003C7742 /* PBXTargetDependency */,
+			);
+			name = APSimplePass;
+			productName = APSimplePass;
+			productReference = 48C703CE170DC0C0003C7742 /* APSimplePass.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		48C703C6170DC0C0003C7742 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = AP;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = Mitre;
+			};
+			buildConfigurationList = 48C703C9170DC0C0003C7742 /* Build configuration list for PBXProject "APSimplePass" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 48C703C5170DC0C0003C7742;
+			productRefGroup = 48C703CF170DC0C0003C7742 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 48C703F9170DC1EC003C7742 /* Products */;
+					ProjectRef = 48C703F8170DC1EC003C7742 /* AppPassword.xcodeproj */;
+				},
+				{
+					ProductGroup = 48CC0FD71716FDB0008C1D13 /* Products */;
+					ProjectRef = 48CC0FD61716FDB0008C1D13 /* SecureFoundation.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				48C703CD170DC0C0003C7742 /* APSimplePass */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		48C703FD170DC1EC003C7742 /* AppPassword.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AppPassword.framework;
+			remoteRef = 48C703FC170DC1EC003C7742 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		48CC0FDC1716FDB0008C1D13 /* libSecureFoundation.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSecureFoundation.a;
+			remoteRef = 48CC0FDB1716FDB0008C1D13 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		48CC0FDE1716FDB0008C1D13 /* SecureFoundationTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SecureFoundationTests.octest;
+			remoteRef = 48CC0FDD1716FDB0008C1D13 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		48C703CC170DC0C0003C7742 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4816FF2B170F282E00309034 /* AppPassword.framework in Resources */,
+				48C703DC170DC0C0003C7742 /* InfoPlist.strings in Resources */,
+				48C703E4170DC0C0003C7742 /* Default.png in Resources */,
+				48C703E6170DC0C0003C7742 /* Default@2x.png in Resources */,
+				48C703E8170DC0C0003C7742 /* Default-568h@2x.png in Resources */,
+				48C703EB170DC0C0003C7742 /* MainStoryboard_iPhone.storyboard in Resources */,
+				48C703EE170DC0C0003C7742 /* MainStoryboard_iPad.storyboard in Resources */,
+				48C7040E170DCF85003C7742 /* Wallpaper-Clown-Fish.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		48C703CA170DC0C0003C7742 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48C703DE170DC0C0003C7742 /* main.m in Sources */,
+				48C703E2170DC0C0003C7742 /* APAppDelegate.m in Sources */,
+				48C703F1170DC0C0003C7742 /* APViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		48C703FF170DC20C003C7742 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AppPassword;
+			targetProxy = 48C703FE170DC20C003C7742 /* PBXContainerItemProxy */;
+		};
+		48CC0FE0171703D5008C1D13 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SecureFoundation;
+			targetProxy = 48CC0FDF171703D5008C1D13 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		48C703DA170DC0C0003C7742 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				48C703DB170DC0C0003C7742 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		48C703E9170DC0C0003C7742 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				48C703EA170DC0C0003C7742 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		48C703EC170DC0C0003C7742 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				48C703ED170DC0C0003C7742 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		48C703F2170DC0C0003C7742 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		48C703F3170DC0C0003C7742 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		48C703F5170DC0C0003C7742 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../../Library/Developer/Xcode/DerivedData/APSimplePass-haexvfijndrxadcjymzlsztwnlue/Build/Products/Debug-iphoneos\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "APSimplePass/APSimplePass-Prefix.pch";
+				INFOPLIST_FILE = "APSimplePass/APSimplePass-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		48C703F6170DC0C0003C7742 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../../Library/Developer/Xcode/DerivedData/APSimplePass-haexvfijndrxadcjymzlsztwnlue/Build/Products/Debug-iphoneos\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "APSimplePass/APSimplePass-Prefix.pch";
+				INFOPLIST_FILE = "APSimplePass/APSimplePass-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		48C703C9170DC0C0003C7742 /* Build configuration list for PBXProject "APSimplePass" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48C703F2170DC0C0003C7742 /* Debug */,
+				48C703F3170DC0C0003C7742 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		48C703F4170DC0C0003C7742 /* Build configuration list for PBXNativeTarget "APSimplePass" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48C703F5170DC0C0003C7742 /* Debug */,
+				48C703F6170DC0C0003C7742 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 48C703C6170DC0C0003C7742 /* Project object */;
+}

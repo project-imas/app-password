@@ -2,7 +2,7 @@
 
 ## Background
 
-The "iMAS App Password" provides a simple way to include a password prompt to protect your application's data. It has just enough logic to enforce password strength, show alerts when input is invalid, and provide means for a customizable user interface.
+The "iMAS App Password" framework provides a simple way to include passcode support into your application. It has the logic to enforce passcode strength, and can react to any passcode input. The framework contains two types of pass codes, a simple passcode (numeric) and a complex passcode (a combination of numbers and characters). The frameworks works with the "iMAS Secure Foundation" framework in order to provide advanced security for both types codes.
 
 ## Vulnerabilities Addressed
 1. No application password
@@ -24,55 +24,153 @@ The "iMAS App Password" provides a simple way to include a password prompt to pr
 ## Installation
 
 - Add the App Password repository as a submodule to your project. `git submodule add git@github.com:project-imas/app-password.git vendor/app-password`
-- Drag the "App Password" folder to your Xcode Project and add to the appropriate target
-- Add the IMSPassword.bundle to the "Copy Bundle Resources" build phase of the target
-- If you wish to run the sample app or the test suite, run `git submodule update --init --recursive`
+- Add the Secure Foundation repository as a submodule to your project. `git submodule add git@github.com:project-imas/securefoundation.git vendor/securefoundation`
+
+- Drag AppPassword.xcodeproj      into the your project as a subproject
+- Drag SecureFoundation.xcodeproj into the your project as a subproject
+
+- Add AppPassword           to target’s build phase - target dependancies 
+- Add libSecureFoundation.a to target’s build phase - target dependancies 
+
+- Add AppPassword.framework to target’s build phase - link binary with libraries
+- Add libSecureFoundation.a to target’s build phase - link binary with libraries 
+- Add Security.framework    to target’s build phase - link binary with libraries 
+- Add QuartzCore.framework  to target’s build phase - link binary with libraries
+
+- Add AppPassword.framework to target’s build phase - copy bundle resources (if using the "out of the box" storyboards)
+- Add AppPassword.framework to your application’s framework folder
 
 ## Usage
 
-The "App Password" folder contains one key class: `IMSPasswordViewController`. This class contains basic logic for controlling password input inside your app.
+The "App Password" folder contains one key class: `APPass`. It is designed as a class factory that provides either a simple or complex control for your AppViewController. The following are examples of instantiating and launching a control.
 
-It is highly customizable. You can change the following:
-
-- Set the required password strength with a regular expression
-- Subclass `IMSPasswordViewController` and override `+ storyboard` or `+ storybaordBaseName` to provide a custom storyboard
-- Subclass `IMSPasswordViewController` and override `+ localizedStringForKey:` to provide custom localized strings
-- Perform actions in callbacks on key events
-
-To allow a user to set their passcode your code would look like:
+###Simple:  
 
 ```objc
-UIStoryboard *storyboard = [SamplePasswordViewController storyboard];
-UINavigationController *navigationController = [storyboard instantiateViewControllerWithIdentifier:@"CreatePasswordViewController"];
-IMSPasswordViewController *passwordController = [[navigationController viewControllers] objectAtIndex:0];
-passwordController.target = self;
-passwordController.action = @selector(passwordController:didCreatePassword:);
-passwordController.passwordSecurityPattern = @"^.*(?=.*[a-zA-Z])(?=.*[0-9])(?=.{6,}).*$";
-[self presentViewController:navigationController animated:YES completion:nil];
+	// ---------------------------------------------------------------
+	// AppPassword API - passcode
+	// ---------------------------------------------------------------
+	APPass *pass;
+	self.pass            = [APPass passWithCodes:6 rotatingKeyboard:YES];
+	self.pass.delegate   = self;
+    // ---------------------------------------------------------------
+    // setting the parentView will cause the passView to be displayed
+    // ---------------------------------------------------------------
+    self.pass.parentView = self.view;
 ```
 
-The code for showing a password verification screen would look very similar. Perform any required actions in the action method you provide, including dismissing the view.
+- Set the required passcode strength by specifying the number of codes
+- Set the keyboard as rotating in order to confuse onlookers 
+- Receive actions within the delegate protocol methods (see example app)
+
+###Complex: 	
+
+```objc	
+	// ---------------------------------------------------------------
+    // AppPassword API - passcode
+    // ---------------------------------------------------------------
+	APPass *pass;
+	self.pass             = [APPass passComplex];
+	self.pass.delegate    = self;
+	self.pass.syntax      = @"^.*(?=.*[a-zA-Z])(?=.*[0-9])(?=.{6,}).*$";
+    self.pass.syntaxLabel = @"length:6 - 1 digit";
+    // ---------------------------------------------------------------
+    // AppPassword API - security questions
+    // ---------------------------------------------------------------
+	APPass *question;
+    self.numberOfQuestion    = 2;
+    self.question            = [APPass passQuestions:self.numberOfQuestion];
+    self.question.delegate   = self;
+    // ---------------------------------------------------------------
+    // setting the parentView will cause the passView to be displayed
+    // ---------------------------------------------------------------
+    self.pass.parentView     = self.view;
+```
+	
+- Set the required passcode strength with a regular expression
+- Set the number of questions required to reset the passcode
+- Receive actions within the delegate protocol methods (see example app)
 
 ## Customization
 
-You can provide your own storyboard by subclassing `IMSPasswordViewController` and overriding either `storyboardBaseName` to use the default load mechanism, or `storyboard` to perform custom storyboard loading. You do not need to call super in either of these cases. In your storyboard you should set the `passwordOneField`, `passwordTwoField`, and `passwordFields` outlets. The behavior of each of these can be seen in either of the `IMSPasswordStoryboard` files.
+The APPass class allows you to specify your own storyboard with the following methods:
 
-Custom localizations can be loaded by subclassing `IMSPasswordViewController` and overriding `localizedStringForKey:`. You do not need to call super here. The default implementation of this method looks in `IMSPassword.bundle` for localizations. If you would like to add a translation to the default set please send a pull request. Otherwise you can load your own localization table or pass calls through to `NSLocalizedString`.
+###Simple:  
+
+```objc	
+
+	+(APPass*)  passWithName:(NSString*) name
+	                   codes:(NSInteger) numberOfCodes
+	        rotatingKeyboard:(BOOL)      rotating
+	  fromStoryboardWithName:(NSString*) storyboardName;
+```
+
+####Parameters
+
+name 
+	The Storyboard ID e.g. APSimplePass within the framework's provided storyboard.
+	
+numberOfCodes
+	The number of codes (digits) that will be required to create a passcode.
+	
+rotating
+	A boolean that indicates whether or not to rotate the keyboard keys.
+
+storyboardName
+	The storyboards name without the extension e.g. APSimplePass_iPhone within the framework's provided storyboards.
+
+####Required IBOutlets 
+
+```objc
+@property (nonatomic,strong) IBOutlet UILabel         * phraseTitleLabel;
+@property (nonatomic,strong) IBOutlet UILabel         * phraseSubtitleLabel;
+@property (nonatomic,strong) IBOutlet UITextField     * phraseTextField;
+```
+
+
+###Complex: 	
+
+```objc	
+	+(APPass*)  complexPassWithName:(NSString*) name
+	         fromStoryboardWithName:(NSString*) storyboardName
+```
+
+####Parameters
+
+name 
+	The Storyboard ID e.g. APComplexPass within the framework's provided storyboard.
+
+storyboardName
+	The storyboards name without the extension e.g. APComplexPass_iPhone within the framework's provided storyboards.
+
+
+####Required IBOutlets 
+
+```objc
+@property (nonatomic,strong) IBOutlet UILabel         * phraseTitleLabel;
+@property (nonatomic,strong) IBOutlet UILabel         * phraseSubtitleLabel;
+@property (nonatomic,strong) IBOutlet UITextField     * phraseTextField;
+```
+
 
 ## Sample App
 
-The sample application demonstrates the use of the different password view modes, as well as its use with [SecureFoundation](https://github.com/project-imas/securefoundation) which provides additional levels of data protection.
+The sample applications demonstrate the implementation of the "out of the box" passcode controls, as well as, the implementation of the delegation methods. 
 
-Tests built using the [KIF](https://github.com/square/KIF) testing framework can be run by running the "Password Tests" target.
+### APSimplePass
 
-## Example Screenshot 
+![screenshot](https://github.com/project-imas/app-password/raw/master/APSimplePass.png)
 
-![screenshot](https://github.com/project-imas/app-password/raw/master/passcode.png)
+
+### APComplexPassEncryt
+
+![screenshot](https://github.com/project-imas/app-password/raw/master/APComplexPass.png)
+
 
 
 ## License
 
-Copyright 2012 The MITRE Corporation, All Rights Reserved.
+Copyright 2012,2013 The MITRE Corporation, All Rights Reserved.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this work except in compliance with the License.
