@@ -2,7 +2,7 @@
 
 ## Background
 
-The "iMAS App Password" framework provides a simple way to include passcode support into your application. It has the logic to enforce passcode strength, and can react to any passcode input. The framework contains two types of pass codes, a simple passcode (numeric) and a complex passcode (a combination of numbers and characters). The framework utilizes the "iMAS Secure Foundation" framework in order to provide advanced security for both types codes.
+The "iMAS App Password" framework provides a simple way to include passcode support into your application. It has the logic to enforce passcode strength, and can react to any passcode input. The framework contains two types of passcode controls, a simple passcode (numeric) and a complex passcode (a combination of numbers and characters). The framework utilizes the "iMAS Secure Foundation" framework in order to provide advanced security for both types of controls.
 
 ## Vulnerabilities Addressed
 1. No application password
