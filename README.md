@@ -174,7 +174,9 @@ The sample applications demonstrate the implementation of the "out of the box" p
 <img align="center" src="https://github.com/project-imas/app-password/raw/master/APComplexPass.png">
 
 
+## Recognition
 
+MITRE wishes to thank [Kevin O'Keefe](https://github.com/centerthread) for thoroughly revamping and re-implementing this security control from the ground up.
 
 ## License
 
