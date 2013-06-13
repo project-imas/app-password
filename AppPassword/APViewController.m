@@ -25,8 +25,11 @@
     
 //    [self resetPass];
 
-    if (0)  self.pass   = [APPass passWithCodes:4 roatingKeyboard:YES];
-    else    self.pass   = [APPass passComplex];
+#if (0)
+    self.pass   = [APPass passWithCodes:4 roatingKeyboard:YES];
+#else
+    self.pass   = [APPass passComplex];
+#endif
     
     self.pass.delegate  = self;
     self.pass.verify    = [self checkForIMSCrytoPass];
