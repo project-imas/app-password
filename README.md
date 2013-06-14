@@ -167,7 +167,11 @@ The sample applications demonstrate the implementation of the "out of the box" p
 
 <img align="center" src="https://github.com/project-imas/app-password/raw/master/APSimplePass.png">
 
-
+Instructions for running the sample apps:
+- git pull app-password
+- open XCode and open APSimplepass project file.
+- Ensure XCode scheme is set to APSimplepass > < sim or device >
+- Clean, run and explore
 
 ### APComplexPassEncryt
 
