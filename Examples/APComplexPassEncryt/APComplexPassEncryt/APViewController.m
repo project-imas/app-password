@@ -18,6 +18,11 @@
 
 @property (nonatomic,strong) IBOutlet UIButton *askForPassword;
 @property (nonatomic,strong) IBOutlet UIImage  *background;
+@property (nonatomic,strong) IBOutlet UIButton *logoutButton;
+@property (weak, nonatomic) IBOutlet UIButton *resetButton;
+
+@property (weak, nonatomic) IBOutlet UIButton *clearAllButton;
+@property (weak, nonatomic) IBOutlet UIButton *forgotButton;
 
 @end
 
@@ -47,8 +52,16 @@
     self.question.delegate   = self;
     self.question.background = self.background;
     
+    //** dsiable all buttons
+    
+    _logoutButton.alpha = 0.6f;
+    [_logoutButton setEnabled:NO];
+    _resetButton.alpha = 0.6f;
+    [_resetButton setEnabled:NO];
+    
     [self askForPasscode:self];
 }
+
 - (IBAction)  askForPasscode:(id)sender {
     
     if ( [self checkForIMSCrytoPass] ) {
@@ -60,25 +73,32 @@
         
         self.pass.verify         = nil;
         self.passControl         = PASS_CREATE;
+        
+        //** disable forgot button
+        _forgotButton.alpha = 0.6f;
+        [_forgotButton setEnabled:NO];
     }
     // ---------------------------------------------------------------
     // setting the parent will cause the passView to be displayed
     // ---------------------------------------------------------------
     self.pass.parentView     = self.view;
 }
+
+
 //- (IBAction) askForQuestions:(id)sender {
 - (void) askForQuestions {
     
     self.question.verifyQuestions  = IMSCryptoManagerSecurityQuestions();
-    self.passControl         = (nil == self.pass.verify)
-    ? PASS_CREATE_Q: PASS_VERIFY_Q;
+    self.passControl         = (nil == self.pass.verify) ? PASS_CREATE_Q: PASS_VERIFY_Q;
     // ---------------------------------------------------------------
     // setting the parent will cause the passView to be displayed
     // ---------------------------------------------------------------
     
     self.question.parentView = self.view;
 }
-- (IBAction)   clearPassword:(id)sender {
+
+
+- (IBAction) clearPassword:(id)sender {
     
     IMSCryptoManagerPurge();
     
@@ -99,6 +119,8 @@
     self.pass.clear     = @"clear";
     self.question.clear = @"clear";
 }
+
+
 //------------------------------------------------------------------------------
 // APPassProtocol - required
 //------------------------------------------------------------------------------
@@ -125,31 +147,52 @@
         }
     }
 }
+
+
 //------------------------------------------------------------------------------
 // The passcode has been entered now present the questions
 //------------------------------------------------------------------------------
 - (void) processCreate:(UIViewController*) viewController
             withPhrase:(NSString*) phrase {
+
+    NSLog(@"here in processCreate");
     
     // hold on to the phrase for finialize method
     IMSCryptoManagerStoreTemporaryPasscode(phrase);
     
     // ask to create questions
     [self askForQuestions];
+
+    //** USER logged in
+    [self userLoggedInSetButtons];
 }
+
+
 //------------------------------------------------------------------------------
 // Update the stored passcode with a new one
 //------------------------------------------------------------------------------
 - (void)  processReset:(UIViewController*) viewController
             withPhrase:(NSString*) phrase {
     
+    NSLog(@"here in processReset");
+
     IMSCryptoManagerUpdatePasscode(phrase);
+    
+    //** USER logged in
+    [self userLoggedInSetButtons];
 }
+
+
 //------------------------------------------------------------------------------
 //
 //------------------------------------------------------------------------------
 - (void) processVerify:(UIViewController*) viewController
             withPhrase:(NSString*) phrase {
+    
+    NSLog(@"here in processVerify USER Logged in");
+    
+    //** USER logged in
+    [self userLoggedInSetButtons];    
 }
 
 //------------------------------------------------------------------------------
@@ -163,6 +206,8 @@
     
     return ret;
 }
+
+
 //------------------------------------------------------------------------------
 // Required if implementing secureFoundation
 //------------------------------------------------------------------------------
@@ -180,6 +225,7 @@
     
     [self askForQuestions];
 }
+
 
 //------------------------------------------------------------------------------
 // APQuestionProtocol - required
@@ -221,8 +267,28 @@
 -(BOOL) APPassQuestion:(UIViewController *) viewController
          verifyAnswers:(NSArray *)          answers {
     
-    return IMSCryptoManagerUnlockWithAnswersForSecurityQuestions(answers);
-    
+    if (IMSCryptoManagerUnlockWithAnswersForSecurityQuestions(answers) == FALSE) {
+        //** wrong answers to questions
+        //** display a dialog and then quit app
+        UIAlertView *alert = [[UIAlertView alloc]
+                              initWithTitle:@"Answers do not match Questions, exiting" message:nil delegate:self
+                              cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+        [alert setTag:0];
+        [alert show];
+        
+        return FALSE;
+    }
+    else {
+        //** App Password will prompt for new passcode
+        //** display a dialog and then quit app
+        UIAlertView *alert = [[UIAlertView alloc]
+                              initWithTitle:@"Reset success, enter new passcode" message:nil delegate:self
+                              cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+        [alert setTag:1];
+        [alert show];
+        
+        return TRUE;
+    }
 }
 
 //------------------------------------------------------------------------------
@@ -244,6 +310,116 @@
     }
 }
 
+//** Forgot my password
+- (IBAction)passForgotten:(id)sender {
+    // ask questions, if correct, allow password to be reset
+    //[self resetPassAP];
+    [self askForQuestions];
+}
+
+- (IBAction)resetPasscode:(id)sender {
+    
+    //** check and confirm passcode was entered by user already
+    if (IMSCryptoManagerHasPasscode()) {
+        self.passControl     = PASS_RESET;
+        self.pass.verify     = nil;
+        self.pass.parentView = self.view;
+    }
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == [alertView cancelButtonIndex]) return;
+
+    //** question reset - failed Q&A
+    if (alertView.tag == 0)
+    {
+        //** user entered bad answers to questions
+        exit(0);
+    }
+    
+    //** question reset - good Q&A, just return when OK is pressed
+    if (alertView.tag == 1)
+    {
+        return;
+    }
+
+    //** logout
+    if (alertView.tag == 2)
+    {
+       NSLog(@"User Logged out");
+       IMSCryptoManagerPurge();
+    }
+    
+    if (alertView.tag == 2 || alertView.tag == 3) {
+        //** user logged out or cleared all passwords and questions
+        [self userLoggedOutSetButtons];
+    }
+
+    //** clear all
+    if (alertView.tag == 3)
+    {
+        NSLog(@"User CLEARED ALL!");
+        [self clearPassword:nil];
+        
+        //** disable forgot button
+        _forgotButton.alpha = 0.6f;
+        [_forgotButton setEnabled:NO];
+    }
+       
+    
+    
+}
+
+
+- (IBAction)passLogout:(id)sender {
+    UIAlertView *alert = [[UIAlertView alloc]
+                          initWithTitle:@"Logout, are you sure?" message:nil delegate:self
+                          cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
+    [alert setTag:2];
+    [alert show];
+    
+}
+
+- (IBAction)passClearAll:(id)sender {
+    UIAlertView *alert = [[UIAlertView alloc]
+                          initWithTitle:@"Clear All, are you sure?" message:nil delegate:self
+                          cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
+    [alert setTag:3];
+    [alert show];
+}
+
+- (void) userLoggedInSetButtons {
+    //** enable these buttons
+    _logoutButton.alpha = 1.0f;
+    [_logoutButton setEnabled:YES];
+    _resetButton.alpha = 1.0f;
+    [_resetButton setEnabled:YES];
+    _clearAllButton.alpha = 1.0f;
+    [_clearAllButton setEnabled:YES];
+
+    //** disable buttons
+    _askForPassword.alpha = 0.6f;
+    [_askForPassword setEnabled:NO];
+    _forgotButton.alpha = 0.6f;
+    [_forgotButton setEnabled:NO];
+}
+
+- (void) userLoggedOutSetButtons {
+    //** disable buttons
+    _logoutButton.alpha = 0.6f;
+    [_logoutButton setEnabled:NO];
+    _resetButton.alpha = 0.6f;
+    [_resetButton setEnabled:NO];
+    _clearAllButton.alpha = 0.6f;
+    [_clearAllButton setEnabled:NO];
+    
+    //** enable buttons
+    _askForPassword.alpha = 1.0f;
+    [_askForPassword setEnabled:YES];
+    _forgotButton.alpha = 1.0f;
+    [_forgotButton setEnabled:YES];
+}
 
 
 @end

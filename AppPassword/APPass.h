@@ -35,6 +35,7 @@ typedef enum {
 @property (nonatomic)         NSString            *verify;
 @property (nonatomic)         NSArray             *verifyQuestions;
 @property (nonatomic, strong) NSString            *syntax;
+@property (nonatomic)         BOOL                resetEnabled;
 @property (nonatomic)         NSString            *syntaxLabel;
 @property (nonatomic)         UIColor             *keyboardKeycolor;
 @property (nonatomic)         NSString            *clear;
