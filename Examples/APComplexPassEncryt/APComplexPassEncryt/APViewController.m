@@ -44,6 +44,8 @@
     self.pass.background     = self.background;
     self.pass.syntax         = @"^.*(?=.*[a-zA-Z])(?=.*[0-9])(?=.{6,}).*$";
     self.pass.syntaxLabel    = @"length:6 - 1 digit, 1 capital";
+    self.pass.resetEnabled   = FALSE; //** TRUE - ask user for questions and password resets after 3 failures
+                                      //** FALSE - exit(0) after 3 failures
     // ---------------------------------------------------------------
     // AppPassword API - security questions
     // ---------------------------------------------------------------
@@ -118,6 +120,25 @@
     
     self.pass.clear     = @"clear";
     self.question.clear = @"clear";
+    
+    UIAlertView *alert = [[UIAlertView alloc]
+                          initWithTitle:@"Passwords and Q&A cleared!" message:nil delegate:nil
+                          cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+    [alert show];
+    
+    //** wait until user clicks OK
+    NSRunLoop *rl = [NSRunLoop currentRunLoop];
+    NSDate *d;
+    while ([alert isVisible]) {
+       d = [[NSDate alloc] init];
+      [rl runUntilDate:d];
+    }
+    
+    //** disable forgot button
+    _forgotButton.alpha = 0.6f;
+    [_forgotButton setEnabled:NO];
+
+    
 }
 
 
@@ -351,6 +372,7 @@
        IMSCryptoManagerPurge();
     }
     
+    
     if (alertView.tag == 2 || alertView.tag == 3) {
         //** user logged out or cleared all passwords and questions
         [self userLoggedOutSetButtons];
@@ -361,14 +383,8 @@
     {
         NSLog(@"User CLEARED ALL!");
         [self clearPassword:nil];
-        
-        //** disable forgot button
-        _forgotButton.alpha = 0.6f;
-        [_forgotButton setEnabled:NO];
     }
-       
-    
-    
+
 }
 
 
