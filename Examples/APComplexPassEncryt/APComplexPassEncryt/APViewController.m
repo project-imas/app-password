@@ -61,7 +61,8 @@
     _resetButton.alpha = 0.6f;
     [_resetButton setEnabled:NO];
     
-    [self askForPasscode:self];
+    //** uncomment to automatically launch the passcode dialog
+    //[self askForPasscode:self];
 }
 
 - (IBAction)  askForPasscode:(id)sender {
@@ -100,6 +101,10 @@
 }
 
 
+//*******************
+//** DEBUG purposes - remove from production code
+
+# if 1
 - (IBAction) clearPassword:(id)sender {
     
     IMSCryptoManagerPurge();
@@ -140,6 +145,7 @@
 
     
 }
+#endif
 
 
 //------------------------------------------------------------------------------
@@ -178,8 +184,9 @@
 
     NSLog(@"here in processCreate");
     
-    // hold on to the phrase for finialize method
-    IMSCryptoManagerStoreTemporaryPasscode(phrase);
+    //** hold on to the phrase for finialize method
+    //** only called during the initial creation of the passcode, otherwise the temporary variable is never used.
+    IMSCryptoManagerStoreTP(phrase);
     
     // ask to create questions
     [self askForQuestions];
@@ -274,8 +281,7 @@
 
 -(void) processCreateQuestion:questions withAnswers:answers {
     
-    IMSCryptoManagerStoreTemporarySecurityQuestionsAndAnswers(questions
-                                                              ,answers);
+    IMSCryptoManagerStoreTSQA(questions,answers);
     IMSCryptoManagerFinalize();
 }
 

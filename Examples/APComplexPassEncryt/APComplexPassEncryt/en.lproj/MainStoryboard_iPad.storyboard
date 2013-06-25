@@ -88,7 +88,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="clearPassword:" destination="2" eventType="touchUpInside" id="8iU-rm-e8A"/>
+                                    <action selector="passClearAll:" destination="2" eventType="touchUpInside" id="7pF-BI-Ecf"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -127,6 +127,28 @@
     <resources>
         <image name="Wallpaper-Clown-Fish.jpg" width="320" height="480"/>
     </resources>
+    <classes>
+        <class className="APViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/APViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="askForPasscode:"/>
+                <relationship kind="action" name="clearPassword:"/>
+                <relationship kind="action" name="passClearAll:"/>
+                <relationship kind="action" name="passForgotten:"/>
+                <relationship kind="action" name="passLogout:"/>
+                <relationship kind="action" name="resetPasscode:"/>
+                <relationship kind="outlet" name="askForPassword" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="background" candidateClass="UIImage"/>
+                <relationship kind="outlet" name="clearAllButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="forgotButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="logoutButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="resetButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -1,4 +1,6 @@
 # Xcode
+Examples/APComplexPassEncryt/Build/*
+Examples/APSimplePass/Build/*
 build/*
 *.pbxuser
 !default.pbxuser
