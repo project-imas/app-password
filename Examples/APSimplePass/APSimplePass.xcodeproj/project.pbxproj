@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4816FF2B170F282E00309034 /* AppPassword.framework in Resources */ = {isa = PBXBuildFile; fileRef = 48C703FD170DC1EC003C7742 /* AppPassword.framework */; };
 		4816FF3F170F39BB00309034 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4816FF3E170F39BB00309034 /* QuartzCore.framework */; };
 		48C703D2170DC0C0003C7742 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C703D1170DC0C0003C7742 /* UIKit.framework */; };
 		48C703D4170DC0C0003C7742 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C703D3170DC0C0003C7742 /* Foundation.framework */; };
@@ -21,48 +20,47 @@
 		48C703EB170DC0C0003C7742 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48C703E9170DC0C0003C7742 /* MainStoryboard_iPhone.storyboard */; };
 		48C703EE170DC0C0003C7742 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48C703EC170DC0C0003C7742 /* MainStoryboard_iPad.storyboard */; };
 		48C703F1170DC0C0003C7742 /* APViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C703F0170DC0C0003C7742 /* APViewController.m */; };
-		48C70402170DC256003C7742 /* AppPassword.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C703FD170DC1EC003C7742 /* AppPassword.framework */; };
 		48C70406170DC541003C7742 /* AppPassword.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C70405170DC541003C7742 /* AppPassword.framework */; };
 		48C7040E170DCF85003C7742 /* Wallpaper-Clown-Fish.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 48C7040D170DCF85003C7742 /* Wallpaper-Clown-Fish.jpg */; };
-		48CC0FE1171703F1008C1D13 /* libSecureFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48CC0FDC1716FDB0008C1D13 /* libSecureFoundation.a */; };
 		48CC0FE317170422008C1D13 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48CC0FE217170422008C1D13 /* Security.framework */; };
+		FE58F9D217B42541003A9DEE /* libSecureFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE1038A17B4248500C461B7 /* libSecureFoundation.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		48C703FC170DC1EC003C7742 /* PBXContainerItemProxy */ = {
+		FE58F9CB17B4251D003A9DEE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 48C703F8170DC1EC003C7742 /* AppPassword.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4819438D16CE96B90016DB79;
-			remoteInfo = AppPassword;
-		};
-		48C703FE170DC20C003C7742 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 48C703F8170DC1EC003C7742 /* AppPassword.xcodeproj */;
+			containerPortal = FEE1038D17B4249900C461B7 /* AppPassword.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 4819438C16CE96B90016DB79;
 			remoteInfo = AppPassword;
 		};
-		48CC0FDB1716FDB0008C1D13 /* PBXContainerItemProxy */ = {
+		FE58F9D017B42521003A9DEE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 48CC0FD61716FDB0008C1D13 /* SecureFoundation.xcodeproj */;
+			containerPortal = FEE1038417B4248500C461B7 /* SecureFoundation.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B89357B162C92F1003750B6;
+			remoteInfo = SecureFoundation;
+		};
+		FEE1038917B4248500C461B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FEE1038417B4248500C461B7 /* SecureFoundation.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 3B89357C162C92F1003750B6;
 			remoteInfo = SecureFoundation;
 		};
-		48CC0FDD1716FDB0008C1D13 /* PBXContainerItemProxy */ = {
+		FEE1038B17B4248500C461B7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 48CC0FD61716FDB0008C1D13 /* SecureFoundation.xcodeproj */;
+			containerPortal = FEE1038417B4248500C461B7 /* SecureFoundation.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 3B89358D162C92F1003750B6;
 			remoteInfo = SecureFoundationTests;
 		};
-		48CC0FDF171703D5008C1D13 /* PBXContainerItemProxy */ = {
+		FEE1039117B4249900C461B7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 48CC0FD61716FDB0008C1D13 /* SecureFoundation.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 3B89357B162C92F1003750B6;
-			remoteInfo = SecureFoundation;
+			containerPortal = FEE1038D17B4249900C461B7 /* AppPassword.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4819438D16CE96B90016DB79;
+			remoteInfo = AppPassword;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -85,11 +83,11 @@
 		48C703ED170DC0C0003C7742 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		48C703EF170DC0C0003C7742 /* APViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APViewController.h; sourceTree = "<group>"; };
 		48C703F0170DC0C0003C7742 /* APViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APViewController.m; sourceTree = "<group>"; };
-		48C703F8170DC1EC003C7742 /* AppPassword.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AppPassword.xcodeproj; path = ../../AppPassword.xcodeproj; sourceTree = "<group>"; };
 		48C70405170DC541003C7742 /* AppPassword.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppPassword.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/APSimplePass-haexvfijndrxadcjymzlsztwnlue/Build/Products/Debug-iphoneos/AppPassword.framework"; sourceTree = "<group>"; };
 		48C7040D170DCF85003C7742 /* Wallpaper-Clown-Fish.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Wallpaper-Clown-Fish.jpg"; path = "../../../../rotatingkeypad/Images/Wallpaper-Clown-Fish.jpg"; sourceTree = "<group>"; };
-		48CC0FD61716FDB0008C1D13 /* SecureFoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SecureFoundation.xcodeproj; path = ../../../securefoundation/SecureFoundation.xcodeproj; sourceTree = "<group>"; };
 		48CC0FE217170422008C1D13 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		FEE1038417B4248500C461B7 /* SecureFoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SecureFoundation.xcodeproj; path = ../../../securefoundation/SecureFoundation.xcodeproj; sourceTree = "<group>"; };
+		FEE1038D17B4249900C461B7 /* AppPassword.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AppPassword.xcodeproj; path = ../../AppPassword.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,10 +95,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE58F9D217B42541003A9DEE /* libSecureFoundation.a in Frameworks */,
 				48CC0FE317170422008C1D13 /* Security.framework in Frameworks */,
-				48CC0FE1171703F1008C1D13 /* libSecureFoundation.a in Frameworks */,
 				4816FF3F170F39BB00309034 /* QuartzCore.framework in Frameworks */,
-				48C70402170DC256003C7742 /* AppPassword.framework in Frameworks */,
 				48C703D2170DC0C0003C7742 /* UIKit.framework in Frameworks */,
 				48C703D4170DC0C0003C7742 /* Foundation.framework in Frameworks */,
 				48C703D6170DC0C0003C7742 /* CoreGraphics.framework in Frameworks */,
@@ -114,7 +111,8 @@
 		48C703C5170DC0C0003C7742 = {
 			isa = PBXGroup;
 			children = (
-				48C703F7170DC1B2003C7742 /* Subprojects */,
+				FEE1038D17B4249900C461B7 /* AppPassword.xcodeproj */,
+				FEE1038417B4248500C461B7 /* SecureFoundation.xcodeproj */,
 				48C703D7170DC0C0003C7742 /* APSimplePass */,
 				48C703D0170DC0C0003C7742 /* Frameworks */,
 				48C703CF170DC0C0003C7742 /* Products */,
@@ -170,23 +168,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		48C703F7170DC1B2003C7742 /* Subprojects */ = {
-			isa = PBXGroup;
-			children = (
-				48C703F8170DC1EC003C7742 /* AppPassword.xcodeproj */,
-				48CC0FD61716FDB0008C1D13 /* SecureFoundation.xcodeproj */,
-			);
-			name = Subprojects;
-			sourceTree = "<group>";
-		};
-		48C703F9170DC1EC003C7742 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				48C703FD170DC1EC003C7742 /* AppPassword.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		48C7040B170DCE42003C7742 /* Delegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,11 +185,19 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
-		48CC0FD71716FDB0008C1D13 /* Products */ = {
+		FEE1038517B4248500C461B7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				48CC0FDC1716FDB0008C1D13 /* libSecureFoundation.a */,
-				48CC0FDE1716FDB0008C1D13 /* SecureFoundationTests.octest */,
+				FEE1038A17B4248500C461B7 /* libSecureFoundation.a */,
+				FEE1038C17B4248500C461B7 /* SecureFoundationTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FEE1038E17B4249900C461B7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FEE1039217B4249900C461B7 /* AppPassword.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -227,8 +216,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				48CC0FE0171703D5008C1D13 /* PBXTargetDependency */,
-				48C703FF170DC20C003C7742 /* PBXTargetDependency */,
+				FE58F9D117B42521003A9DEE /* PBXTargetDependency */,
+				FE58F9CC17B4251D003A9DEE /* PBXTargetDependency */,
 			);
 			name = APSimplePass;
 			productName = APSimplePass;
@@ -257,12 +246,12 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 48C703F9170DC1EC003C7742 /* Products */;
-					ProjectRef = 48C703F8170DC1EC003C7742 /* AppPassword.xcodeproj */;
+					ProductGroup = FEE1038E17B4249900C461B7 /* Products */;
+					ProjectRef = FEE1038D17B4249900C461B7 /* AppPassword.xcodeproj */;
 				},
 				{
-					ProductGroup = 48CC0FD71716FDB0008C1D13 /* Products */;
-					ProjectRef = 48CC0FD61716FDB0008C1D13 /* SecureFoundation.xcodeproj */;
+					ProductGroup = FEE1038517B4248500C461B7 /* Products */;
+					ProjectRef = FEE1038417B4248500C461B7 /* SecureFoundation.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -273,25 +262,25 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		48C703FD170DC1EC003C7742 /* AppPassword.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = AppPassword.framework;
-			remoteRef = 48C703FC170DC1EC003C7742 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		48CC0FDC1716FDB0008C1D13 /* libSecureFoundation.a */ = {
+		FEE1038A17B4248500C461B7 /* libSecureFoundation.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libSecureFoundation.a;
-			remoteRef = 48CC0FDB1716FDB0008C1D13 /* PBXContainerItemProxy */;
+			remoteRef = FEE1038917B4248500C461B7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		48CC0FDE1716FDB0008C1D13 /* SecureFoundationTests.octest */ = {
+		FEE1038C17B4248500C461B7 /* SecureFoundationTests.octest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = SecureFoundationTests.octest;
-			remoteRef = 48CC0FDD1716FDB0008C1D13 /* PBXContainerItemProxy */;
+			remoteRef = FEE1038B17B4248500C461B7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FEE1039217B4249900C461B7 /* AppPassword.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AppPassword.framework;
+			remoteRef = FEE1039117B4249900C461B7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -301,7 +290,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4816FF2B170F282E00309034 /* AppPassword.framework in Resources */,
 				48C703DC170DC0C0003C7742 /* InfoPlist.strings in Resources */,
 				48C703E4170DC0C0003C7742 /* Default.png in Resources */,
 				48C703E6170DC0C0003C7742 /* Default@2x.png in Resources */,
@@ -328,15 +316,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		48C703FF170DC20C003C7742 /* PBXTargetDependency */ = {
+		FE58F9CC17B4251D003A9DEE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AppPassword;
-			targetProxy = 48C703FE170DC20C003C7742 /* PBXContainerItemProxy */;
+			targetProxy = FE58F9CB17B4251D003A9DEE /* PBXContainerItemProxy */;
 		};
-		48CC0FE0171703D5008C1D13 /* PBXTargetDependency */ = {
+		FE58F9D117B42521003A9DEE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SecureFoundation;
-			targetProxy = 48CC0FDF171703D5008C1D13 /* PBXContainerItemProxy */;
+			targetProxy = FE58F9D017B42521003A9DEE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

@@ -431,6 +431,8 @@
 		48C70487170DEB08003C7742 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_X86_VECTOR_INSTRUCTIONS = default;
+				"CLANG_X86_VECTOR_INSTRUCTIONS[arch=*]" = default;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -440,6 +442,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "APComplexPassEncryt/APComplexPassEncryt-Prefix.pch";
 				INFOPLIST_FILE = "APComplexPassEncryt/APComplexPassEncryt-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../../../../Library/Developer/Xcode/DerivedData/APComplexPassEncryt-fptbojptfsxptucuhtunktrxxhid/Build/Products/Debug-iphoneos\"",
@@ -463,6 +466,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "APComplexPassEncryt/APComplexPassEncryt-Prefix.pch";
 				INFOPLIST_FILE = "APComplexPassEncryt/APComplexPassEncryt-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../../../../Library/Developer/Xcode/DerivedData/APComplexPassEncryt-fptbojptfsxptucuhtunktrxxhid/Build/Products/Debug-iphoneos\"",

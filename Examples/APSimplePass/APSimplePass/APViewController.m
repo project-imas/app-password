@@ -76,7 +76,7 @@
     
     if ( nil != phrase ) {
         
-        IMSCryptoManagerStoreTemporaryPasscode(phrase);
+        IMSCryptoManagerStoreTP(phrase);
  
         IMSCryptoManagerFinalize();        
     }
@@ -104,5 +104,55 @@
     
     return key;
 }
+- (IBAction)clearAll:(id)sender {
+}
+
+
+//*******************
+//** DEBUG purposes - remove from production code
+
+# if 1
+- (IBAction)clearPassword:(id)sender {
+    
+    IMSCryptoManagerPurge();
+    
+    NSArray *accounts = [IMSKeychain accounts];
+    
+    [accounts enumerateObjectsUsingBlock:
+     
+     ^(NSDictionary *account, NSUInteger idx, BOOL *stop) {
+         
+         NSString *serviceName = account[(__bridge NSString *)kSecAttrService];
+         NSString *accountName = account[(__bridge NSString *)kSecAttrAccount];
+         
+         [IMSKeychain deletePasswordForService:serviceName account:accountName];
+     }];
+    
+    [IMSKeychain synchronize];
+    
+    self.pass.clear     = @"clear";
+   // self.question.clear = @"clear";
+    
+    UIAlertView *alert = [[UIAlertView alloc]
+                          initWithTitle:@"Passwords cleared!"
+                          message:nil delegate:nil
+                          cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+    [alert show];
+    
+    //** wait until user clicks OK
+    NSRunLoop *rl = [NSRunLoop currentRunLoop];
+    NSDate *d;
+    while ([alert isVisible]) {
+        d = [[NSDate alloc] init];
+        [rl runUntilDate:d];
+    }
+    
+    //** disable forgot button
+    //_forgotButton.alpha = 0.6f;
+    //[_forgotButton setEnabled:NO];
+    
+    
+}
+#endif
 
 @end

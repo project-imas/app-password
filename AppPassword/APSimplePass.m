@@ -72,6 +72,12 @@
     
     for (int i = 0;i < numberOfCodes; i++) _phraseVerify[i] = _phrase[i] = @" ";
 }
+
+
+//******************
+//******************
+//**
+//**
 -(void)        initCodes:(NSInteger) numberOfCodes {
     
     UICollectionViewFlowLayout * layout;
@@ -135,11 +141,22 @@
     self.passportCV.dataSource      = self;
     self.code                       = 0;
 }
+
+
+//******************
+//******************
+//**
+//**
 -(void)    setBackground:(UIImage *) background    {
     
     if ( nil != _imageView ) _imageView.image = background;
 }
 
+
+//******************
+//******************
+//**
+//**
 -(void) initKeyboard {
     
     UICollectionViewFlowLayout * layout;
@@ -202,6 +219,12 @@
     
     if ( self.keyboardRotating ) [self rotateKeyboard];
 }
+
+
+//******************
+//******************
+//**
+//**
 -(void) setKeys      {
     
     _keys      = [[NSMutableArray alloc] initWithObjects: @"9"
@@ -242,6 +265,12 @@
     if ( url ) _backKey = [UIImage imageWithContentsOfFile:url.path];
     
 }
+
+
+//******************
+//******************
+//**
+//**
 -(void) setLabel     {
     
     self.phraseTitleLabel.text     = (_phraseCurrent == _phrase)
@@ -253,6 +282,13 @@
                                    : @"";
 
 }
+
+
+
+//******************
+//******************
+//**
+//**
 -(void) chkLabelText {
     
     if ( nil != _phraseVerify ) {
@@ -263,6 +299,11 @@
     }
 }
 
+
+//******************
+//******************
+//**
+//**
 -(void) setVerify:(NSString *)verify {
 
     self.processControl        = PASS_CREATE;
@@ -286,6 +327,12 @@
         if ( self.keyboardRotating ) [self rotateKeyboard];
     }
 }
+
+
+//******************
+//******************
+//**
+//**
 -(void) adjustForContainer           {
     
     CGRect   lFrame   = self.phraseTitleLabel.frame;  //phraseTitleLabel
@@ -327,8 +374,9 @@
     [self.container           addSubview:self.phraseSubtitleLabel];
 }
 
+
 //------------------------------------------------------------------------------
-// UICollectionView Datastore delegate protocol methodes
+// UICollectionView Datastore delegate protocol methods
 //------------------------------------------------------------------------------
 - (NSInteger)collectionView:(UICollectionView *)collectionView
      numberOfItemsInSection:(NSInteger)section {
@@ -339,6 +387,12 @@
     
     return ret;
 }
+
+
+//******************
+//******************
+//**
+//**
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
                   cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
@@ -404,6 +458,7 @@
     return cell;
 }
 
+
 //------------------------------------------------------------------------------
 // Main processing
 //------------------------------------------------------------------------------
@@ -411,6 +466,12 @@
 
     
 }
+
+
+//******************
+//******************
+//**
+//**
 -(IBAction)keyButtonPress:(id)sender {
     
     UIButton * b  = sender;
@@ -463,6 +524,12 @@
         [_passportCV reloadData];
     }
 }
+
+
+//******************
+//******************
+//**
+//**
 -(void)    verifyPhrase              {
 
         
@@ -488,7 +555,13 @@
     }
     
 }
--(BOOL)    verifyExisting{
+
+
+//******************
+//******************
+//**
+//**
+-(BOOL)    verifyExisting   {
     
     BOOL      ret = NO;
     
@@ -508,6 +581,11 @@
     return ret;
 }
 
+
+//******************
+//******************
+//**
+//**
 -(void)    verifyAlert               {
     
     _code = 0;
@@ -524,6 +602,12 @@
     
     if ( self.keyboardRotating ) [self rotateKeyboard];
 }
+
+
+//******************
+//******************
+//**
+//**
 -(void)    shakeEntry                {
     
     CATransform3D left  = CATransform3DMakeTranslation(-5.0f, 0.0f, 0.0f);
@@ -543,6 +627,12 @@
     
     [ _passportCV.layer addAnimation:anim forKey:nil ] ;
 }
+
+
+//******************
+//******************
+//**
+//**
 -(void)    rotateKeyboard            {
 
     NSArray   *k   = [NSArray arrayWithArray:_keys];
@@ -565,6 +655,12 @@
     }
 }
 
+
+
+//******************
+//******************
+//**
+//**
 -(void)    finished                  {
     
     NSString* phrase = [self.phrase componentsJoinedByString:@""];
