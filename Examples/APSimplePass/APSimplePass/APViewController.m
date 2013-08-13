@@ -11,6 +11,8 @@
 @interface APViewController ()
 
 @property (nonatomic) APPass *pass;
+@property (nonatomic) APPass    *question;
+@property (nonatomic) NSInteger  numberOfQuestion;
 
 @property (nonatomic,strong) IBOutlet UIImage  *background;
 @property (nonatomic,strong) IBOutlet UIButton *askForPassword;
@@ -41,6 +43,14 @@
     self.pass.delegate         = self;
     self.pass.syntaxLabel      = @"application passcode";
     
+    // ---------------------------------------------------------------
+    // AppPassword API - security questions
+    // ---------------------------------------------------------------
+    self.numberOfQuestion    = 1;
+    self.question            = [APPass passQuestions:self.numberOfQuestion];
+    self.question.delegate   = self;
+    self.question.background = self.background;
+    
     // -----------------------------------------------------------
     // Keycolor is optional - defaults to black
     // -----------------------------------------------------------
@@ -48,11 +58,14 @@
     //                                                 green:0.55f
     //                                                  blue:0.45f
     //                                                 alpha:1.0f];
-
+    
     [self askForPasscode:self];
 }
 
 - (IBAction)  askForPasscode:(id)sender {
+    
+    //** DEBUG call
+    //[self clearPassword:nil];
     
     if ( [self checkForIMSCrytoPass] ) {
         
@@ -132,6 +145,9 @@
     
     self.pass.clear     = @"clear";
    // self.question.clear = @"clear";
+    
+    if (sender == nil)
+        return;
     
     UIAlertView *alert = [[UIAlertView alloc]
                           initWithTitle:@"Passwords cleared!"

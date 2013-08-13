@@ -54,13 +54,6 @@
     self.question.delegate   = self;
     self.question.background = self.background;
     
-    //** dsiable all buttons
-    
-    _logoutButton.alpha = 0.6f;
-    [_logoutButton setEnabled:NO];
-    _resetButton.alpha = 0.6f;
-    [_resetButton setEnabled:NO];
-    
     //** uncomment to automatically launch the passcode dialog
     //[self askForPasscode:self];
     

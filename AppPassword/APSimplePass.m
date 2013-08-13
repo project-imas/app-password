@@ -7,7 +7,7 @@
 //
 
 #import "APSimplePass.h"
-#import "APKeyboardCell.h"
+#import "APKeyboardCell.h"verify
 #import "APSimplePassCell.h"
 #import <QuartzCore/CAAnimation.h>
 
@@ -111,6 +111,12 @@
     layout.minimumInteritemSpacing  = 1.0f;
     layout.minimumLineSpacing       = 1.0f;
     layout.sectionInset             = insets;
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    button.frame = CGRectMake(220.0, 0 /*170*/, 100.0, 30.0);
+    [button setTitle:@"Forgot?" forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(forgotPass:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
     
     
     if ( nil != self.container ) {
@@ -407,17 +413,17 @@
                    dequeueReusableCellWithReuseIdentifier:@"APKeyboardCell"
                                              forIndexPath:indexPath];
         
-        if ( nil == kCell ) kCell = [[APKeyboardCell alloc]
-                                     initWithFrame:self.keyboardFrame];
+        if ( nil == kCell )
+                kCell = [[APKeyboardCell alloc]
+                                        initWithFrame:self.keyboardFrame];
         
         if (self.keyboardKeycolor)
-            
             kCell.btn.backgroundColor = self.keyboardKeycolor;
         
         [kCell.btn setTitle:_keys[indexPath.row]
                    forState:UIControlStateNormal];
         
-        btnImage         = ( [_keys[indexPath.row] isEqualToString:@"X"] )
+        btnImage = ( [_keys[indexPath.row] isEqualToString:@"X"] )
                          ? _backKey
                          : nil;
         
@@ -435,7 +441,7 @@
                       action:@selector(keyButtonPress:)
             forControlEvents:UIControlEventTouchUpInside];
 
-        cell             = kCell;
+        cell = kCell;
         
     } else {
 
@@ -445,12 +451,11 @@
                  dequeueReusableCellWithReuseIdentifier:@"APSimplePassportCell"
                                            forIndexPath:indexPath];
         
-        if ( nil == pCell ) pCell = [[APSimplePassCell alloc]
+        if ( nil == pCell )
+                pCell = [[APSimplePassCell alloc]
                                      initWithFrame:self.passportFrame];
         
-        pCell.label.text =
-        
-        ([_phraseCurrent[indexPath.row] isEqualToString:@" "]) ? @" " : @"*";
+        pCell.label.text =  ([_phraseCurrent[indexPath.row] isEqualToString:@" "]) ? @" " : @"*";
         
         cell = pCell;
     }
@@ -464,6 +469,15 @@
 //------------------------------------------------------------------------------
 -(IBAction)barButtonPress:(id)sender {
 
+    
+}
+
+//******************
+//******************
+//**
+//**
+-(IBAction)forgotPass:(id)sender {
+    NSLog(@"here in forgot pass");
     
 }
 
@@ -484,14 +498,14 @@
         
     } else {
         
-        if ( _code < _numberOfCodes
-        &&  ![b.titleLabel.text isEqualToString:@" "] ) {
+        if ( _code < _numberOfCodes  &&  ![b.titleLabel.text isEqualToString:@" "] ) {
          
             _phraseCurrent[_code] = b.titleLabel.text;
 
             _code++;
         }
     }
+    
     
     if (_code == _numberOfCodes) {
      
@@ -633,14 +647,15 @@
 //******************
 //**
 //**
--(void)    rotateKeyboard            {
-
+-(void)    rotateKeyboard            {    
     NSArray   *k   = [NSArray arrayWithArray:_keys];
     NSArray   *kl  = [NSArray arrayWithArray:_keyLabels];
     NSInteger rand = 0;
     
-    while ( !rand ) rand = random() % 10;
+    while ( !rand )
+        rand = arc4random_uniform(10);
     
+    //NSLog(@"rand is: %d", rand);
     if ( [k count] ) {
         
         for (int i = 0; i < 10; i++) {

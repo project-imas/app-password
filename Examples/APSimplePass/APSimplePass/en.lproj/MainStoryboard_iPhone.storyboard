@@ -59,21 +59,6 @@
     <resources>
         <image name="Wallpaper-Clown-Fish.jpg" width="320" height="480"/>
     </resources>
-    <classes>
-        <class className="APViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/APViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="askForPasscode:"/>
-                <relationship kind="action" name="clearAll:"/>
-                <relationship kind="action" name="clearPassword:"/>
-                <relationship kind="outlet" name="askForPassword" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="background" candidateClass="UIImage"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

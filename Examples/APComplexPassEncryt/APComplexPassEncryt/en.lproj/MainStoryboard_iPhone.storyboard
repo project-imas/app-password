@@ -26,18 +26,85 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTx-HN-PaI">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Forgot?">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="passForgotten:" destination="2" eventType="touchUpInside" id="CV6-ob-hvL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JpV-wC-8gl">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetPasscode:" destination="2" eventType="touchUpInside" id="ACi-bO-iUM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z4R-gy-Jxp">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="passLogout:" destination="2" eventType="touchUpInside" id="BEr-RK-NHw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aks-Zn-OIx">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="96" id="3sa-m2-D8b"/>
+                                    <constraint firstAttribute="height" constant="23" id="kTR-YB-QdP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                <state key="normal" title="Debug - clear ALL">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearPassword:" destination="2" eventType="touchUpInside" id="1Yr-1p-hgI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Ab4-3N-0ba" firstAttribute="centerX" secondItem="NGe-m7-zKv" secondAttribute="centerX" type="default" id="3ag-G3-fKQ"/>
                             <constraint firstItem="NGe-m7-zKv" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="B0C-dQ-dW7"/>
+                            <constraint firstItem="z4R-gy-Jxp" firstAttribute="top" secondItem="3" secondAttribute="top" constant="146" id="D9p-bT-oGd"/>
                             <constraint firstItem="NGe-m7-zKv" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="JwW-vx-OeP"/>
+                            <constraint firstAttribute="bottom" secondItem="Ab4-3N-0ba" secondAttribute="bottom" constant="30" id="MH9-Sb-7Uq"/>
+                            <constraint firstAttribute="trailing" secondItem="gTx-HN-PaI" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Mc3-HW-g8X"/>
+                            <constraint firstItem="gTx-HN-PaI" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="TSG-25-xD2"/>
+                            <constraint firstItem="z4R-gy-Jxp" firstAttribute="centerX" secondItem="gTx-HN-PaI" secondAttribute="centerX" type="default" id="Tmg-WZ-IsU"/>
+                            <constraint firstItem="Ab4-3N-0ba" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="47" id="UPs-7Y-aLM"/>
                             <constraint firstItem="NGe-m7-zKv" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="Z66-v9-igG"/>
-                            <constraint firstAttribute="bottom" secondItem="Ab4-3N-0ba" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="fse-hW-n6p"/>
+                            <constraint firstItem="z4R-gy-Jxp" firstAttribute="leading" secondItem="aks-Zn-OIx" secondAttribute="leading" type="default" id="aaf-h7-eW3"/>
+                            <constraint firstItem="JpV-wC-8gl" firstAttribute="top" secondItem="3" secondAttribute="top" constant="81" id="eGt-LH-TYp"/>
+                            <constraint firstItem="aks-Zn-OIx" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="pUo-QX-riq"/>
+                            <constraint firstItem="JpV-wC-8gl" firstAttribute="leading" secondItem="gTx-HN-PaI" secondAttribute="leading" type="default" id="x7H-cV-tWb"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="askForPassword" destination="Ab4-3N-0ba" id="sqH-ee-X7S"/>
+                        <outlet property="forgotButton" destination="gTx-HN-PaI" id="Cci-wI-tUy"/>
+                        <outlet property="logoutButton" destination="z4R-gy-Jxp" id="fHO-5u-Ge2"/>
+                        <outlet property="resetButton" destination="JpV-wC-8gl" id="saV-6L-NSl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
@@ -47,6 +114,27 @@
     <resources>
         <image name="Wallpaper-Clown-Fish.jpg" width="320" height="480"/>
     </resources>
+    <classes>
+        <class className="APViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/APViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="askForPasscode:"/>
+                <relationship kind="action" name="clearPassword:"/>
+                <relationship kind="action" name="passClearAll:"/>
+                <relationship kind="action" name="passForgotten:"/>
+                <relationship kind="action" name="passLogout:"/>
+                <relationship kind="action" name="resetPasscode:"/>
+                <relationship kind="outlet" name="askForPassword" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="background" candidateClass="UIImage"/>
+                <relationship kind="outlet" name="forgotButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="logoutButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="resetButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
