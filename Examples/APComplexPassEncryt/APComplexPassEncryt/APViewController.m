@@ -21,7 +21,7 @@
 @property (nonatomic,strong) IBOutlet UIButton *logoutButton;
 @property (weak, nonatomic) IBOutlet UIButton *resetButton;
 
-@property (weak, nonatomic) IBOutlet UIButton *clearAllButton;
+//@property (weak, nonatomic) IBOutlet UIButton *clearAllButton;
 @property (weak, nonatomic) IBOutlet UIButton *forgotButton;
 
 @end
@@ -63,6 +63,26 @@
     
     //** uncomment to automatically launch the passcode dialog
     //[self askForPasscode:self];
+    
+    //** initial app state check
+    [self setInitialAppUI];
+}
+
+//******************
+//******************
+//**
+//**
+- (void) setInitialAppUI {
+    
+    //** app has passcode set, set buttons accordingly
+    [self userLoggedOutSetButtons];
+    if ( ![self checkForIMSCrytoPass] ) {
+        //** app has no passcode, set buttons and buttons labels
+        [self noPasswordSetButtons];
+    }
+    
+
+    
 }
 
 - (IBAction)  askForPasscode:(id)sender {
@@ -106,6 +126,7 @@
 
 # if 1
 - (IBAction) clearPassword:(id)sender {
+    //** remove password and questions and answers
     
     IMSCryptoManagerPurge();
     
@@ -139,11 +160,12 @@
       [rl runUntilDate:d];
     }
     
-    //** disable forgot button
-    _forgotButton.alpha = 0.6f;
-    [_forgotButton setEnabled:NO];
-
+    [self noPasswordSetButtons];
     
+    //** disable forgot button
+    //_forgotButton.alpha = 0.6f;
+    //[_forgotButton setEnabled:NO];
+
 }
 #endif
 
@@ -412,13 +434,15 @@
 }
 
 - (void) userLoggedInSetButtons {
+    [_askForPassword setTitle: @"Passcode" forState:UIControlStateNormal];
+    
     //** enable these buttons
     _logoutButton.alpha = 1.0f;
     [_logoutButton setEnabled:YES];
     _resetButton.alpha = 1.0f;
     [_resetButton setEnabled:YES];
-    _clearAllButton.alpha = 1.0f;
-    [_clearAllButton setEnabled:YES];
+  //  _clearAllButton.alpha = 1.0f;
+  //  [_clearAllButton setEnabled:YES];
 
     //** disable buttons
     _askForPassword.alpha = 0.6f;
@@ -428,19 +452,38 @@
 }
 
 - (void) userLoggedOutSetButtons {
+    [_askForPassword setTitle: @"Passcode" forState:UIControlStateNormal];
+    
     //** disable buttons
     _logoutButton.alpha = 0.6f;
     [_logoutButton setEnabled:NO];
     _resetButton.alpha = 0.6f;
     [_resetButton setEnabled:NO];
-    _clearAllButton.alpha = 0.6f;
-    [_clearAllButton setEnabled:NO];
+ //   _clearAllButton.alpha = 0.6f;
+ //   [_clearAllButton setEnabled:NO];
     
     //** enable buttons
     _askForPassword.alpha = 1.0f;
     [_askForPassword setEnabled:YES];
     _forgotButton.alpha = 1.0f;
     [_forgotButton setEnabled:YES];
+}
+
+- (void) noPasswordSetButtons {
+    //** disable buttons
+    _logoutButton.alpha = 0.6f;
+    [_logoutButton setEnabled:NO];
+    _resetButton.alpha = 0.6f;
+    [_resetButton setEnabled:NO];
+    _forgotButton.alpha = 0.6f;
+    [_forgotButton setEnabled:NO];
+    //   _clearAllButton.alpha = 0.6f;
+    //   [_clearAllButton setEnabled:NO];
+    
+    //** enable buttons
+    _askForPassword.alpha = 1.0f;
+    [_askForPassword setEnabled:YES];
+    [_askForPassword setTitle: @"Create Passcode" forState:UIControlStateNormal];
 }
 
 
