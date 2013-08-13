@@ -32,13 +32,13 @@ The "iMAS App Password" framework provides a simple way to include passcode supp
 - Add AppPassword           to target’s build phase - target dependancies 
 - Add libSecureFoundation.a to target’s build phase - target dependancies 
 
-- Add AppPassword.framework to target’s build phase - link binary with libraries
+- Drag AppPassword.framework to target’s build phase - link binary with libraries
 - Add libSecureFoundation.a to target’s build phase - link binary with libraries 
 - Add Security.framework    to target’s build phase - link binary with libraries 
 - Add QuartzCore.framework  to target’s build phase - link binary with libraries
 
 - Add AppPassword.framework to target’s build phase - copy bundle resources (if using the "out of the box" storyboards)
-- Add AppPassword.framework to your application’s framework folder
+- Drag AppPassword.framework to your application’s framework folder (accept the defaults on the pop-up dialog)
 
 ## Usage
 
