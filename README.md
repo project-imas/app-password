@@ -38,6 +38,7 @@ The "iMAS App Password" framework provides a simple way to include passcode supp
 - Add QuartzCore.framework  to target’s build phase - link binary with libraries
 
 - Add AppPassword.framework to target’s build phase - copy bundle resources (if using the "out of the box" storyboards)
+  - If you get the "AppPass OBJ" not found error on link, you may need to copy the "gold suitcase" AppPassword.framework file into the link binary with libraries build phase
 - Drag AppPassword.framework to your application’s framework folder (accept the defaults on the pop-up dialog)
 
 ## Usage

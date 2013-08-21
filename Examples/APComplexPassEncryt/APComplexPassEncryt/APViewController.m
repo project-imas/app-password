@@ -19,10 +19,10 @@
 @property (nonatomic,strong) IBOutlet UIButton *askForPassword;
 @property (nonatomic,strong) IBOutlet UIImage  *background;
 @property (nonatomic,strong) IBOutlet UIButton *logoutButton;
-@property (weak, nonatomic) IBOutlet UIButton *resetButton;
+@property (nonatomic,strong) IBOutlet UIButton *resetButton;
 
 //@property (weak, nonatomic) IBOutlet UIButton *clearAllButton;
-@property (weak, nonatomic) IBOutlet UIButton *forgotButton;
+@property (nonatomic,strong) IBOutlet UIButton *forgotButton;
 
 @end
 
