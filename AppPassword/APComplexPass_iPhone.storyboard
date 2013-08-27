@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -35,18 +35,37 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S5H-Y5-ODs">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="7fh-10-afm"/>
+                                    <constraint firstAttribute="width" constant="74" id="o2T-MI-CFR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Forgot?">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="forgot:" destination="Ftn-Ap-YcP" eventType="touchUpInside" id="xXd-Ny-8Zs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="S5H-Y5-ODs" secondAttribute="trailing" constant="8" id="FL6-Xh-GsB"/>
                             <constraint firstItem="tml-fi-sbN" firstAttribute="leading" secondItem="efE-xE-MTu" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Gg6-VN-sGK"/>
                             <constraint firstItem="OfT-O8-ae9" firstAttribute="bottom" secondItem="efE-xE-MTu" secondAttribute="bottom" type="default" id="IrH-PC-5KO"/>
                             <constraint firstItem="rZq-mM-0KE" firstAttribute="leading" secondItem="efE-xE-MTu" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="KT5-aI-hfk"/>
+                            <constraint firstItem="rZq-mM-0KE" firstAttribute="top" secondItem="efE-xE-MTu" secondAttribute="top" constant="53" id="RH8-TV-s60"/>
                             <constraint firstItem="tml-fi-sbN" firstAttribute="top" secondItem="efE-xE-MTu" secondAttribute="top" constant="143" id="U2n-sI-JvR"/>
                             <constraint firstItem="4nm-GY-ryg" firstAttribute="top" secondItem="efE-xE-MTu" secondAttribute="top" constant="99" id="Udt-OR-UTM"/>
+                            <constraint firstItem="S5H-Y5-ODs" firstAttribute="top" secondItem="efE-xE-MTu" secondAttribute="top" constant="6" id="VKD-6a-B5z"/>
                             <constraint firstItem="OfT-O8-ae9" firstAttribute="leading" secondItem="efE-xE-MTu" secondAttribute="leading" type="default" id="ajh-tv-6mI"/>
                             <constraint firstItem="OfT-O8-ae9" firstAttribute="trailing" secondItem="efE-xE-MTu" secondAttribute="trailing" type="default" id="cpl-se-Rrt"/>
                             <constraint firstItem="tml-fi-sbN" firstAttribute="centerX" secondItem="4nm-GY-ryg" secondAttribute="centerX" type="default" id="fyH-r5-0KS"/>
-                            <constraint firstItem="rZq-mM-0KE" firstAttribute="top" secondItem="efE-xE-MTu" secondAttribute="top" constant="53" id="kvy-8z-hJn"/>
                             <constraint firstItem="OfT-O8-ae9" firstAttribute="top" secondItem="efE-xE-MTu" secondAttribute="top" type="default" id="ote-y0-jbX"/>
                             <constraint firstAttribute="trailing" secondItem="rZq-mM-0KE" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="vqI-7P-7fu"/>
                             <constraint firstAttribute="trailing" secondItem="tml-fi-sbN" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="waR-s2-9Db"/>
@@ -70,6 +89,7 @@
         <class className="APComplexPass" superclassName="APPass">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/APComplexPass.h"/>
             <relationships>
+                <relationship kind="action" name="forgot:"/>
                 <relationship kind="outlet" name="container" candidateClass="UIView"/>
                 <relationship kind="outlet" name="containerButton" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="containerToolbar" candidateClass="UIToolbar"/>

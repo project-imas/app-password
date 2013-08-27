@@ -316,4 +316,11 @@
             break;
     }    
 }
+
+- (IBAction)forgot:(id)sender {
+    
+    [self closeWindow];
+
+    [self.delegate forgotPassAP];
+}
 @end

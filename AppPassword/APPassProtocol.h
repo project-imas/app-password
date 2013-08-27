@@ -22,4 +22,5 @@
 
 -(void) resetPassAP;
 
+-(void) forgotPassAP;
 @end
