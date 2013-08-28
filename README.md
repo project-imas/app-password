@@ -41,6 +41,7 @@ The "iMAS App Password" framework provides a simple way to include passcode supp
   - If you get the "AppPass OBJ" not found error on link, you may need to copy the "gold suitcase" AppPassword.framework file into the link binary with libraries build phase
 - Drag AppPassword.framework to your application’s framework folder (accept the defaults on the pop-up dialog)
   - if you encounter a sym link error, double check the "copy bundle resources" list to ensure that you only have 1 entry for AppPassword.framework
+
 ## Usage
 
 The "App Password" folder contains one key class: `APPass`. It is designed as a class factory that provides either a simple or complex control for your AppViewController. The following are examples of instantiating and launching a control.
