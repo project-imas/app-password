@@ -181,7 +181,7 @@ Instructions for running the sample apps:
 <img align="center" src="https://github.com/project-imas/app-password/raw/master/APComplexPass.png">
 
 ### iPhone version (added to existing app with multiple views)
-[AppPass Sample App](https://github.com/project-imas/AppPasswordSampleApp)
+Be sure to review - [AppPass Sample App](https://github.com/project-imas/AppPasswordSampleApp)
 <img align="center" src="https://github.com/project-imas/AppPasswordSampleApp/raw/master/readme_images/login_screen.jpg">
 
 
