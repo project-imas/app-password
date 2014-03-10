@@ -212,6 +212,3 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 
-[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/1872ba534d9159e437208c392bade83f "githalytics.com")](http://githalytics.com/project-imas/app-password)
-
-
