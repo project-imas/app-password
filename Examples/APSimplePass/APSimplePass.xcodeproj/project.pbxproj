@@ -23,6 +23,8 @@
 		48C70406170DC541003C7742 /* AppPassword.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C70405170DC541003C7742 /* AppPassword.framework */; };
 		48C7040E170DCF85003C7742 /* Wallpaper-Clown-Fish.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 48C7040D170DCF85003C7742 /* Wallpaper-Clown-Fish.jpg */; };
 		48CC0FE317170422008C1D13 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48CC0FE217170422008C1D13 /* Security.framework */; };
+		FE14CFA118DB8B1800218FAB /* APSimplePass_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE14CFA018DB8B1800218FAB /* APSimplePass_iPhone.storyboard */; };
+		FE14CFA318DB8B6800218FAB /* APQuestionPass_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE14CFA218DB8B6800218FAB /* APQuestionPass_iPhone.storyboard */; };
 		FE58F9D217B42541003A9DEE /* libSecureFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE1038A17B4248500C461B7 /* libSecureFoundation.a */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +88,8 @@
 		48C70405170DC541003C7742 /* AppPassword.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppPassword.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/APSimplePass-haexvfijndrxadcjymzlsztwnlue/Build/Products/Debug-iphoneos/AppPassword.framework"; sourceTree = "<group>"; };
 		48C7040D170DCF85003C7742 /* Wallpaper-Clown-Fish.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Wallpaper-Clown-Fish.jpg"; path = "../../../../rotatingkeypad/Images/Wallpaper-Clown-Fish.jpg"; sourceTree = "<group>"; };
 		48CC0FE217170422008C1D13 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		FE14CFA018DB8B1800218FAB /* APSimplePass_iPhone.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = APSimplePass_iPhone.storyboard; sourceTree = "<group>"; };
+		FE14CFA218DB8B6800218FAB /* APQuestionPass_iPhone.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = APQuestionPass_iPhone.storyboard; sourceTree = "<group>"; };
 		FEE1038417B4248500C461B7 /* SecureFoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SecureFoundation.xcodeproj; path = ../../../securefoundation/SecureFoundation.xcodeproj; sourceTree = "<group>"; };
 		FEE1038D17B4249900C461B7 /* AppPassword.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AppPassword.xcodeproj; path = ../../AppPassword.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,6 +115,8 @@
 		48C703C5170DC0C0003C7742 = {
 			isa = PBXGroup;
 			children = (
+				FE14CFA218DB8B6800218FAB /* APQuestionPass_iPhone.storyboard */,
+				FE14CFA018DB8B1800218FAB /* APSimplePass_iPhone.storyboard */,
 				FEE1038D17B4249900C461B7 /* AppPassword.xcodeproj */,
 				FEE1038417B4248500C461B7 /* SecureFoundation.xcodeproj */,
 				48C703D7170DC0C0003C7742 /* APSimplePass */,
@@ -290,6 +296,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE14CFA318DB8B6800218FAB /* APQuestionPass_iPhone.storyboard in Resources */,
+				FE14CFA118DB8B1800218FAB /* APSimplePass_iPhone.storyboard in Resources */,
 				48C703DC170DC0C0003C7742 /* InfoPlist.strings in Resources */,
 				48C703E4170DC0C0003C7742 /* Default.png in Resources */,
 				48C703E6170DC0C0003C7742 /* Default@2x.png in Resources */,
@@ -426,9 +434,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "APSimplePass/APSimplePass-Prefix.pch";
 				INFOPLIST_FILE = "APSimplePass/APSimplePass-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -445,9 +455,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "APSimplePass/APSimplePass-Prefix.pch";
 				INFOPLIST_FILE = "APSimplePass/APSimplePass-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
