@@ -28,7 +28,6 @@
     NSBundle     *storyboardBundle;
     
     if ([[UIDevice currentDevice]userInterfaceIdiom] == UIUserInterfaceIdiomPad)
-        
         storyboardName = [name stringByAppendingString:@"_iPad"];
     else
         storyboardName = [name stringByAppendingString:@"_iPhone"];
@@ -89,7 +88,6 @@
     NSBundle      *storyboardBundle;
     
     if ([[UIDevice currentDevice]userInterfaceIdiom] == UIUserInterfaceIdiomPad)
-        
         storyboardName = [name stringByAppendingString:@"_iPad"];
     else
         storyboardName = [name stringByAppendingString:@"_iPhone"];

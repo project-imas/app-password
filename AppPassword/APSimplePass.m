@@ -214,7 +214,6 @@
     self.keyboardCV.backgroundColor = [UIColor clearColor];
 
     if ( nil != self.container )
-    
         [self.container addSubview:self.keyboardCV];
     else
         [self.view addSubview:self.keyboardCV];
@@ -647,33 +646,23 @@
 //******************
 //**
 //**
--(void)    rotateKeyboard            {    
-    NSArray   *k   = [NSArray arrayWithArray:_keys];
-    NSArray   *kl  = [NSArray arrayWithArray:_keyLabels];
-    NSInteger rand = 0;
-    
-    while ( !rand )
-        rand = arc4random_uniform(10);
-    
-    //NSLog(@"rand is: %d", rand);
-    if ( [k count] ) {
-        
-        for (int i = 0; i < 10; i++) {
-            
-            _keys[i]      =  k[rand];
-            _keyLabels[i] = kl[rand];
-            
-            rand = ( rand == 9 ) ? 0 : ++rand;
-         }
-        
-        [_keyboardCV reloadData];
+-(void)    rotateKeyboard            {
+    //shuffle the keys randomly
+    NSUInteger count = [_keys count];
+    if (count) {
+        for (NSUInteger i = count - 3; i > 0; i--) {
+            NSInteger rand = arc4random_uniform((u_int32_t)(i+1));
+            [_keys exchangeObjectAtIndex:i withObjectAtIndex:rand];
+            [_keyLabels exchangeObjectAtIndex:i withObjectAtIndex:rand];
+        }
     }
+    [_keyboardCV reloadData];
 }
 
 
 
 //******************
-//******************
+//******************≥
 //**
 //**
 -(void)    finished                  {
