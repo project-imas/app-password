@@ -18,11 +18,9 @@
 		48C703E6170DC0C0003C7742 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 48C703E5170DC0C0003C7742 /* Default@2x.png */; };
 		48C703E8170DC0C0003C7742 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 48C703E7170DC0C0003C7742 /* Default-568h@2x.png */; };
 		48C703EB170DC0C0003C7742 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48C703E9170DC0C0003C7742 /* MainStoryboard_iPhone.storyboard */; };
-		48C703EE170DC0C0003C7742 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48C703EC170DC0C0003C7742 /* MainStoryboard_iPad.storyboard */; };
 		48C703F1170DC0C0003C7742 /* APViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C703F0170DC0C0003C7742 /* APViewController.m */; };
-		48C70406170DC541003C7742 /* AppPassword.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C70405170DC541003C7742 /* AppPassword.framework */; };
-		48C7040E170DCF85003C7742 /* Wallpaper-Clown-Fish.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 48C7040D170DCF85003C7742 /* Wallpaper-Clown-Fish.jpg */; };
 		48CC0FE317170422008C1D13 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48CC0FE217170422008C1D13 /* Security.framework */; };
+		B4C63D77197853F5000E651D /* AppPassword.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4C63D76197853F5000E651D /* AppPassword.framework */; };
 		FE14CFA118DB8B1800218FAB /* APSimplePass_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE14CFA018DB8B1800218FAB /* APSimplePass_iPhone.storyboard */; };
 		FE14CFA318DB8B6800218FAB /* APQuestionPass_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE14CFA218DB8B6800218FAB /* APQuestionPass_iPhone.storyboard */; };
 		FE58F9D217B42541003A9DEE /* libSecureFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE1038A17B4248500C461B7 /* libSecureFoundation.a */; };
@@ -50,13 +48,6 @@
 			remoteGlobalIDString = 3B89357C162C92F1003750B6;
 			remoteInfo = SecureFoundation;
 		};
-		FEE1038B17B4248500C461B7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FEE1038417B4248500C461B7 /* SecureFoundation.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 3B89358D162C92F1003750B6;
-			remoteInfo = SecureFoundationTests;
-		};
 		FEE1039117B4249900C461B7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FEE1038D17B4249900C461B7 /* AppPassword.xcodeproj */;
@@ -82,12 +73,10 @@
 		48C703E5170DC0C0003C7742 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		48C703E7170DC0C0003C7742 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		48C703EA170DC0C0003C7742 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		48C703ED170DC0C0003C7742 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		48C703EF170DC0C0003C7742 /* APViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APViewController.h; sourceTree = "<group>"; };
 		48C703F0170DC0C0003C7742 /* APViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APViewController.m; sourceTree = "<group>"; };
-		48C70405170DC541003C7742 /* AppPassword.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppPassword.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/APSimplePass-haexvfijndrxadcjymzlsztwnlue/Build/Products/Debug-iphoneos/AppPassword.framework"; sourceTree = "<group>"; };
-		48C7040D170DCF85003C7742 /* Wallpaper-Clown-Fish.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Wallpaper-Clown-Fish.jpg"; path = "../../../../rotatingkeypad/Images/Wallpaper-Clown-Fish.jpg"; sourceTree = "<group>"; };
 		48CC0FE217170422008C1D13 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		B4C63D76197853F5000E651D /* AppPassword.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppPassword.framework; path = "../../../Library/Developer/Xcode/DerivedData/APSimplePass-fvaffyfjizmzuferbszbonlfayrj/Build/Products/Debug-iphoneos/AppPassword.embeddedframework/AppPassword.framework"; sourceTree = "<group>"; };
 		FE14CFA018DB8B1800218FAB /* APSimplePass_iPhone.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = APSimplePass_iPhone.storyboard; sourceTree = "<group>"; };
 		FE14CFA218DB8B6800218FAB /* APQuestionPass_iPhone.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = APQuestionPass_iPhone.storyboard; sourceTree = "<group>"; };
 		FEE1038417B4248500C461B7 /* SecureFoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SecureFoundation.xcodeproj; path = ../../../securefoundation/SecureFoundation.xcodeproj; sourceTree = "<group>"; };
@@ -99,13 +88,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4C63D77197853F5000E651D /* AppPassword.framework in Frameworks */,
 				FE58F9D217B42541003A9DEE /* libSecureFoundation.a in Frameworks */,
 				48CC0FE317170422008C1D13 /* Security.framework in Frameworks */,
 				4816FF3F170F39BB00309034 /* QuartzCore.framework in Frameworks */,
 				48C703D2170DC0C0003C7742 /* UIKit.framework in Frameworks */,
 				48C703D4170DC0C0003C7742 /* Foundation.framework in Frameworks */,
 				48C703D6170DC0C0003C7742 /* CoreGraphics.framework in Frameworks */,
-				48C70406170DC541003C7742 /* AppPassword.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,9 +125,9 @@
 		48C703D0170DC0C0003C7742 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B4C63D76197853F5000E651D /* AppPassword.framework */,
 				48CC0FE217170422008C1D13 /* Security.framework */,
 				4816FF3E170F39BB00309034 /* QuartzCore.framework */,
-				48C70405170DC541003C7742 /* AppPassword.framework */,
 				48C703D1170DC0C0003C7742 /* UIKit.framework */,
 				48C703D3170DC0C0003C7742 /* Foundation.framework */,
 				48C703D5170DC0C0003C7742 /* CoreGraphics.framework */,
@@ -152,7 +141,6 @@
 				48C7040C170DCF66003C7742 /* Images */,
 				48C7040B170DCE42003C7742 /* Delegate */,
 				48C703E9170DC0C0003C7742 /* MainStoryboard_iPhone.storyboard */,
-				48C703EC170DC0C0003C7742 /* MainStoryboard_iPad.storyboard */,
 				48C703EF170DC0C0003C7742 /* APViewController.h */,
 				48C703F0170DC0C0003C7742 /* APViewController.m */,
 				48C703D8170DC0C0003C7742 /* Supporting Files */,
@@ -186,7 +174,6 @@
 		48C7040C170DCF66003C7742 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				48C7040D170DCF85003C7742 /* Wallpaper-Clown-Fish.jpg */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -195,7 +182,6 @@
 			isa = PBXGroup;
 			children = (
 				FEE1038A17B4248500C461B7 /* libSecureFoundation.a */,
-				FEE1038C17B4248500C461B7 /* SecureFoundationTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -275,13 +261,6 @@
 			remoteRef = FEE1038917B4248500C461B7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		FEE1038C17B4248500C461B7 /* SecureFoundationTests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = SecureFoundationTests.octest;
-			remoteRef = FEE1038B17B4248500C461B7 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		FEE1039217B4249900C461B7 /* AppPassword.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
@@ -303,8 +282,6 @@
 				48C703E6170DC0C0003C7742 /* Default@2x.png in Resources */,
 				48C703E8170DC0C0003C7742 /* Default-568h@2x.png in Resources */,
 				48C703EB170DC0C0003C7742 /* MainStoryboard_iPhone.storyboard in Resources */,
-				48C703EE170DC0C0003C7742 /* MainStoryboard_iPad.storyboard in Resources */,
-				48C7040E170DCF85003C7742 /* Wallpaper-Clown-Fish.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,14 +328,6 @@
 				48C703EA170DC0C0003C7742 /* en */,
 			);
 			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		48C703EC170DC0C0003C7742 /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				48C703ED170DC0C0003C7742 /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -429,7 +398,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../../../../../Library/Developer/Xcode/DerivedData/APSimplePass-haexvfijndrxadcjymzlsztwnlue/Build/Products/Debug-iphoneos\"",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/APSimplePass-fvaffyfjizmzuferbszbonlfayrj/Build/Products/Debug-iphoneos/AppPassword.embeddedframework",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "APSimplePass/APSimplePass-Prefix.pch";
@@ -450,7 +419,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../../../../../Library/Developer/Xcode/DerivedData/APSimplePass-haexvfijndrxadcjymzlsztwnlue/Build/Products/Debug-iphoneos\"",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/APSimplePass-fvaffyfjizmzuferbszbonlfayrj/Build/Products/Debug-iphoneos/AppPassword.embeddedframework",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "APSimplePass/APSimplePass-Prefix.pch";
