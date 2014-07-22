@@ -20,6 +20,7 @@ Pod::Spec.new do |s|
     s.requires_arc  = true
 
     s.platform      = :ios
+    s.ios.deployment_target = '6.1'
     s.source_files  = 'AppPassword/*.{h,m}'
     s.exclude_files = 'AppPassword/main.m', 'AppPassword/*ViewController*'
 
