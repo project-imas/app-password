@@ -24,6 +24,6 @@ Pod::Spec.new do |s|
     s.source_files  = 'AppPassword/*.{h,m}'
     s.exclude_files = 'AppPassword/main.m', 'AppPassword/*ViewController*'
 
-#   SecureFoundation podspec is not in the official Cocoapods spec repo
-#   s.dependency 'SecureFoundation', '~> 1.0'
+#   SecureFoundation podspec is not in the official Cocoapods spec repo, so remember to include it in your Podfile BEFORE you try to include AppPassword
+    s.dependency 'SecureFoundation', '~> 1.0'
 end

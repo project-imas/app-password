@@ -29,8 +29,8 @@ The "iMAS App Password" framework provides a simple way to include passcode supp
 - Drag AppPassword.xcodeproj      into the your project as a subproject
 - Drag SecureFoundation.xcodeproj into the your project as a subproject
 
-- Add AppPassword           to target’s build phase - target dependancies 
-- Add libSecureFoundation.a to target’s build phase - target dependancies 
+- Add AppPassword           to target’s build phase - target dependencies 
+- Add libSecureFoundation.a to target’s build phase - target dependencies 
 
 - Drag AppPassword.framework to target’s build phase - link binary with libraries
 - Add libSecureFoundation.a to target’s build phase - link binary with libraries 
@@ -42,6 +42,12 @@ The "iMAS App Password" framework provides a simple way to include passcode supp
 - Drag AppPassword.framework to your application’s framework folder (accept the defaults on the pop-up dialog)
   - if you encounter a sym link error, double check the "copy bundle resources" list to ensure that you only have 1 entry for AppPassword.framework
 
+## Installation via CocoaPod
+
+- Add `pod 'SecureFoundation', :git => 'https://github.com/project-imas/securefoundation.git'` to your PodFile
+- On the next line, add `pod 'AppPassword', :git => 'https://github.com/project-imas/app-password.git'`
+- Run `pod install`
+- Add `#import <AppPassword/AppPassword.h>` to your app
 
 ### Usage
 
