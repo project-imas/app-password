@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
 
     s.platform      = :ios
     s.ios.deployment_target = '6.1'
-    s.source_files  = 'AppPassword/*.{h,m,storyboard}'
+    s.source_files  = 'AppPassword/*.{h,m}'
     s.exclude_files = 'AppPassword/main.m', 'AppPassword/*ViewController*'
 
 #   SecureFoundation podspec is not in the official Cocoapods spec repo, so remember to include it in your Podfile BEFORE you try to include AppPassword
