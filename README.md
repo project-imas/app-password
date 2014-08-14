@@ -44,6 +44,8 @@ The "iMAS App Password" framework provides a simple way to include passcode supp
 
 ## Installation via CocoaPod
 
+- - If you don't already have CocoaPods installed, do `$ sudo gem install cocoapods` in your terminal. (See the [CocoaPods website](http://guides.cocoapods.org/using/getting-started.html#getting-started) for details.)
+- In your project directory, do `pod init` to create a Podfile.
 - Add `pod 'SecureFoundation', :git => 'https://github.com/project-imas/securefoundation.git'` to your PodFile
 - On the next line, add `pod 'AppPassword', :git => 'https://github.com/project-imas/app-password.git'`
 - Run `pod install`
